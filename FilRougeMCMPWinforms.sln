@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilRougeMCMPWinforms", "FilRougeMCMPWinforms\FilRougeMCMPWinforms.csproj", "{A74B96AC-A876-4641-9803-9D9A0E9D8626}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A74B96AC-A876-4641-9803-9D9A0E9D8626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74B96AC-A876-4641-9803-9D9A0E9D8626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74B96AC-A876-4641-9803-9D9A0E9D8626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74B96AC-A876-4641-9803-9D9A0E9D8626}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {640D8B0B-9B33-4E2E-A8BC-F474296402E7}
+	EndGlobalSection
+EndGlobal
