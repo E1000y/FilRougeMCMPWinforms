@@ -52,6 +52,15 @@ namespace FilRougeMCMPWinforms
                 DataRowView objectCurrentActivity = (DataRowView)activityBindingSource.Current;
                 mcmpDataSet.activityRow activityRow = (mcmpDataSet.activityRow) objectCurrentActivity.Row;
 
+                String NameActivity = textBoxNameActivity.Text;
+                DateTime DateActivity = dtpDateActivity.Value;
+                String DescriptionActivity = textBoxDescription.Text;
+                String VehicleType = textBoxVehicleType.Text;
+                String UsersRate = textBoxUserRate.Text;
+                String GuestsRate = textBoxGuestRate.Text;
+                String ActivityDuration = textBoxActivityDurationDays.Text;
+                String OrganizerName = textBoxOrganizerName.Text;
+                String GPSpoint = textBoxGPS.Text;
 
 
 

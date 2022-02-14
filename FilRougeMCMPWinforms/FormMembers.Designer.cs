@@ -42,30 +42,6 @@ namespace FilRougeMCMPWinforms
             this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
-            this.textBoxStreetNr = new System.Windows.Forms.TextBox();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.textBoxZipCode = new System.Windows.Forms.TextBox();
-            this.textBoxCity = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textFirstName = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.checkBoxIsOrganizer = new System.Windows.Forms.CheckBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.checkBoxIsActive = new System.Windows.Forms.CheckBox();
-            this.textBoxTelephoneNr = new System.Windows.Forms.TextBox();
-            this.textBoxCountry = new System.Windows.Forms.TextBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,6 +61,30 @@ namespace FilRougeMCMPWinforms
             this.remembertokenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isactiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxStreetNr = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.textBoxZipCode = new System.Windows.Forms.TextBox();
+            this.textBoxCity = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBoxIsOrganizer = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.checkBoxIsActive = new System.Windows.Forms.CheckBox();
+            this.textBoxTelephoneNr = new System.Windows.Forms.TextBox();
+            this.textBoxCountry = new System.Windows.Forms.TextBox();
             this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -92,9 +92,9 @@ namespace FilRougeMCMPWinforms
             this.flowLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mcmpDataSet
@@ -245,271 +245,6 @@ namespace FilRougeMCMPWinforms
             this.dataGridView1.Size = new System.Drawing.Size(786, 281);
             this.dataGridView1.TabIndex = 0;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 362);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(792, 322);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Détail d\'un adhérent";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePickerDOB, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxStreetNr, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxAddress, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxZipCode, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxCity, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxName, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textFirstName, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxEmail, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBoxIsOrganizer, 3, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBoxIsActive, 3, 4);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxTelephoneNr, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxCountry, 1, 8);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 9;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(786, 231);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Date de naissance";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 110);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "N° de rue";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Adresse";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 162);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Code postal";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(73, 188);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Ville";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(69, 214);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Pays";
-            // 
-            // dateTimePickerDOB
-            // 
-            this.dateTimePickerDOB.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePickerDOB.CustomFormat = "yyyy/MM/d";
-            this.dateTimePickerDOB.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usersBindingSource, "dob", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.dateTimePickerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDOB.Location = new System.Drawing.Point(105, 81);
-            this.dateTimePickerDOB.Name = "dateTimePickerDOB";
-            this.dateTimePickerDOB.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerDOB.TabIndex = 4;
-            // 
-            // textBoxStreetNr
-            // 
-            this.textBoxStreetNr.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxStreetNr.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "street_number", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxStreetNr.Location = new System.Drawing.Point(105, 107);
-            this.textBoxStreetNr.Name = "textBoxStreetNr";
-            this.textBoxStreetNr.Size = new System.Drawing.Size(100, 20);
-            this.textBoxStreetNr.TabIndex = 5;
-            // 
-            // textBoxAddress
-            // 
-            this.textBoxAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "street_name", true));
-            this.textBoxAddress.Location = new System.Drawing.Point(105, 133);
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(257, 20);
-            this.textBoxAddress.TabIndex = 6;
-            // 
-            // textBoxZipCode
-            // 
-            this.textBoxZipCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxZipCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "zip_code", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxZipCode.Location = new System.Drawing.Point(105, 159);
-            this.textBoxZipCode.Name = "textBoxZipCode";
-            this.textBoxZipCode.Size = new System.Drawing.Size(100, 20);
-            this.textBoxZipCode.TabIndex = 7;
-            // 
-            // textBoxCity
-            // 
-            this.textBoxCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxCity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "city", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxCity.Location = new System.Drawing.Point(105, 185);
-            this.textBoxCity.Name = "textBoxCity";
-            this.textBoxCity.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCity.TabIndex = 8;
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxName.Location = new System.Drawing.Point(105, 3);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 20);
-            this.textBoxName.TabIndex = 1;
-            // 
-            // textFirstName
-            // 
-            this.textFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "firstname", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textFirstName.Location = new System.Drawing.Point(105, 29);
-            this.textFirstName.Name = "textFirstName";
-            this.textFirstName.Size = new System.Drawing.Size(100, 20);
-            this.textFirstName.TabIndex = 2;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "email", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxEmail.Location = new System.Drawing.Point(105, 55);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
-            this.textBoxEmail.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(70, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Nom";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(56, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Prénom";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(67, 58);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Email";
-            // 
-            // checkBoxIsOrganizer
-            // 
-            this.checkBoxIsOrganizer.AutoSize = true;
-            this.checkBoxIsOrganizer.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usersBindingSource, "is_organizer", true));
-            this.checkBoxIsOrganizer.Location = new System.Drawing.Point(483, 81);
-            this.checkBoxIsOrganizer.Name = "checkBoxIsOrganizer";
-            this.checkBoxIsOrganizer.Size = new System.Drawing.Size(147, 17);
-            this.checkBoxIsOrganizer.TabIndex = 12;
-            this.checkBoxIsOrganizer.Text = "Est un membre du bureau";
-            this.checkBoxIsOrganizer.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(368, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 13);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Numéro de téléphone";
-            // 
-            // checkBoxIsActive
-            // 
-            this.checkBoxIsActive.AutoSize = true;
-            this.checkBoxIsActive.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usersBindingSource, "is_active", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.checkBoxIsActive.Location = new System.Drawing.Point(483, 107);
-            this.checkBoxIsActive.Name = "checkBoxIsActive";
-            this.checkBoxIsActive.Size = new System.Drawing.Size(65, 17);
-            this.checkBoxIsActive.TabIndex = 13;
-            this.checkBoxIsActive.Text = "Est Actif";
-            this.checkBoxIsActive.UseVisualStyleBackColor = true;
-            // 
-            // textBoxTelephoneNr
-            // 
-            this.textBoxTelephoneNr.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "telephone_number", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxTelephoneNr.Location = new System.Drawing.Point(483, 3);
-            this.textBoxTelephoneNr.Name = "textBoxTelephoneNr";
-            this.textBoxTelephoneNr.Size = new System.Drawing.Size(147, 20);
-            this.textBoxTelephoneNr.TabIndex = 10;
-            // 
-            // textBoxCountry
-            // 
-            this.textBoxCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxCountry.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "country", true));
-            this.textBoxCountry.Location = new System.Drawing.Point(105, 211);
-            this.textBoxCountry.Name = "textBoxCountry";
-            this.textBoxCountry.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCountry.TabIndex = 9;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -659,6 +394,271 @@ namespace FilRougeMCMPWinforms
             this.usersBindingSource.DataMember = "users";
             this.usersBindingSource.DataSource = this.mcmpDataSet;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(3, 362);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(792, 322);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Détail d\'un adhérent";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Controls.Add(this.dateTimePickerDOB, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxStreetNr, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxAddress, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxZipCode, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxCity, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxName, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.textFirstName, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxEmail, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label11, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxIsOrganizer, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label12, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxIsActive, 3, 4);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxTelephoneNr, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxCountry, 1, 8);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 9;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(786, 231);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // dateTimePickerDOB
+            // 
+            this.dateTimePickerDOB.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dateTimePickerDOB.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerDOB.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usersBindingSource, "dob", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.dateTimePickerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(105, 81);
+            this.dateTimePickerDOB.Name = "dateTimePickerDOB";
+            this.dateTimePickerDOB.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDOB.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Date de naissance";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(47, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "N° de rue";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(54, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Adresse";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(36, 162);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Code postal";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(73, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Ville";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(69, 214);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Pays";
+            // 
+            // textBoxStreetNr
+            // 
+            this.textBoxStreetNr.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxStreetNr.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "street_number", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxStreetNr.Location = new System.Drawing.Point(105, 107);
+            this.textBoxStreetNr.Name = "textBoxStreetNr";
+            this.textBoxStreetNr.Size = new System.Drawing.Size(100, 20);
+            this.textBoxStreetNr.TabIndex = 5;
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "street_name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxAddress.Location = new System.Drawing.Point(105, 133);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(257, 20);
+            this.textBoxAddress.TabIndex = 6;
+            // 
+            // textBoxZipCode
+            // 
+            this.textBoxZipCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxZipCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "zip_code", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxZipCode.Location = new System.Drawing.Point(105, 159);
+            this.textBoxZipCode.Name = "textBoxZipCode";
+            this.textBoxZipCode.Size = new System.Drawing.Size(100, 20);
+            this.textBoxZipCode.TabIndex = 7;
+            // 
+            // textBoxCity
+            // 
+            this.textBoxCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxCity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "city", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxCity.Location = new System.Drawing.Point(105, 185);
+            this.textBoxCity.Name = "textBoxCity";
+            this.textBoxCity.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCity.TabIndex = 8;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxName.Location = new System.Drawing.Point(105, 3);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxName.TabIndex = 1;
+            // 
+            // textFirstName
+            // 
+            this.textFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "firstname", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textFirstName.Location = new System.Drawing.Point(105, 29);
+            this.textFirstName.Name = "textFirstName";
+            this.textFirstName.Size = new System.Drawing.Size(100, 20);
+            this.textFirstName.TabIndex = 2;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "email", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxEmail.Location = new System.Drawing.Point(105, 55);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEmail.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(70, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Nom";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(56, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Prénom";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(67, 58);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 13);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Email";
+            // 
+            // checkBoxIsOrganizer
+            // 
+            this.checkBoxIsOrganizer.AutoSize = true;
+            this.checkBoxIsOrganizer.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usersBindingSource, "is_organizer", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.checkBoxIsOrganizer.Location = new System.Drawing.Point(483, 81);
+            this.checkBoxIsOrganizer.Name = "checkBoxIsOrganizer";
+            this.checkBoxIsOrganizer.Size = new System.Drawing.Size(147, 17);
+            this.checkBoxIsOrganizer.TabIndex = 12;
+            this.checkBoxIsOrganizer.Text = "Est un membre du bureau";
+            this.checkBoxIsOrganizer.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(368, 6);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 13);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Numéro de téléphone";
+            // 
+            // checkBoxIsActive
+            // 
+            this.checkBoxIsActive.AutoSize = true;
+            this.checkBoxIsActive.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usersBindingSource, "is_active", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.checkBoxIsActive.Location = new System.Drawing.Point(483, 107);
+            this.checkBoxIsActive.Name = "checkBoxIsActive";
+            this.checkBoxIsActive.Size = new System.Drawing.Size(65, 17);
+            this.checkBoxIsActive.TabIndex = 13;
+            this.checkBoxIsActive.Text = "Est Actif";
+            this.checkBoxIsActive.UseVisualStyleBackColor = true;
+            // 
+            // textBoxTelephoneNr
+            // 
+            this.textBoxTelephoneNr.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "telephone_number", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxTelephoneNr.Location = new System.Drawing.Point(483, 3);
+            this.textBoxTelephoneNr.Name = "textBoxTelephoneNr";
+            this.textBoxTelephoneNr.Size = new System.Drawing.Size(147, 20);
+            this.textBoxTelephoneNr.TabIndex = 10;
+            // 
+            // textBoxCountry
+            // 
+            this.textBoxCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxCountry.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "country", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxCountry.Location = new System.Drawing.Point(105, 211);
+            this.textBoxCountry.Name = "textBoxCountry";
+            this.textBoxCountry.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCountry.TabIndex = 9;
+            // 
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
@@ -681,10 +681,10 @@ namespace FilRougeMCMPWinforms
             this.flowLayoutPanel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

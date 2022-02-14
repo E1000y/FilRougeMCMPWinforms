@@ -59,20 +59,20 @@ namespace FilRougeMCMPWinforms
 
                 String TelephoneNr = textBoxTelephoneNr.Text;
                 DateTime? created_at = UsersRow.Iscreated_atNull() ? null : (DateTime?)UsersRow.created_at;
-                DateTime? updated_at = UsersRow.Iscreated_atNull() ? null : (DateTime?)UsersRow.updated_at;
+                DateTime? updated_at = UsersRow.Isupdated_atNull() ? null : (DateTime?)UsersRow.updated_at;
                 String remember_token = null;
                 Byte isActive = checkBoxIsActive.Checked ? (Byte)1 : (Byte)0;
 
                 DateTime? crea_at = UsersRow.Iscreated_atNull() ? null : (DateTime?)UsersRow.created_at;
                 DateTime? upda_at = UsersRow.Isupdated_atNull() ? null : (DateTime?)UsersRow.updated_at;
                 String remem_tok = (UsersRow.Isremember_tokenNull()) ? null : UsersRow.remember_token;
-                bool is_act = UsersRow.is_active;
+                byte is_actDuWhere = (UsersRow.is_active)? (byte) 1 : (byte) 0;
 
 
                 String NameduWhere = (UsersRow.IsnameNull()) ? null : UsersRow.name;
                 String firstNameduWhere = (UsersRow.IsfirstnameNull()) ? null : UsersRow.firstname;
                 String emailDuWhere = (UsersRow.IsemailNull()) ? null : UsersRow.email;
-                String isOrganizerduWhere = (UsersRow.Isis_organizerNull()) ? null : UsersRow.is_organizer.ToString();
+                byte isOrganizerduWhere = (UsersRow.is_organizer) ? (byte) 1 :(byte) 0;
                 DateTime? DoBduWhere = UsersRow.IsdobNull() ? null : (DateTime?)UsersRow.dob;
                 
                 String StreetNrDuWhere = UsersRow.Isstreet_numberNull() ? null : UsersRow.street_number;
@@ -107,10 +107,11 @@ WHERE        (id = @pUsersRowId) AND (created_at IS NULL OR
 
               
 
-                usersTableAdapter.UpdateQuery(name, firstName, email, IsOrganizer, DoB, StreetNr, StreetName, ZipCode, City, Country, TelephoneNr, created_at, updated_at, remember_token, isActive, UsersRow.id, crea_at, upda_at, remem_tok, is_act, NameduWhere, firstNameduWhere, emailDuWhere, isOrganizerduWhere, DoBduWhere, StreetNrDuWhere, StreetNameDuWhere, ZipCodeDuWhere, CityduWhere, CountryduWhere, TelephoneNumberduWhere);
+                int n = usersTableAdapter.UpdateQuery(name, firstName, email, IsOrganizer, DoB, StreetNr, StreetName, ZipCode, City, Country, TelephoneNr, created_at, updated_at, remember_token, isActive, UsersRow.id, crea_at, upda_at, remem_tok, is_actDuWhere, NameduWhere, firstNameduWhere, emailDuWhere, isOrganizerduWhere, DoBduWhere, StreetNrDuWhere, StreetNameDuWhere, ZipCodeDuWhere, CityduWhere, CountryduWhere, TelephoneNumberduWhere);
 
+                /* usersTableAdapter.UpdateQuery(name, firstName, email, IsOrganizer, DoB, StreetNr, StreetName, ZipCode, City, Country, TelephoneNr, created_at, updated_at, remember_token, isActive, UsersRow.id, crea_at, upda_at, remem_tok, is_act, NameduWhere, firstNameduWhere, emailDuWhere, isOrganizerduWhere, DoBduWhere, StreetNrDuWhere, StreetNameDuWhere, ZipCodeDuWhere, CityduWhere, CountryduWhere, TelephoneNumberduWhere);*/
 
-
+                MessageBox.Show(n + " éléments modifiés");
 
 
                 RefreshTable();
