@@ -16,5 +16,12 @@ namespace FilRougeMCMPWinforms
         {
             InitializeComponent();
         }
+
+        private void FormParticipation_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'mcmpDataSet.users'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.usersTableAdapter.Fill(this.mcmpDataSet.users);
+
+        }
     }
 }

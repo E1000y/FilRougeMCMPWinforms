@@ -108,7 +108,9 @@ namespace FilRougeMCMPWinforms
 
         private void BtnDisplayParticipations_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            Form formParticipation = new FormParticipation();
+            openChildForm(formParticipation);
+
         }
     }
 }
