@@ -63,6 +63,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormParticipation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormParticipation.Designer.cs">
+      <DependentUpon>FormParticipation.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTokens.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMembers.resx">
       <DependentUpon>FormMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormParticipation.resx">
+      <DependentUpon>FormParticipation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTokens.resx">
       <DependentUpon>FormTokens.cs</DependentUpon>
