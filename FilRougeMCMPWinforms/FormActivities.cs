@@ -34,7 +34,7 @@ namespace FilRougeMCMPWinforms
 
         }
 
-        
+
 
         private void activityBindingSource_CurrentChanged(object sender, EventArgs e)
         {
@@ -66,9 +66,9 @@ namespace FilRougeMCMPWinforms
                 DateTime DateActivity = dtpDateActivity.Value;
                 String DescriptionActivity = textBoxDescription.Text;
                 String VehicleType = textBoxVehicleType.Text;
-                decimal? UsersRate = String.IsNullOrWhiteSpace(textBoxUserRate.Text)? 0 : Decimal.Parse(textBoxUserRate.Text);
-                decimal? GuestsRate = String.IsNullOrWhiteSpace(textBoxGuestRate.Text)? 0 : Decimal.Parse(textBoxGuestRate.Text);
-                decimal? ActivityDuration = String.IsNullOrWhiteSpace(textBoxActivityDurationDays.Text)? 0 : Decimal.Parse(textBoxActivityDurationDays.Text);
+                decimal? UsersRate = String.IsNullOrWhiteSpace(textBoxUserRate.Text) ? 0 : Decimal.Parse(textBoxUserRate.Text);
+                decimal? GuestsRate = String.IsNullOrWhiteSpace(textBoxGuestRate.Text) ? 0 : Decimal.Parse(textBoxGuestRate.Text);
+                decimal? ActivityDuration = String.IsNullOrWhiteSpace(textBoxActivityDurationDays.Text) ? 0 : Decimal.Parse(textBoxActivityDurationDays.Text);
                 int idOrganizer = (int)comboBoxOrganizerName.SelectedValue;
                 String GPSpoint = textBoxGPS.Text;
 
@@ -150,6 +150,7 @@ namespace FilRougeMCMPWinforms
 
 
                 this.vactivityfulltableorganizernameTableAdapter.Fill(this.mcmpDataSet.vactivityfulltableorganizername);
+                this.vactivityfulltableorganizernameBindingSource.Position = vactivityfulltableorganizernameBindingSource.Find("activity_name", NameActivity);
 
             }
         }
@@ -178,6 +179,56 @@ namespace FilRougeMCMPWinforms
 
             }
 
+        }
+
+
+
+        private void textBoxFilterActivity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vactivityfulltableorganizernameBindingSource.Filter = $" activity_name LIKE '%{textBoxFilterActivity.Text}%' OR activity_description LIKE '%{textBoxFilterActivity.Text}%' OR activity_destination LIKE '%{textBoxFilterActivity.Text}%'";
+        }
+
+        private void dateTimePickerBeginDate_ValueChanged(object sender, EventArgs e)
+        {
+        
+
+            if (dateTimePickerBeginDate != null)
+            {
+                //activiteBindingSource2.Filter = "dateActivite = #" + dateTimePickerDtSortie.Text + "#";
+                vactivityfulltableorganizernameBindingSource.Filter = @"activity_date > #" + dateTimePickerBeginDate.Text + "# AND activity_date < #"+ dateTimePickerEndDate.Text+ "#";
+
+            }
+
+
+
+        }
+
+        private void dateTimePickerEndDate_ValueChanged(object sender, EventArgs e)
+        {
+
+
+            if (dateTimePickerEndDate != null)
+            {
+                //activiteBindingSource2.Filter = "dateActivite = #" + dateTimePickerDtSortie.Text + "#";
+                vactivityfulltableorganizernameBindingSource.Filter = @"activity_date > #" + dateTimePickerBeginDate.Text + "# AND activity_date < #" + dateTimePickerEndDate.Text + "#";
+
+            }
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            dateTimePickerBeginDate.Value = DateTime.Today;
+            dateTimePickerEndDate.Value = DateTime.Today;
+            vactivityfulltableorganizernameBindingSource.RemoveFilter();
+        }
+
+        private void textBoxGPS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && e.KeyChar!=(char)Keys.Back && e.KeyChar != '.' && e.KeyChar !=',')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -15,6 +15,8 @@ namespace FilRougeMCMPWinforms
         public FormMembers()
         {
             InitializeComponent();
+
+            
         }
 
         private void FormMembers_Load(object sender, EventArgs e)
@@ -118,6 +120,47 @@ WHERE        (id = @pUsersRowId) AND (created_at IS NULL OR
 
                 usersBindingSource.Position = usersBindingSource.Find("Id", id);
             }
+        }
+
+        private void textBoxFilterMembers_TextChanged(object sender, EventArgs e)
+        {
+            /*
+             private void textBoxFilterActivity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vactivityfulltableorganizernameBindingSource.Filter = $" activity_name LIKE '%{textBoxFilterActivity.Text}%' OR activity_description LIKE '%{textBoxFilterActivity.Text}%' OR activity_destination LIKE '%{textBoxFilterActivity.Text}%'";
+        }
+             */
+
+            usersBindingSource.Filter = $"name LIKE '%{textBoxFilterMembers.Text}%' OR firstname LIKE '%{textBoxFilterMembers.Text}%' ";
+
+        }
+
+        private void btnResetSelection_Click(object sender, EventArgs e)
+        {
+
+            /*dateTimePickerBeginDate.Value = DateTime.Today;
+            dateTimePickerEndDate.Value = DateTime.Today;
+            vactivityfulltableorganizernameBindingSource.RemoveFilter();*/
+
+            dateTimePickerDoBlimitbeginning.Value = DateTime.Today;
+            dateTimePickerDoBLimitEnd.Value = DateTime.Today;
+
+            textBoxFilterMembers.Text = "";
+            
+            usersBindingSource.RemoveFilter();
+        }
+
+        private void dateTimePickerDoBlimitbeginning_ValueChanged(object sender, EventArgs e)
+        {
+
+            dateTimePickerDoBLimitEnd.MinDate = dateTimePickerDoBlimitbeginning.Value.AddYears(1);
+
+            usersBindingSource.Filter = $"dob> #{dateTimePickerDoBlimitbeginning.Text}# and dob< #{dateTimePickerDoBLimitEnd.Text}# ";
+        }
+
+        private void dateTimePickerDoBLimitEnd_ValueChanged(object sender, EventArgs e)
+        {
+            usersBindingSource.Filter = $"dob> #{dateTimePickerDoBlimitbeginning.Text}# and dob< #{dateTimePickerDoBLimitEnd.Text}# ";
         }
     }
 }

@@ -34,10 +34,10 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxFilterMembers = new System.Windows.Forms.TextBox();
+            this.btnResetSelection = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDoBlimitbeginning = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -86,6 +86,8 @@ namespace FilRougeMCMPWinforms
             this.textBoxTelephoneNr = new System.Windows.Forms.TextBox();
             this.textBoxCountry = new System.Windows.Forms.TextBox();
             this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dateTimePickerDoBLimitEnd = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -125,10 +127,12 @@ namespace FilRougeMCMPWinforms
             // 
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.textBox1);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.textBoxFilterMembers);
             this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Controls.Add(this.dateTimePicker1);
+            this.flowLayoutPanel1.Controls.Add(this.dateTimePickerDoBlimitbeginning);
+            this.flowLayoutPanel1.Controls.Add(this.label13);
+            this.flowLayoutPanel1.Controls.Add(this.dateTimePickerDoBLimitEnd);
+            this.flowLayoutPanel1.Controls.Add(this.btnResetSelection);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(792, 47);
@@ -144,41 +148,48 @@ namespace FilRougeMCMPWinforms
             this.label1.TabIndex = 0;
             this.label1.Text = "Rechercher un adhérent : ";
             // 
-            // textBox1
+            // textBoxFilterMembers
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(141, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 14;
+            this.textBoxFilterMembers.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxFilterMembers.Location = new System.Drawing.Point(141, 4);
+            this.textBoxFilterMembers.Name = "textBoxFilterMembers";
+            this.textBoxFilterMembers.Size = new System.Drawing.Size(140, 20);
+            this.textBoxFilterMembers.TabIndex = 14;
+            this.textBoxFilterMembers.TextChanged += new System.EventHandler(this.textBoxFilterMembers_TextChanged);
             // 
-            // button1
+            // btnResetSelection
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.Location = new System.Drawing.Point(334, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Rechercher";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnResetSelection.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnResetSelection.Location = new System.Drawing.Point(626, 3);
+            this.btnResetSelection.Name = "btnResetSelection";
+            this.btnResetSelection.Size = new System.Drawing.Size(51, 23);
+            this.btnResetSelection.TabIndex = 15;
+            this.btnResetSelection.Text = "&Rétablir";
+            this.btnResetSelection.UseVisualStyleBackColor = true;
+            this.btnResetSelection.Click += new System.EventHandler(this.btnResetSelection_Click);
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(415, 8);
+            this.label2.Location = new System.Drawing.Point(287, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.Size = new System.Drawing.Size(123, 13);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Date de naissance";
+            this.label2.Text = "Date de naissance entre";
             // 
-            // dateTimePicker1
+            // dateTimePickerDoBlimitbeginning
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.Location = new System.Drawing.Point(517, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(179, 20);
-            this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePickerDoBlimitbeginning.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dateTimePickerDoBlimitbeginning.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerDoBlimitbeginning.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDoBlimitbeginning.Location = new System.Drawing.Point(416, 4);
+            this.dateTimePickerDoBlimitbeginning.MaxDate = new System.DateTime(2022, 2, 17, 0, 0, 0, 0);
+            this.dateTimePickerDoBlimitbeginning.Name = "dateTimePickerDoBlimitbeginning";
+            this.dateTimePickerDoBlimitbeginning.Size = new System.Drawing.Size(88, 20);
+            this.dateTimePickerDoBlimitbeginning.TabIndex = 17;
+            this.dateTimePickerDoBlimitbeginning.Value = new System.DateTime(2022, 2, 17, 0, 0, 0, 0);
+            this.dateTimePickerDoBlimitbeginning.ValueChanged += new System.EventHandler(this.dateTimePickerDoBlimitbeginning_ValueChanged);
             // 
             // flowLayoutPanel2
             // 
@@ -663,6 +674,28 @@ namespace FilRougeMCMPWinforms
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(510, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 13);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "et";
+            // 
+            // dateTimePickerDoBLimitEnd
+            // 
+            this.dateTimePickerDoBLimitEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerDoBLimitEnd.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerDoBLimitEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDoBLimitEnd.Location = new System.Drawing.Point(532, 4);
+            this.dateTimePickerDoBLimitEnd.MinDate = new System.DateTime(2022, 2, 17, 0, 0, 0, 0);
+            this.dateTimePickerDoBLimitEnd.Name = "dateTimePickerDoBLimitEnd";
+            this.dateTimePickerDoBLimitEnd.Size = new System.Drawing.Size(88, 20);
+            this.dateTimePickerDoBLimitEnd.TabIndex = 19;
+            this.dateTimePickerDoBLimitEnd.ValueChanged += new System.EventHandler(this.dateTimePickerDoBLimitEnd_ValueChanged);
+            // 
             // FormMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -695,10 +728,10 @@ namespace FilRougeMCMPWinforms
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxFilterMembers;
+        private System.Windows.Forms.Button btnResetSelection;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDoBlimitbeginning;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -746,5 +779,7 @@ namespace FilRougeMCMPWinforms
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox checkBoxIsActive;
         private System.Windows.Forms.TextBox textBoxTelephoneNr;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDoBLimitEnd;
     }
 }

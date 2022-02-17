@@ -23,5 +23,11 @@ namespace FilRougeMCMPWinforms
             this.usersTableAdapter.Fill(this.mcmpDataSet.users);
 
         }
+
+        private void dataGridViewUsers_SelectionChanged(object sender, EventArgs e)
+        {
+            dataGridViewUsers.ClearSelection();
+
+        }
     }
 }
