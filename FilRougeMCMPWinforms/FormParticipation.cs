@@ -26,7 +26,17 @@ namespace FilRougeMCMPWinforms
 
         private void dataGridViewUsers_SelectionChanged(object sender, EventArgs e)
         {
-            dataGridViewUsers.ClearSelection();
+
+            if (usersBindingSource.Current != null)
+            {
+                mcmpDataSet.usersRow usersRow = (mcmpDataSet.usersRow)((DataRowView) usersBindingSource.Current).Row;
+
+                currentYearActivitiesTableAdapter.Fill(mcmpDataSet.CurrentYearActivities, usersRow.id); 
+
+              
+
+
+            }
 
         }
     }

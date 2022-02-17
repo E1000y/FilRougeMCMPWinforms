@@ -9,6 +9,10 @@
 
 namespace FilRougeMCMPWinforms.mcmpDataSetTableAdapters
 {
+    partial class CurrentYearActivitiesTableAdapter
+    {
+    }
+
     partial class vactivityfulltableorganizernameTableAdapter
     {
     }

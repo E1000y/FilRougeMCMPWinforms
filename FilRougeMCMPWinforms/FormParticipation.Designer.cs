@@ -33,11 +33,8 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanelParticipation = new System.Windows.Forms.TableLayoutPanel();
             this.GroupBoxMember = new System.Windows.Forms.GroupBox();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
             this.groupBoxActivity = new System.Windows.Forms.GroupBox();
             this.dataGridViewActivities = new System.Windows.Forms.DataGridView();
-            this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnReset = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,14 +55,22 @@ namespace FilRougeMCMPWinforms
             this.updatedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remembertokenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isactiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
+            this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
+            this.currentYearActivitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.currentYearActivitiesTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter();
+            this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanelParticipation.SuspendLayout();
             this.GroupBoxMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).BeginInit();
             this.groupBoxActivity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentYearActivitiesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanelParticipation
@@ -98,6 +103,8 @@ namespace FilRougeMCMPWinforms
             // 
             // dataGridViewUsers
             // 
+            this.dataGridViewUsers.AllowUserToAddRows = false;
+            this.dataGridViewUsers.AllowUserToDeleteRows = false;
             this.dataGridViewUsers.AutoGenerateColumns = false;
             this.dataGridViewUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -124,20 +131,11 @@ namespace FilRougeMCMPWinforms
             this.dataGridViewUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUsers.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
+            this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewUsers.Size = new System.Drawing.Size(394, 414);
             this.dataGridViewUsers.TabIndex = 0;
             this.dataGridViewUsers.SelectionChanged += new System.EventHandler(this.dataGridViewUsers_SelectionChanged);
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // mcmpDataSet
-            // 
-            this.mcmpDataSet.DataSetName = "mcmpDataSet";
-            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBoxActivity
             // 
@@ -152,16 +150,23 @@ namespace FilRougeMCMPWinforms
             // 
             // dataGridViewActivities
             // 
+            this.dataGridViewActivities.AllowUserToAddRows = false;
+            this.dataGridViewActivities.AllowUserToDeleteRows = false;
+            this.dataGridViewActivities.AutoGenerateColumns = false;
+            this.dataGridViewActivities.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewActivities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.activitynameDataGridViewTextBoxColumn,
+            this.activitydateDataGridViewTextBoxColumn});
+            this.dataGridViewActivities.DataSource = this.currentYearActivitiesBindingSource;
             this.dataGridViewActivities.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewActivities.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewActivities.Name = "dataGridViewActivities";
+            this.dataGridViewActivities.ReadOnly = true;
+            this.dataGridViewActivities.RowHeadersVisible = false;
+            this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewActivities.Size = new System.Drawing.Size(386, 414);
             this.dataGridViewActivities.TabIndex = 1;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // flowLayoutPanel1
             // 
@@ -307,6 +312,41 @@ namespace FilRougeMCMPWinforms
             this.isactiveDataGridViewCheckBoxColumn.Name = "isactiveDataGridViewCheckBoxColumn";
             this.isactiveDataGridViewCheckBoxColumn.Visible = false;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // mcmpDataSet
+            // 
+            this.mcmpDataSet.DataSetName = "mcmpDataSet";
+            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // currentYearActivitiesBindingSource
+            // 
+            this.currentYearActivitiesBindingSource.DataMember = "CurrentYearActivities";
+            this.currentYearActivitiesBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // currentYearActivitiesTableAdapter
+            // 
+            this.currentYearActivitiesTableAdapter.ClearBeforeFill = true;
+            // 
+            // activitynameDataGridViewTextBoxColumn
+            // 
+            this.activitynameDataGridViewTextBoxColumn.DataPropertyName = "activity_name";
+            this.activitynameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'activité";
+            this.activitynameDataGridViewTextBoxColumn.Name = "activitynameDataGridViewTextBoxColumn";
+            // 
+            // activitydateDataGridViewTextBoxColumn
+            // 
+            this.activitydateDataGridViewTextBoxColumn.DataPropertyName = "activity_date";
+            this.activitydateDataGridViewTextBoxColumn.HeaderText = "Date de l\'activité";
+            this.activitydateDataGridViewTextBoxColumn.Name = "activitydateDataGridViewTextBoxColumn";
+            // 
             // FormParticipation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,11 +359,12 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanelParticipation.ResumeLayout(false);
             this.GroupBoxMember.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).EndInit();
             this.groupBoxActivity.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentYearActivitiesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,5 +399,9 @@ namespace FilRougeMCMPWinforms
         private System.Windows.Forms.DataGridViewTextBoxColumn updatedatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn remembertokenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isactiveDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activitynameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activitydateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource currentYearActivitiesBindingSource;
+        private mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter currentYearActivitiesTableAdapter;
     }
 }

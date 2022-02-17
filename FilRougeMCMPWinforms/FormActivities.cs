@@ -91,6 +91,8 @@ namespace FilRougeMCMPWinforms
 
                 this.vactivityfulltableorganizernameTableAdapter.Fill(this.mcmpDataSet.vactivityfulltableorganizername);
 
+                this.vactivityfulltableorganizernameBindingSource.Position = this.vactivityfulltableorganizernameBindingSource.Find("id_activity", activityTableAdapter.Adapter.InsertCommand.LastInsertedId);
+
             }
 
 
