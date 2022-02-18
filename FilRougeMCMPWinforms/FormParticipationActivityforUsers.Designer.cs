@@ -1,7 +1,7 @@
 ﻿
 namespace FilRougeMCMPWinforms
 {
-    partial class FormParticipation
+    partial class FormParticipationActivityforUsers
     {
         /// <summary>
         /// Required designer variable.

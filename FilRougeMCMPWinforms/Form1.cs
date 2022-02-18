@@ -108,7 +108,7 @@ namespace FilRougeMCMPWinforms
 
         private void BtnDisplayParticipations_Click(object sender, EventArgs e)
         {
-            Form formParticipation = new FormParticipation();
+            Form formParticipation = new FormParticipationActivityforUsers();
             openChildForm(formParticipation);
 
         }

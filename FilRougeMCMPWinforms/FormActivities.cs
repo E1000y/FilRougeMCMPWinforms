@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace FilRougeMCMPWinforms
@@ -167,18 +169,46 @@ namespace FilRougeMCMPWinforms
 
         private void BtnDeleteActivity_Click(object sender, EventArgs e)
         {
-            if (vactivityfulltableorganizernameBindingSource.Current != null)
+            if (vactivityfulltableorganizernameBindingSource.Current != null && participateBindingSource!=null)
             {
                 DataRowView objectDRV = (DataRowView)vactivityfulltableorganizernameBindingSource.Current;
                 mcmpDataSet.vactivityfulltableorganizernameRow vactivityorgaRow = (mcmpDataSet.vactivityfulltableorganizernameRow)objectDRV.Row;
 
+                //BUG : on a une erreur là car le BindingSource de participate est null forcément car on n'a pas de datagridview correspondant au participatebindingsource
+                      
 
 
-                this.activityTableAdapter.Delete(vactivityorgaRow.id_activity, vactivityorgaRow.id, vactivityorgaRow.activity_name, vactivityorgaRow.activity_description, vactivityorgaRow.activity_destination, vactivityorgaRow.activity_gps_point, vactivityorgaRow.activity_date, vactivityorgaRow.user_rate, vactivityorgaRow.guest_rate, vactivityorgaRow.vehicle_type, vactivityorgaRow.activity_duration_days);
 
-                this.vactivityfulltableorganizernameTableAdapter.Fill(this.mcmpDataSet.vactivityfulltableorganizername);
+                DialogResult dr = MessageBox.Show("Voulez-vous vraiment supprimer cette ligne?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+                if (dr == DialogResult.Yes)
+                {
+                    using (TransactionScope objtransaction = new TransactionScope())
+                    {
 
 
+                        //TODO : Supprimer les inscriptions dans la table participate (le rajouter dans l'interface), inscrire tout ça dans une transaction 
+                        int np = this.participateTableAdapter.DeleteActivity(vactivityorgaRow.id_activity);
+
+                        int n = this.activityTableAdapter.Delete(vactivityorgaRow.id_activity, vactivityorgaRow.id, vactivityorgaRow.activity_name, vactivityorgaRow.activity_description, vactivityorgaRow.activity_destination, vactivityorgaRow.activity_gps_point, vactivityorgaRow.activity_date, vactivityorgaRow.user_rate, vactivityorgaRow.guest_rate, vactivityorgaRow.vehicle_type, vactivityorgaRow.activity_duration_days);
+
+                        this.vactivityfulltableorganizernameTableAdapter.Fill(this.mcmpDataSet.vactivityfulltableorganizername);
+
+                        MessageBox.Show(n + "lignes supprimées");
+
+                        if (np == 0 || n == 0)
+                        {
+                            MessageBox.Show("La transaction ne s'est pas déroulée correctement");
+                        }
+                        else
+                        {
+                            objtransaction.Complete();
+                        }
+
+
+                    }
+                    MySqlConnection.ClearAllPools();
+                }
             }
 
         }
@@ -192,12 +222,12 @@ namespace FilRougeMCMPWinforms
 
         private void dateTimePickerBeginDate_ValueChanged(object sender, EventArgs e)
         {
-        
+
 
             if (dateTimePickerBeginDate != null)
             {
                 //activiteBindingSource2.Filter = "dateActivite = #" + dateTimePickerDtSortie.Text + "#";
-                vactivityfulltableorganizernameBindingSource.Filter = @"activity_date > #" + dateTimePickerBeginDate.Text + "# AND activity_date < #"+ dateTimePickerEndDate.Text+ "#";
+                vactivityfulltableorganizernameBindingSource.Filter = @"activity_date > #" + dateTimePickerBeginDate.Text + "# AND activity_date < #" + dateTimePickerEndDate.Text + "#";
 
             }
 
@@ -227,7 +257,7 @@ namespace FilRougeMCMPWinforms
 
         private void textBoxGPS_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsDigit(e.KeyChar) && e.KeyChar!=(char)Keys.Back && e.KeyChar != '.' && e.KeyChar !=',')
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.' && e.KeyChar != ',')
             {
                 e.Handled = true;
             }

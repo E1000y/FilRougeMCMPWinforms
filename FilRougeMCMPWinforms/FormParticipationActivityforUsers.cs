@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FilRougeMCMPWinforms
 {
-    public partial class FormParticipation : Form
+    public partial class FormParticipationActivityforUsers : Form
     {
-        public FormParticipation()
+        public FormParticipationActivityforUsers()
         {
             InitializeComponent();
         }
