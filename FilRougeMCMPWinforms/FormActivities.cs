@@ -196,7 +196,7 @@ namespace FilRougeMCMPWinforms
 
                         MessageBox.Show(n + "lignes supprimées");
 
-                        if (np == 0 || n == 0)
+                        if (n == 0)
                         {
                             MessageBox.Show("La transaction ne s'est pas déroulée correctement");
                         }

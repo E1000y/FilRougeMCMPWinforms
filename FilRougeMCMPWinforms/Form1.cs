@@ -112,5 +112,11 @@ namespace FilRougeMCMPWinforms
             openChildForm(formParticipation);
 
         }
+
+        private void BtnDisplayParticipationsByOuting_Click(object sender, EventArgs e)
+        {
+            Form formParticipationByOuting = new FormParticipationUsersInActivity();
+            openChildForm(formParticipationByOuting);
+        }
     }
 }

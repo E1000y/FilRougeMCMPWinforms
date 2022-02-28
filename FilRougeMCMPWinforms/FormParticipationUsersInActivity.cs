@@ -23,5 +23,17 @@ namespace FilRougeMCMPWinforms
             this.activityTableAdapter.Fill(this.mcmpDataSet.activity);
 
         }
+
+        private void dataGridViewActivities_SelectionChanged(object sender, EventArgs e)
+        {
+            if (activityBindingSource.Current != null)
+            {
+                DataRowView ObjectDRV = (DataRowView) activityBindingSource.Current;
+                mcmpDataSet.activityRow activityRow = (mcmpDataSet.activityRow)ObjectDRV.Row;
+
+                this.usersbyActivityTableAdapter.Fill(this.mcmpDataSet.usersbyActivity, activityRow.id_activity);
+
+            }
+        }
     }
 }

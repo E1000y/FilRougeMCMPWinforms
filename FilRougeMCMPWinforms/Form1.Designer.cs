@@ -32,13 +32,13 @@ namespace FilRougeMCMPWinforms
             this.SideMenuPanel = new System.Windows.Forms.Panel();
             this.BtnJetons = new System.Windows.Forms.Button();
             this.OutingsPanel = new System.Windows.Forms.Panel();
+            this.BtnDisplayParticipationsByOuting = new System.Windows.Forms.Button();
             this.BtnDisplayParticipations = new System.Windows.Forms.Button();
             this.BtnDisplayOutings = new System.Windows.Forms.Button();
             this.BtnOutings = new System.Windows.Forms.Button();
             this.BtnMembers = new System.Windows.Forms.Button();
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.ChildFormPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.SideMenuPanel.SuspendLayout();
             this.OutingsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +78,7 @@ namespace FilRougeMCMPWinforms
             // OutingsPanel
             // 
             this.OutingsPanel.BackColor = System.Drawing.Color.Crimson;
-            this.OutingsPanel.Controls.Add(this.button1);
+            this.OutingsPanel.Controls.Add(this.BtnDisplayParticipationsByOuting);
             this.OutingsPanel.Controls.Add(this.BtnDisplayParticipations);
             this.OutingsPanel.Controls.Add(this.BtnDisplayOutings);
             this.OutingsPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -86,6 +86,22 @@ namespace FilRougeMCMPWinforms
             this.OutingsPanel.Name = "OutingsPanel";
             this.OutingsPanel.Size = new System.Drawing.Size(293, 131);
             this.OutingsPanel.TabIndex = 4;
+            // 
+            // BtnDisplayParticipationsByOuting
+            // 
+            this.BtnDisplayParticipationsByOuting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnDisplayParticipationsByOuting.FlatAppearance.BorderSize = 0;
+            this.BtnDisplayParticipationsByOuting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDisplayParticipationsByOuting.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BtnDisplayParticipationsByOuting.Location = new System.Drawing.Point(0, 72);
+            this.BtnDisplayParticipationsByOuting.Name = "BtnDisplayParticipationsByOuting";
+            this.BtnDisplayParticipationsByOuting.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
+            this.BtnDisplayParticipationsByOuting.Size = new System.Drawing.Size(293, 36);
+            this.BtnDisplayParticipationsByOuting.TabIndex = 2;
+            this.BtnDisplayParticipationsByOuting.Text = "Par Sortie";
+            this.BtnDisplayParticipationsByOuting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnDisplayParticipationsByOuting.UseVisualStyleBackColor = true;
+            this.BtnDisplayParticipationsByOuting.Click += new System.EventHandler(this.BtnDisplayParticipationsByOuting_Click);
             // 
             // BtnDisplayParticipations
             // 
@@ -98,7 +114,7 @@ namespace FilRougeMCMPWinforms
             this.BtnDisplayParticipations.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
             this.BtnDisplayParticipations.Size = new System.Drawing.Size(293, 36);
             this.BtnDisplayParticipations.TabIndex = 1;
-            this.BtnDisplayParticipations.Text = "Membres inscrits";
+            this.BtnDisplayParticipations.Text = "Par Membre";
             this.BtnDisplayParticipations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDisplayParticipations.UseVisualStyleBackColor = true;
             this.BtnDisplayParticipations.Click += new System.EventHandler(this.BtnDisplayParticipations_Click);
@@ -170,21 +186,6 @@ namespace FilRougeMCMPWinforms
             this.ChildFormPanel.Size = new System.Drawing.Size(929, 815);
             this.ChildFormPanel.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(0, 72);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(293, 36);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Membres inscrits";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -215,7 +216,7 @@ namespace FilRougeMCMPWinforms
         private System.Windows.Forms.Button BtnDisplayOutings;
         private System.Windows.Forms.Button BtnOutings;
         private System.Windows.Forms.Panel ChildFormPanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnDisplayParticipationsByOuting;
     }
 }
 

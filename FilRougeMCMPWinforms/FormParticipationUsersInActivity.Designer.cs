@@ -32,12 +32,7 @@ namespace FilRougeMCMPWinforms
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
-            this.activityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.activityTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.activityTableAdapter();
+            this.dataGridViewActivities = new System.Windows.Forms.DataGridView();
             this.idactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activitydescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,18 +45,23 @@ namespace FilRougeMCMPWinforms
             this.activitypicDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.activitydurationdaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usersbyActivityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersbyActivityTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersbyActivityTableAdapter();
+            this.activityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewMembers = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersbyActivityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.activityTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.activityTableAdapter();
+            this.usersbyActivityTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersbyActivityTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.activityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersbyActivityBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +83,7 @@ namespace FilRougeMCMPWinforms
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView2);
+            this.groupBox1.Controls.Add(this.dataGridViewActivities);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
@@ -92,46 +92,14 @@ namespace FilRougeMCMPWinforms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sorties";
             // 
-            // groupBox2
+            // dataGridViewActivities
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(394, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(385, 550);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Participants";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.nameDataGridViewTextBoxColumn,
-            this.firstnameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.usersbyActivityBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(379, 531);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewActivities.AllowUserToAddRows = false;
+            this.dataGridViewActivities.AllowUserToDeleteRows = false;
+            this.dataGridViewActivities.AutoGenerateColumns = false;
+            this.dataGridViewActivities.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewActivities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idactivityDataGridViewTextBoxColumn,
             this.activitynameDataGridViewTextBoxColumn,
             this.activitydescriptionDataGridViewTextBoxColumn,
@@ -144,28 +112,15 @@ namespace FilRougeMCMPWinforms
             this.activitypicDataGridViewImageColumn,
             this.activitydurationdaysDataGridViewTextBoxColumn,
             this.idDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.activityBindingSource;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(379, 531);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // mcmpDataSet
-            // 
-            this.mcmpDataSet.DataSetName = "mcmpDataSet";
-            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // activityBindingSource
-            // 
-            this.activityBindingSource.DataMember = "activity";
-            this.activityBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // activityTableAdapter
-            // 
-            this.activityTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewActivities.DataSource = this.activityBindingSource;
+            this.dataGridViewActivities.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewActivities.Location = new System.Drawing.Point(3, 16);
+            this.dataGridViewActivities.Name = "dataGridViewActivities";
+            this.dataGridViewActivities.ReadOnly = true;
+            this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewActivities.Size = new System.Drawing.Size(379, 531);
+            this.dataGridViewActivities.TabIndex = 0;
+            this.dataGridViewActivities.SelectionChanged += new System.EventHandler(this.dataGridViewActivities_SelectionChanged);
             // 
             // idactivityDataGridViewTextBoxColumn
             // 
@@ -260,14 +215,46 @@ namespace FilRougeMCMPWinforms
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // usersbyActivityBindingSource
+            // activityBindingSource
             // 
-            this.usersbyActivityBindingSource.DataMember = "usersbyActivity";
-            this.usersbyActivityBindingSource.DataSource = this.mcmpDataSet;
+            this.activityBindingSource.DataMember = "activity";
+            this.activityBindingSource.DataSource = this.mcmpDataSet;
             // 
-            // usersbyActivityTableAdapter
+            // mcmpDataSet
             // 
-            this.usersbyActivityTableAdapter.ClearBeforeFill = true;
+            this.mcmpDataSet.DataSetName = "mcmpDataSet";
+            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridViewMembers);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(394, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(385, 550);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Participants";
+            // 
+            // dataGridViewMembers
+            // 
+            this.dataGridViewMembers.AllowUserToAddRows = false;
+            this.dataGridViewMembers.AllowUserToDeleteRows = false;
+            this.dataGridViewMembers.AutoGenerateColumns = false;
+            this.dataGridViewMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.nameDataGridViewTextBoxColumn,
+            this.firstnameDataGridViewTextBoxColumn});
+            this.dataGridViewMembers.DataSource = this.usersbyActivityBindingSource;
+            this.dataGridViewMembers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewMembers.Location = new System.Drawing.Point(3, 16);
+            this.dataGridViewMembers.Name = "dataGridViewMembers";
+            this.dataGridViewMembers.ReadOnly = true;
+            this.dataGridViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewMembers.Size = new System.Drawing.Size(379, 531);
+            this.dataGridViewMembers.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -290,6 +277,19 @@ namespace FilRougeMCMPWinforms
             this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
             this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // usersbyActivityBindingSource
+            // 
+            this.usersbyActivityBindingSource.DataMember = "usersbyActivity";
+            this.usersbyActivityBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // activityTableAdapter
+            // 
+            this.activityTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersbyActivityTableAdapter
+            // 
+            this.usersbyActivityTableAdapter.ClearBeforeFill = true;
+            // 
             // FormParticipationUsersInActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,11 +302,11 @@ namespace FilRougeMCMPWinforms
             this.Load += new System.EventHandler(this.FormParticipationUsersInActivity_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.activityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersbyActivityBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -317,8 +317,8 @@ namespace FilRougeMCMPWinforms
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewMembers;
+        private System.Windows.Forms.DataGridView dataGridViewActivities;
         private mcmpDataSet mcmpDataSet;
         private System.Windows.Forms.BindingSource activityBindingSource;
         private mcmpDataSetTableAdapters.activityTableAdapter activityTableAdapter;
