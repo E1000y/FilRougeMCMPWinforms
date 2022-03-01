@@ -14,9 +14,11 @@ namespace FilRougeMCMPWinforms
 {
     public partial class FormActivities : Form
     {
+        
         public FormActivities()
         {
             InitializeComponent();
+            dateTimePickerBeginDate.Value = DateTime.Today;
         }
 
         private void FormOutings_Load(object sender, EventArgs e)
@@ -250,8 +252,8 @@ namespace FilRougeMCMPWinforms
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            dateTimePickerBeginDate.Value = DateTime.Today;
-            dateTimePickerEndDate.Value = DateTime.Today;
+            dateTimePickerBeginDate.Value = DateTime.Today.AddYears(-1);
+            dateTimePickerEndDate.Value = DateTime.Today.AddYears(+1);
             vactivityfulltableorganizernameBindingSource.RemoveFilter();
         }
 
@@ -260,6 +262,29 @@ namespace FilRougeMCMPWinforms
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.' && e.KeyChar != ',')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btnChangePic_Click(object sender, EventArgs e)
+        {
+            using(OpenFileDialog openfiledialog = new OpenFileDialog())
+            {
+                openfiledialog.InitialDirectory = "C:\\Users\\cda5pani\\Pictures";
+                openfiledialog.Filter = "Image files | *.jpg; *.jpeg; *.png";
+                DialogResult dr = openfiledialog.ShowDialog();
+
+                if (dr == DialogResult.OK)
+                {
+                    //Ajouter l'image à la base de données. Bonne chance.
+
+                 //   activityImage.Image = Image.FromFile(openfiledialog.FileName);
+
+                    //Filestream, créer un nouveau filestream, regarder la classe, et appeler sa méthode Read... qui renvoie un tableau de bytes
+
+                    //Filestream est un objet Idisposable, donc il faut un using pour l'utiliser
+
+                    
+                }
             }
         }
     }

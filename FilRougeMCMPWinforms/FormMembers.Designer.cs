@@ -35,9 +35,11 @@ namespace FilRougeMCMPWinforms
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFilterMembers = new System.Windows.Forms.TextBox();
-            this.btnResetSelection = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerDoBlimitbeginning = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dateTimePickerDoBLimitEnd = new System.Windows.Forms.DateTimePicker();
+            this.btnResetSelection = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -86,8 +88,6 @@ namespace FilRougeMCMPWinforms
             this.textBoxTelephoneNr = new System.Windows.Forms.TextBox();
             this.textBoxCountry = new System.Windows.Forms.TextBox();
             this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePickerDoBLimitEnd = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -118,8 +118,8 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.448276F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.34483F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.37931F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.103448F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.48276F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(798, 725);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -157,17 +157,6 @@ namespace FilRougeMCMPWinforms
             this.textBoxFilterMembers.TabIndex = 14;
             this.textBoxFilterMembers.TextChanged += new System.EventHandler(this.textBoxFilterMembers_TextChanged);
             // 
-            // btnResetSelection
-            // 
-            this.btnResetSelection.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnResetSelection.Location = new System.Drawing.Point(626, 3);
-            this.btnResetSelection.Name = "btnResetSelection";
-            this.btnResetSelection.Size = new System.Drawing.Size(51, 23);
-            this.btnResetSelection.TabIndex = 15;
-            this.btnResetSelection.Text = "&Rétablir";
-            this.btnResetSelection.UseVisualStyleBackColor = true;
-            this.btnResetSelection.Click += new System.EventHandler(this.btnResetSelection_Click);
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -191,22 +180,55 @@ namespace FilRougeMCMPWinforms
             this.dateTimePickerDoBlimitbeginning.Value = new System.DateTime(2022, 2, 17, 0, 0, 0, 0);
             this.dateTimePickerDoBlimitbeginning.ValueChanged += new System.EventHandler(this.dateTimePickerDoBlimitbeginning_ValueChanged);
             // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(510, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 13);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "et";
+            // 
+            // dateTimePickerDoBLimitEnd
+            // 
+            this.dateTimePickerDoBLimitEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerDoBLimitEnd.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerDoBLimitEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDoBLimitEnd.Location = new System.Drawing.Point(532, 4);
+            this.dateTimePickerDoBLimitEnd.MinDate = new System.DateTime(2022, 2, 17, 0, 0, 0, 0);
+            this.dateTimePickerDoBLimitEnd.Name = "dateTimePickerDoBLimitEnd";
+            this.dateTimePickerDoBLimitEnd.Size = new System.Drawing.Size(88, 20);
+            this.dateTimePickerDoBLimitEnd.TabIndex = 19;
+            this.dateTimePickerDoBLimitEnd.ValueChanged += new System.EventHandler(this.dateTimePickerDoBLimitEnd_ValueChanged);
+            // 
+            // btnResetSelection
+            // 
+            this.btnResetSelection.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnResetSelection.Location = new System.Drawing.Point(626, 3);
+            this.btnResetSelection.Name = "btnResetSelection";
+            this.btnResetSelection.Size = new System.Drawing.Size(51, 23);
+            this.btnResetSelection.TabIndex = 15;
+            this.btnResetSelection.Text = "&Rétablir";
+            this.btnResetSelection.UseVisualStyleBackColor = true;
+            this.btnResetSelection.Click += new System.EventHandler(this.btnResetSelection_Click);
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.btnUpdate);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 690);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 622);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(792, 32);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(792, 100);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(3, 3);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(164, 23);
             this.btnUpdate.TabIndex = 15;
-            this.btnUpdate.Text = "&Modifier";
+            this.btnUpdate.Text = "&Enregistrer les modifications";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -410,6 +432,7 @@ namespace FilRougeMCMPWinforms
             this.groupBox2.Controls.Add(this.tableLayoutPanel2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 362);
+            this.groupBox2.MinimumSize = new System.Drawing.Size(792, 322);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(792, 322);
             this.groupBox2.TabIndex = 3;
@@ -673,28 +696,6 @@ namespace FilRougeMCMPWinforms
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(510, 8);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(16, 13);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "et";
-            // 
-            // dateTimePickerDoBLimitEnd
-            // 
-            this.dateTimePickerDoBLimitEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerDoBLimitEnd.CustomFormat = "yyyy/MM/dd";
-            this.dateTimePickerDoBLimitEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDoBLimitEnd.Location = new System.Drawing.Point(532, 4);
-            this.dateTimePickerDoBLimitEnd.MinDate = new System.DateTime(2022, 2, 17, 0, 0, 0, 0);
-            this.dateTimePickerDoBLimitEnd.Name = "dateTimePickerDoBLimitEnd";
-            this.dateTimePickerDoBLimitEnd.Size = new System.Drawing.Size(88, 20);
-            this.dateTimePickerDoBLimitEnd.TabIndex = 19;
-            this.dateTimePickerDoBLimitEnd.ValueChanged += new System.EventHandler(this.dateTimePickerDoBLimitEnd_ValueChanged);
             // 
             // FormMembers
             // 
