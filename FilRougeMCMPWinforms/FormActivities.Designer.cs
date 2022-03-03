@@ -86,6 +86,7 @@ namespace FilRougeMCMPWinforms
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePickerEndDate = new System.Windows.Forms.DateTimePicker();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btnChangePic = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.activityTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.activityTableAdapter();
             this.organizersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -95,7 +96,6 @@ namespace FilRougeMCMPWinforms
             this.vactivityfulltableorganizernameTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.vactivityfulltableorganizernameTableAdapter();
             this.participateTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.participateTableAdapter();
             this.participateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnChangePic = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.OutingsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -166,9 +166,9 @@ namespace FilRougeMCMPWinforms
             // textBoxFilterActivity
             // 
             this.textBoxFilterActivity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxFilterActivity.Location = new System.Drawing.Point(116, 11);
+            this.textBoxFilterActivity.Location = new System.Drawing.Point(114, 11);
             this.textBoxFilterActivity.Name = "textBoxFilterActivity";
-            this.textBoxFilterActivity.Size = new System.Drawing.Size(236, 20);
+            this.textBoxFilterActivity.Size = new System.Drawing.Size(231, 20);
             this.textBoxFilterActivity.TabIndex = 0;
             this.textBoxFilterActivity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFilterActivity_KeyPress);
             // 
@@ -176,7 +176,7 @@ namespace FilRougeMCMPWinforms
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 8);
+            this.label7.Location = new System.Drawing.Point(19, 8);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 26);
             this.label7.TabIndex = 19;
@@ -337,7 +337,7 @@ namespace FilRougeMCMPWinforms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 352);
+            this.label2.Location = new System.Drawing.Point(3, 345);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 3;
@@ -346,7 +346,7 @@ namespace FilRougeMCMPWinforms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 378);
+            this.label3.Location = new System.Drawing.Point(3, 371);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 4;
@@ -355,7 +355,7 @@ namespace FilRougeMCMPWinforms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 404);
+            this.label4.Location = new System.Drawing.Point(3, 397);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 5;
@@ -364,7 +364,7 @@ namespace FilRougeMCMPWinforms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 430);
+            this.label5.Location = new System.Drawing.Point(3, 423);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 6;
@@ -373,7 +373,7 @@ namespace FilRougeMCMPWinforms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 461);
+            this.label6.Location = new System.Drawing.Point(3, 454);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 7;
@@ -382,17 +382,17 @@ namespace FilRougeMCMPWinforms
             // textBoxDescription
             // 
             this.textBoxDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_description", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxDescription.Location = new System.Drawing.Point(116, 249);
+            this.textBoxDescription.Location = new System.Drawing.Point(114, 249);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxDescription.Size = new System.Drawing.Size(236, 93);
+            this.textBoxDescription.Size = new System.Drawing.Size(231, 93);
             this.textBoxDescription.TabIndex = 6;
             // 
             // textBoxVehicleType
             // 
             this.textBoxVehicleType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "vehicle_type", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxVehicleType.Location = new System.Drawing.Point(116, 355);
+            this.textBoxVehicleType.Location = new System.Drawing.Point(114, 348);
             this.textBoxVehicleType.Name = "textBoxVehicleType";
             this.textBoxVehicleType.Size = new System.Drawing.Size(100, 20);
             this.textBoxVehicleType.TabIndex = 7;
@@ -400,7 +400,7 @@ namespace FilRougeMCMPWinforms
             // textBoxUserRate
             // 
             this.textBoxUserRate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "user_rate", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxUserRate.Location = new System.Drawing.Point(116, 381);
+            this.textBoxUserRate.Location = new System.Drawing.Point(114, 374);
             this.textBoxUserRate.Name = "textBoxUserRate";
             this.textBoxUserRate.Size = new System.Drawing.Size(100, 20);
             this.textBoxUserRate.TabIndex = 8;
@@ -409,7 +409,7 @@ namespace FilRougeMCMPWinforms
             // textBoxGuestRate
             // 
             this.textBoxGuestRate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "guest_rate", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxGuestRate.Location = new System.Drawing.Point(116, 407);
+            this.textBoxGuestRate.Location = new System.Drawing.Point(114, 400);
             this.textBoxGuestRate.Name = "textBoxGuestRate";
             this.textBoxGuestRate.Size = new System.Drawing.Size(100, 20);
             this.textBoxGuestRate.TabIndex = 13;
@@ -418,7 +418,7 @@ namespace FilRougeMCMPWinforms
             // textBoxActivityDurationDays
             // 
             this.textBoxActivityDurationDays.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_duration_days", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N1"));
-            this.textBoxActivityDurationDays.Location = new System.Drawing.Point(116, 433);
+            this.textBoxActivityDurationDays.Location = new System.Drawing.Point(114, 426);
             this.textBoxActivityDurationDays.Name = "textBoxActivityDurationDays";
             this.textBoxActivityDurationDays.Size = new System.Drawing.Size(100, 20);
             this.textBoxActivityDurationDays.TabIndex = 14;
@@ -429,9 +429,10 @@ namespace FilRougeMCMPWinforms
             this.flowLayoutPanel1.Controls.Add(this.label9);
             this.flowLayoutPanel1.Controls.Add(this.pictureBoxActivityImage);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(358, 249);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(351, 249);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(437, 100);
+            this.tableLayoutPanel1.SetRowSpan(this.flowLayoutPanel1, 4);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(444, 171);
             this.flowLayoutPanel1.TabIndex = 16;
             // 
             // label9
@@ -448,7 +449,7 @@ namespace FilRougeMCMPWinforms
             this.pictureBoxActivityImage.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.vactivityfulltableorganizernameBindingSource, "activity_pic", true));
             this.pictureBoxActivityImage.Location = new System.Drawing.Point(100, 3);
             this.pictureBoxActivityImage.Name = "pictureBoxActivityImage";
-            this.pictureBoxActivityImage.Size = new System.Drawing.Size(286, 122);
+            this.pictureBoxActivityImage.Size = new System.Drawing.Size(286, 158);
             this.pictureBoxActivityImage.TabIndex = 1;
             this.pictureBoxActivityImage.TabStop = false;
             // 
@@ -459,9 +460,9 @@ namespace FilRougeMCMPWinforms
             this.flowLayoutPanel2.Controls.Add(this.BtnUpdateActivity);
             this.flowLayoutPanel2.Controls.Add(this.BtnDeleteActivity);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(358, 464);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(351, 457);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(437, 80);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(444, 87);
             this.flowLayoutPanel2.TabIndex = 17;
             // 
             // btnClearFields
@@ -508,7 +509,7 @@ namespace FilRougeMCMPWinforms
             // 
             this.flowLayoutPanel3.Controls.Add(this.label8);
             this.flowLayoutPanel3.Controls.Add(this.textBoxGPS);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(358, 433);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(351, 426);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(431, 25);
             this.flowLayoutPanel3.TabIndex = 18;
@@ -555,9 +556,9 @@ namespace FilRougeMCMPWinforms
             // 
             this.textBoxNameActivity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.textBoxNameActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxNameActivity.Location = new System.Drawing.Point(116, 194);
+            this.textBoxNameActivity.Location = new System.Drawing.Point(114, 194);
             this.textBoxNameActivity.Name = "textBoxNameActivity";
-            this.textBoxNameActivity.Size = new System.Drawing.Size(236, 20);
+            this.textBoxNameActivity.Size = new System.Drawing.Size(231, 20);
             this.textBoxNameActivity.TabIndex = 4;
             // 
             // dtpDateActivity
@@ -566,9 +567,9 @@ namespace FilRougeMCMPWinforms
             this.dtpDateActivity.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vactivityfulltableorganizernameBindingSource, "activity_date", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.dtpDateActivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpDateActivity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateActivity.Location = new System.Drawing.Point(116, 220);
+            this.dtpDateActivity.Location = new System.Drawing.Point(114, 220);
             this.dtpDateActivity.Name = "dtpDateActivity";
-            this.dtpDateActivity.Size = new System.Drawing.Size(236, 20);
+            this.dtpDateActivity.Size = new System.Drawing.Size(231, 20);
             this.dtpDateActivity.TabIndex = 5;
             // 
             // comboBoxOrganizerName
@@ -579,7 +580,7 @@ namespace FilRougeMCMPWinforms
             this.comboBoxOrganizerName.DataSource = this.usersBindingSource;
             this.comboBoxOrganizerName.DisplayMember = "name";
             this.comboBoxOrganizerName.FormattingEnabled = true;
-            this.comboBoxOrganizerName.Location = new System.Drawing.Point(116, 464);
+            this.comboBoxOrganizerName.Location = new System.Drawing.Point(114, 457);
             this.comboBoxOrganizerName.Name = "comboBoxOrganizerName";
             this.comboBoxOrganizerName.Size = new System.Drawing.Size(121, 21);
             this.comboBoxOrganizerName.TabIndex = 26;
@@ -608,7 +609,7 @@ namespace FilRougeMCMPWinforms
             // textBoxActivityDestination
             // 
             this.textBoxActivityDestination.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_destination", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxActivityDestination.Location = new System.Drawing.Point(116, 168);
+            this.textBoxActivityDestination.Location = new System.Drawing.Point(114, 168);
             this.textBoxActivityDestination.Name = "textBoxActivityDestination";
             this.textBoxActivityDestination.Size = new System.Drawing.Size(181, 20);
             this.textBoxActivityDestination.TabIndex = 3;
@@ -620,7 +621,7 @@ namespace FilRougeMCMPWinforms
             this.flowLayoutPanel4.Controls.Add(this.label14);
             this.flowLayoutPanel4.Controls.Add(this.dateTimePickerEndDate);
             this.flowLayoutPanel4.Controls.Add(this.btnReset);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(358, 3);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(351, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(427, 36);
             this.flowLayoutPanel4.TabIndex = 28;
@@ -680,6 +681,17 @@ namespace FilRougeMCMPWinforms
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // btnChangePic
+            // 
+            this.btnChangePic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnChangePic.Location = new System.Drawing.Point(351, 220);
+            this.btnChangePic.Name = "btnChangePic";
+            this.btnChangePic.Size = new System.Drawing.Size(444, 23);
+            this.btnChangePic.TabIndex = 29;
+            this.btnChangePic.Text = "Changer la photo de l\'activité";
+            this.btnChangePic.UseVisualStyleBackColor = true;
+            this.btnChangePic.Click += new System.EventHandler(this.btnChangePic_Click);
+            // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
@@ -720,17 +732,6 @@ namespace FilRougeMCMPWinforms
             // 
             this.participateBindingSource.DataMember = "participate";
             this.participateBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // btnChangePic
-            // 
-            this.btnChangePic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnChangePic.Location = new System.Drawing.Point(358, 220);
-            this.btnChangePic.Name = "btnChangePic";
-            this.btnChangePic.Size = new System.Drawing.Size(437, 23);
-            this.btnChangePic.TabIndex = 29;
-            this.btnChangePic.Text = "Changer la photo de l\'activité";
-            this.btnChangePic.UseVisualStyleBackColor = true;
-            this.btnChangePic.Click += new System.EventHandler(this.btnChangePic_Click);
             // 
             // FormActivities
             // 

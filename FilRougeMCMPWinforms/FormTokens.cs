@@ -37,6 +37,9 @@ namespace FilRougeMCMPWinforms
 
             this.banquejetonTableAdapter.Insert(token, etat);
             RefreshTableJeton();
+            this.banquejetonBindingSource.Position = this.banquejetonBindingSource.Find("jeton", token);
+
+            
         }
 
         private void RefreshTableJeton()

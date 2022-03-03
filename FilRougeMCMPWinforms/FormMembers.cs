@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +41,22 @@ namespace FilRougeMCMPWinforms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+
+            byte[] tableauProfilePicOctets;
+            using (MemoryStream objStream = new MemoryStream())
+            {
+                if (pictureBoxUserProfilePic.Image != null)
+                {
+                    pictureBoxUserProfilePic.Image.Save(objStream, ImageFormat.Jpeg);
+                    tableauProfilePicOctets = objStream.ToArray();
+                }
+                else
+                {
+                    tableauProfilePicOctets = null;
+                }
+            }
+
+
             if (usersBindingSource.Current != null)
             {
                 DataRowView objectDRVMembers = (DataRowView)usersBindingSource.Current;
@@ -46,12 +64,12 @@ namespace FilRougeMCMPWinforms
 
 
 
-                String name = textBoxName.Text;
+                String Name = textBoxName.Text;
                 String firstName = textFirstName.Text;
                 String email = textBoxEmail.Text;
                 byte IsOrganizer = (checkBoxIsOrganizer.Checked) ? (Byte)1 : (Byte)0;
                 DateTime? DoB = dateTimePickerDOB.Value;
-                byte[] profilePic = (byte[])null;
+                byte[] profilePic = tableauProfilePicOctets;
                 String StreetNr = textBoxStreetNr.Text;
                 String StreetName = textBoxAddress.Text;
                 String ZipCode = textBoxZipCode.Text;
@@ -74,7 +92,7 @@ namespace FilRougeMCMPWinforms
                 String NameduWhere = (UsersRow.IsnameNull()) ? null : UsersRow.name;
                 String firstNameduWhere = (UsersRow.IsfirstnameNull()) ? null : UsersRow.firstname;
                 String emailDuWhere = (UsersRow.IsemailNull()) ? null : UsersRow.email;
-                byte isOrganizerduWhere = (UsersRow.is_organizer) ? (byte) 1 :(byte) 0;
+                byte? isOrganizerduWhere = (UsersRow.Isis_organizerNull())? null : ((UsersRow.is_organizer) ? (byte?)1 : (byte?)0);
                 DateTime? DoBduWhere = UsersRow.IsdobNull() ? null : (DateTime?)UsersRow.dob;
                 
                 String StreetNrDuWhere = UsersRow.Isstreet_numberNull() ? null : UsersRow.street_number;
@@ -83,6 +101,8 @@ namespace FilRougeMCMPWinforms
                 String CityduWhere = UsersRow.IscityNull() ? null : UsersRow.city;
                 String CountryduWhere = UsersRow.IscountryNull() ? null : UsersRow.country;
                 String TelephoneNumberduWhere = UsersRow.Istelephone_numberNull() ? null : UsersRow.telephone_number;
+
+                byte[] ProfilePicDuWhere = UsersRow.Isprofile_picNull() ? null : (byte[]) UsersRow.profile_pic;
 
 
                 /*
@@ -105,11 +125,44 @@ WHERE        (id = @pUsersRowId) AND (created_at IS NULL OR
                          country = @pUsersRowCountry) AND (telephone_number IS NULL OR
                          telephone_number = @pUsersRowTelephoneNr)*/
 
+
+                /*UPDATE       users
+SET                name = @pName, firstname = @pFirstName, email = @pEmail, is_organizer = @pIsOrganizer, dob = @pDoB, street_number = @pStreetNr, street_name = @pStreetName, zip_code = @pZipCode, city = @pCity, 
+                         country = @pCountry, telephone_number = @pTelephoneNr, created_at = @pCreatedAt, updated_at = @pUpdatedAt, remember_token = @pRememberToken, is_active = @pIsActive, profile_pic = @pProfilePic
+WHERE        (id = @pUsersRowId) AND (is_active = @pUsersRowisActive) AND (created_at IS NULL OR
+                         created_at = @pCrea_at) AND (updated_at IS NULL OR
+                         updated_at = @pUpda_at) AND (remember_token IS NULL OR
+                         remember_token = @pUsersRowremembertoken) AND (name IS NULL OR
+                         name = @pUsersRowname) AND (firstname IS NULL OR
+                         firstname = @pUsersRowFirstName) AND (email IS NULL OR
+                         email = @pUsersRowEmail) AND (is_organizer IS NULL OR
+                         is_organizer = @pUsersRowIsOrganizer) AND (dob IS NULL OR
+                         dob = @pUsersRowDoB) AND (street_number IS NULL OR
+                         street_number = @pUsersRowStreetNr) AND (street_name IS NULL OR
+                         street_name = @pUsersRowStreetName) AND (zip_code IS NULL OR
+                         zip_code = @pUsersRowZipCode) AND (city IS NULL OR
+                         city = @pUsersRowCity) AND (country IS NULL OR
+                         country = @pUsersRowCountry) AND (telephone_number IS NULL OR
+                         telephone_number = @pUsersRowTelephoneNr) AND (profile_pic IS NULL OR
+                         profile_pic = @pProfilePic)*/
+
+
+
                 int id = UsersRow.id;
 
-              
+                /*int n = usersTableAdapter.UpdateQuery(name, firstName, email, IsOrganizer, DoB, StreetNr, StreetName, ZipCode, City, Country, TelephoneNr, created_at, updated_at, remember_token, isActive, UsersRow.id, crea_at, upda_at, remem_tok, is_actDuWhere, NameduWhere, firstNameduWhere, emailDuWhere, isOrganizerduWhere, DoBduWhere, StreetNrDuWhere, StreetNameDuWhere, ZipCodeDuWhere, CityduWhere, CountryduWhere, TelephoneNumberduWhere);*/
 
-                int n = usersTableAdapter.UpdateQuery(name, firstName, email, IsOrganizer, DoB, StreetNr, StreetName, ZipCode, City, Country, TelephoneNr, created_at, updated_at, remember_token, isActive, UsersRow.id, crea_at, upda_at, remem_tok, is_actDuWhere, NameduWhere, firstNameduWhere, emailDuWhere, isOrganizerduWhere, DoBduWhere, StreetNrDuWhere, StreetNameDuWhere, ZipCodeDuWhere, CityduWhere, CountryduWhere, TelephoneNumberduWhere);
+
+
+
+                int n = usersTableAdapter.Update(Name, firstName, email, IsOrganizer, DoB, StreetNr, StreetName, ZipCode, City, Country, TelephoneNr, created_at, updated_at, remember_token, isActive, tableauProfilePicOctets, UsersRow.id, UsersRow.is_active, crea_at, upda_at, remem_tok, NameduWhere, firstNameduWhere, emailDuWhere, isOrganizerduWhere, DoBduWhere, StreetNrDuWhere, StreetNameDuWhere, ZipCodeDuWhere, CityduWhere, CountryduWhere, TelephoneNumberduWhere);
+
+
+
+
+
+
+                /*int n = usersTableAdapter.UpdateQuery(name, firstName, email, IsOrganizer, DoB, StreetNr, StreetName, ZipCode, City, Country, TelephoneNr, created_at, updated_at, remember_token, isActive, UsersRow.id, crea_at, upda_at, remem_tok, is_actDuWhere, NameduWhere, firstNameduWhere, emailDuWhere, isOrganizerduWhere, DoBduWhere, StreetNrDuWhere, StreetNameDuWhere, ZipCodeDuWhere, CityduWhere, CountryduWhere, TelephoneNumberduWhere);*/
 
                 /* usersTableAdapter.UpdateQuery(name, firstName, email, IsOrganizer, DoB, StreetNr, StreetName, ZipCode, City, Country, TelephoneNr, created_at, updated_at, remember_token, isActive, UsersRow.id, crea_at, upda_at, remem_tok, is_act, NameduWhere, firstNameduWhere, emailDuWhere, isOrganizerduWhere, DoBduWhere, StreetNrDuWhere, StreetNameDuWhere, ZipCodeDuWhere, CityduWhere, CountryduWhere, TelephoneNumberduWhere);*/
 
@@ -161,6 +214,25 @@ WHERE        (id = @pUsersRowId) AND (created_at IS NULL OR
         private void dateTimePickerDoBLimitEnd_ValueChanged(object sender, EventArgs e)
         {
             usersBindingSource.Filter = $"dob> #{dateTimePickerDoBlimitbeginning.Text}# and dob< #{dateTimePickerDoBLimitEnd.Text}# ";
+        }
+
+        private void BtnProfilePic_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog objOpenfiledialog = new OpenFileDialog())
+            {
+                objOpenfiledialog.InitialDirectory = "C:\\Users\\cda5pani\\Pictures";
+                objOpenfiledialog.Filter = "Image files | *.jpg; *.jpeg; *.png";
+                DialogResult dr = objOpenfiledialog.ShowDialog();
+
+                if (dr == DialogResult.OK)
+                {
+
+                    MessageBox.Show(objOpenfiledialog.FileName);
+                    pictureBoxUserProfilePic.Load(objOpenfiledialog.FileName);
+
+
+                }
+            }
         }
     }
 }

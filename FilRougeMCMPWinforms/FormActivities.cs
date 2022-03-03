@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +16,11 @@ namespace FilRougeMCMPWinforms
 {
     public partial class FormActivities : Form
     {
-        
+
         public FormActivities()
         {
             InitializeComponent();
-            dateTimePickerBeginDate.Value = DateTime.Today;
+            //dateTimePickerBeginDate.Value = DateTime.Today.AddYears(-50); quoi faire avec ça, ça marche pas en datetime.today
         }
 
         private void FormOutings_Load(object sender, EventArgs e)
@@ -59,12 +61,30 @@ namespace FilRougeMCMPWinforms
         }
 
         private void BtnAddActivity_Click(object sender, EventArgs e)
-        {
-            if (vactivityfulltableorganizernameBindingSource.Current != null)
-            {
-                DataRowView objectDRV = (DataRowView)vactivityfulltableorganizernameBindingSource.Current;
-                mcmpDataSet.vactivityfulltableorganizernameRow vactivityorgaRow = (mcmpDataSet.vactivityfulltableorganizernameRow)objectDRV.Row;
 
+
+        {
+
+            byte[] tableauImageOctets;
+            using (MemoryStream objStream = new MemoryStream())
+            {
+
+                if (pictureBoxActivityImage.Image != null)
+                {
+                    pictureBoxActivityImage.Image.Save(objStream, ImageFormat.Jpeg);
+                    tableauImageOctets = objStream.ToArray();
+                }
+                else
+                {
+                    tableauImageOctets = null;
+                }
+               
+                
+
+            }
+
+
+            
                 String DestinationActivity = textBoxActivityDestination.Text;
                 String NameActivity = textBoxNameActivity.Text;
                 DateTime DateActivity = dtpDateActivity.Value;
@@ -76,28 +96,15 @@ namespace FilRougeMCMPWinforms
                 int idOrganizer = (int)comboBoxOrganizerName.SelectedValue;
                 String GPSpoint = textBoxGPS.Text;
 
-                /*int IdActivityDuWhere = vactivityorgaRow.id_activity;
-                int IdOrganizerDuWhere = vactivityorgaRow.id;
-                String ActivityNameDuWhere = vactivityorgaRow.activity_name;
-                String ActivityDescriptionDuWhere = vactivityorgaRow.activity_description;
-                String ActivityDestinationDuWhere = vactivityorgaRow.activity_destination;
-                String ActivityGPSPointDuWhere = vactivityorgaRow.activity_gps_point;
-                DateTime? ActivityDateDuWhere = vactivityorgaRow.activity_date;
-                decimal? UserRateDuWhere = vactivityorgaRow.user_rate;
-                decimal? GuestRateDuWhere = vactivityorgaRow.guest_rate;
-                String VehicleTypeDuWhere = vactivityorgaRow.vehicle_type;
-                decimal? ActivityDurationDaysDuWhere = vactivityorgaRow.activity_duration_days;*/
 
-
-
-                activityTableAdapter.Insert(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, ActivityDuration, idOrganizer);
+                activityTableAdapter.Insert(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, tableauImageOctets, ActivityDuration, idOrganizer);
 
 
                 this.vactivityfulltableorganizernameTableAdapter.Fill(this.mcmpDataSet.vactivityfulltableorganizername);
 
                 this.vactivityfulltableorganizernameBindingSource.Position = this.vactivityfulltableorganizernameBindingSource.Find("id_activity", activityTableAdapter.Adapter.InsertCommand.LastInsertedId);
 
-            }
+            
 
 
 
@@ -122,6 +129,20 @@ namespace FilRougeMCMPWinforms
 
         private void BtnUpdateActivity_Click(object sender, EventArgs e)
         {
+
+            byte[] tableauImageOctets;
+            using (MemoryStream objStream = new MemoryStream())
+            {
+                if (pictureBoxActivityImage.Image != null)
+                {
+                    pictureBoxActivityImage.Image.Save(objStream, ImageFormat.Jpeg);
+                    tableauImageOctets = objStream.ToArray();
+                }
+                else
+                {
+                    tableauImageOctets = null;
+                }
+            }
             if (vactivityfulltableorganizernameBindingSource.Current != null)
             {
                 DataRowView objectDRV = (DataRowView)vactivityfulltableorganizernameBindingSource.Current;
@@ -150,10 +171,12 @@ namespace FilRougeMCMPWinforms
                 String VehicleTypeDuWhere = vactivityorgaRow.vehicle_type;
                 decimal? ActivityDurationDaysDuWhere = vactivityorgaRow.activity_duration_days;
 
+                activityTableAdapter.Update(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, tableauImageOctets, ActivityDuration, idOrganizer, IdActivityDuWhere, IdOrganizerDuWhere, ActivityNameDuWhere, ActivityDescriptionDuWhere, ActivityDestinationDuWhere, ActivityGPSPointDuWhere, ActivityDateDuWhere, UserRateDuWhere, GuestRateDuWhere, VehicleTypeDuWhere, ActivityDurationDaysDuWhere);
 
-
-                activityTableAdapter.Update(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, ActivityDuration, idOrganizer, IdActivityDuWhere, IdOrganizerDuWhere, ActivityNameDuWhere, ActivityDescriptionDuWhere, ActivityDestinationDuWhere, ActivityGPSPointDuWhere, ActivityDateDuWhere, UserRateDuWhere, GuestRateDuWhere, VehicleTypeDuWhere, ActivityDurationDaysDuWhere);
-
+               /* TODO revoir ceci
+                * 
+                * activityTableAdapter.Update(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, ActivityDuration, idOrganizer, IdActivityDuWhere, IdOrganizerDuWhere, ActivityNameDuWhere, ActivityDescriptionDuWhere, ActivityDestinationDuWhere, ActivityGPSPointDuWhere, ActivityDateDuWhere, UserRateDuWhere, GuestRateDuWhere, VehicleTypeDuWhere, ActivityDurationDaysDuWhere);
+               */
 
                 this.vactivityfulltableorganizernameTableAdapter.Fill(this.mcmpDataSet.vactivityfulltableorganizername);
                 this.vactivityfulltableorganizernameBindingSource.Position = vactivityfulltableorganizernameBindingSource.Find("activity_name", NameActivity);
@@ -171,13 +194,13 @@ namespace FilRougeMCMPWinforms
 
         private void BtnDeleteActivity_Click(object sender, EventArgs e)
         {
-            if (vactivityfulltableorganizernameBindingSource.Current != null && participateBindingSource!=null)
+            if (vactivityfulltableorganizernameBindingSource.Current != null && participateBindingSource != null)
             {
                 DataRowView objectDRV = (DataRowView)vactivityfulltableorganizernameBindingSource.Current;
                 mcmpDataSet.vactivityfulltableorganizernameRow vactivityorgaRow = (mcmpDataSet.vactivityfulltableorganizernameRow)objectDRV.Row;
 
                 //BUG : on a une erreur là car le BindingSource de participate est null forcément car on n'a pas de datagridview correspondant au participatebindingsource
-                      
+
 
 
 
@@ -191,6 +214,25 @@ namespace FilRougeMCMPWinforms
 
                         //TODO : Supprimer les inscriptions dans la table participate (le rajouter dans l'interface), inscrire tout ça dans une transaction 
                         int np = this.participateTableAdapter.DeleteActivity(vactivityorgaRow.id_activity);
+
+                        
+                        /*
+                         * 
+                         * DELETE FROM activity
+                            WHERE        (id_activity = @pIdActivityDuWhere) 
+                            AND (activity_name IS NULL OR activity_name = @pActivityNameDuWhere) 
+                            AND (activity_description IS NULL OR activity_description = @pActivityDescriptionDuWhere) 
+                            AND (activity_destination IS NULL OR activity_destination = @pActivityDestinationDuWhere) 
+                            AND (activity_gps_point IS NULL OR activity_gps_point = @pActivityGPSPointDuWhere) 
+                            AND (activity_date IS NULL OR activity_date = @pActivityDateDuWhere) 
+                            AND (user_rate IS NULL OR user_rate = @pUserRateDuWhere) 
+                            AND (guest_rate IS NULL OR guest_rate = @pGuestRateDuWhere) 
+                            AND (vehicle_type IS NULL OR vehicle_type = @pVehicleTypeDuWhere) 
+                            AND (activity_duration_days IS NULL OR activity_duration_days = @pActivityDurationDaysDuWhere) 
+                            AND (id = @pIdOrganizerDuWhere)
+                         * 
+                         */
+
 
                         int n = this.activityTableAdapter.Delete(vactivityorgaRow.id_activity, vactivityorgaRow.id, vactivityorgaRow.activity_name, vactivityorgaRow.activity_description, vactivityorgaRow.activity_destination, vactivityorgaRow.activity_gps_point, vactivityorgaRow.activity_date, vactivityorgaRow.user_rate, vactivityorgaRow.guest_rate, vactivityorgaRow.vehicle_type, vactivityorgaRow.activity_duration_days);
 
@@ -267,25 +309,22 @@ namespace FilRougeMCMPWinforms
 
         private void btnChangePic_Click(object sender, EventArgs e)
         {
-            using(OpenFileDialog openfiledialog = new OpenFileDialog())
+            using (OpenFileDialog objOpenfiledialog = new OpenFileDialog())
             {
-                openfiledialog.InitialDirectory = "C:\\Users\\cda5pani\\Pictures";
-                openfiledialog.Filter = "Image files | *.jpg; *.jpeg; *.png";
-                DialogResult dr = openfiledialog.ShowDialog();
+                objOpenfiledialog.InitialDirectory = "C:\\Users\\cda5pani\\Pictures";
+                objOpenfiledialog.Filter = "Image files | *.jpg; *.jpeg; *.png";
+                DialogResult dr = objOpenfiledialog.ShowDialog();
 
                 if (dr == DialogResult.OK)
                 {
-                    //Ajouter l'image à la base de données. Bonne chance.
 
-                 //   activityImage.Image = Image.FromFile(openfiledialog.FileName);
-
-                    //Filestream, créer un nouveau filestream, regarder la classe, et appeler sa méthode Read... qui renvoie un tableau de bytes
-
-                    //Filestream est un objet Idisposable, donc il faut un using pour l'utiliser
+                    MessageBox.Show(objOpenfiledialog.FileName);
+                    pictureBoxActivityImage.Load(objOpenfiledialog.FileName);
 
                     
                 }
             }
+
         }
     }
 }

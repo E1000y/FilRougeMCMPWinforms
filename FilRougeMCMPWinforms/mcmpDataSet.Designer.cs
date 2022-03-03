@@ -9349,19 +9349,19 @@ namespace FilRougeMCMPWinforms.mcmpDataSetTableAdapters {
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM activity
-WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity_name IS NULL OR
-                         activity_name = @pActivityName) AND (activity_description IS NULL OR
-                         activity_description = @pActivityDescription) AND (activity_destination IS NULL OR
-                         activity_destination = @pActivityDestination) AND (activity_gps_point IS NULL OR
-                         activity_gps_point = @pActivityGPSPoint) AND (activity_date IS NULL OR
-                         activity_date = @pActivityDate) AND (user_rate IS NULL OR
-                         user_rate = @pActivityUserRate) AND (guest_rate IS NULL OR
-                         guest_rate = @pActivityGuestRate) AND (vehicle_type IS NULL OR
-                         vehicle_type = @pVehicleType) AND (activity_duration_days IS NULL OR
-                         activity_duration_days = @pActivityDurationDays)";
+WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere) AND (activity_name IS NULL OR
+                         activity_name = @pActivityNameDuWhere) AND (activity_description IS NULL OR
+                         activity_description = @pActivityDescriptionDuWhere) AND (activity_destination IS NULL OR
+                         activity_destination = @pActivityDestinationDuWhere) AND (activity_gps_point IS NULL OR
+                         activity_gps_point = @pActivityGPSPointDuWhere) AND (activity_date IS NULL OR
+                         activity_date = @pActivityDateDuWhere) AND (user_rate IS NULL OR
+                         user_rate = @pUserRateDuWhere) AND (guest_rate IS NULL OR
+                         guest_rate = @pGuestRateDuWhere) AND (vehicle_type IS NULL OR
+                         vehicle_type = @pVehicleTypeDuWhere) AND (activity_duration_days IS NULL OR
+                         activity_duration_days = @pActivityDurationDaysDuWhere)";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pIdActivity";
+            param.ParameterName = "@pIdActivityDuWhere";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -9369,7 +9369,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pIdOrganizer";
+            param.ParameterName = "@pIdOrganizerDuWhere";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -9377,7 +9377,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityName";
+            param.ParameterName = "@pActivityNameDuWhere";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.Size = 50;
@@ -9386,7 +9386,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityDescription";
+            param.ParameterName = "@pActivityDescriptionDuWhere";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.Size = 500;
@@ -9395,7 +9395,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityDestination";
+            param.ParameterName = "@pActivityDestinationDuWhere";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.Size = 50;
@@ -9404,7 +9404,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityGPSPoint";
+            param.ParameterName = "@pActivityGPSPointDuWhere";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.Size = 50;
@@ -9413,7 +9413,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityDate";
+            param.ParameterName = "@pActivityDateDuWhere";
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
@@ -9421,7 +9421,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityUserRate";
+            param.ParameterName = "@pUserRateDuWhere";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9429,7 +9429,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityGuestRate";
+            param.ParameterName = "@pGuestRateDuWhere";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9437,7 +9437,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pVehicleType";
+            param.ParameterName = "@pVehicleTypeDuWhere";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.Size = 50;
@@ -9446,7 +9446,7 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityDurationDays";
+            param.ParameterName = "@pActivityDurationDaysDuWhere";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9456,8 +9456,8 @@ WHERE        (id_activity = @pIdActivity) AND (id = @pIdOrganizer) AND (activity
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO activity
-                         (activity_name, activity_description, activity_destination, activity_gps_point, activity_date, user_rate, guest_rate, vehicle_type, activity_duration_days, id)
-VALUES        (@pActivityName, @pActivityDescription, @pActivityDestination, @pActivityGPSPoint, @pActivityDate, @ActivityUserRate, @pActivityGuestRate, @pActivityVehicleType, @pActivityDurationDays, @pOrganizerName)";
+                         (activity_name, activity_description, activity_destination, activity_gps_point, activity_date, user_rate, guest_rate, vehicle_type, activity_pic, activity_duration_days, id)
+VALUES        (@pActivityName, @pActivityDescription, @pActivityDestination, @pActivityGPSPoint, @pActivityDate, @pUserRate, @pGuestRate, @pVehicleType, @pActivityPic, @pActivityDuration, @pUserId)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pActivityName";
@@ -9504,7 +9504,7 @@ VALUES        (@pActivityName, @pActivityDescription, @pActivityDestination, @pA
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@ActivityUserRate";
+            param.ParameterName = "@pUserRate";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9512,7 +9512,7 @@ VALUES        (@pActivityName, @pActivityDescription, @pActivityDestination, @pA
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityGuestRate";
+            param.ParameterName = "@pGuestRate";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9520,7 +9520,7 @@ VALUES        (@pActivityName, @pActivityDescription, @pActivityDestination, @pA
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityVehicleType";
+            param.ParameterName = "@pVehicleType";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.Size = 50;
@@ -9529,7 +9529,16 @@ VALUES        (@pActivityName, @pActivityDescription, @pActivityDestination, @pA
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityDurationDays";
+            param.ParameterName = "@pActivityPic";
+            param.DbType = global::System.Data.DbType.Binary;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.LongBlob;
+            param.Size = 1024;
+            param.IsNullable = true;
+            param.SourceColumn = "activity_pic";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@pActivityDuration";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9537,7 +9546,7 @@ VALUES        (@pActivityName, @pActivityDescription, @pActivityDestination, @pA
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pOrganizerName";
+            param.ParameterName = "@pUserId";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -9547,15 +9556,15 @@ VALUES        (@pActivityName, @pActivityDescription, @pActivityDestination, @pA
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE       activity
-SET                activity_name = @pActivityName, activity_description = @pActivityDescription, activity_destination = @pActivityDestination, activity_gps_point = @pActivityGPSPoint, activity_date = @pActivityDate, 
-                         user_rate = @pActivityUserRate, guest_rate = @pActivityGuestRate, vehicle_type = @pActivityVehicleType, activity_duration_days = @pActivityDuration, id = @pIdOrganizer
-WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere) AND (activity_name IS NULL OR
+SET                activity_name = @pActivityName, activity_description = @pActivityDescription, activity_destination = @pActivityDestination, activity_gps_point = @pActivityGPSPoint, activity_date = @pActivityDate, user_rate = @pUserRate, 
+                         guest_rate = @pGuestRate, vehicle_type = @pVehicleType, activity_pic = @pActivityPic, activity_duration_days = @pActivityDurationDays, id = @pOrganizerId
+WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pOrganizerIdDuWhere) AND (activity_name IS NULL OR
                          activity_name = @pActivityNameDuWhere) AND (activity_description IS NULL OR
                          activity_description = @pActivityDescriptionDuWhere) AND (activity_destination IS NULL OR
                          activity_destination = @pActivityDestinationDuWhere) AND (activity_gps_point IS NULL OR
                          activity_gps_point = @pActivityGPSPointDuWhere) AND (activity_date IS NULL OR
                          activity_date = @pActivityDateDuWhere) AND (user_rate IS NULL OR
-                         user_rate = @UserRateDuWhere) AND (guest_rate IS NULL OR
+                         user_rate = @pUserRateDuWhere) AND (guest_rate IS NULL OR
                          guest_rate = @pGuestRateDuWhere) AND (vehicle_type IS NULL OR
                          vehicle_type = @pVehicleTypeDuWhere) AND (activity_duration_days IS NULL OR
                          activity_duration_days = @pActivityDurationDaysDuWhere)";
@@ -9605,7 +9614,7 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityUserRate";
+            param.ParameterName = "@pUserRate";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9613,7 +9622,7 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityGuestRate";
+            param.ParameterName = "@pGuestRate";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9621,7 +9630,7 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityVehicleType";
+            param.ParameterName = "@pVehicleType";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.Size = 50;
@@ -9630,7 +9639,16 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pActivityDuration";
+            param.ParameterName = "@pActivityPic";
+            param.DbType = global::System.Data.DbType.Binary;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.LongBlob;
+            param.Size = 1024;
+            param.IsNullable = true;
+            param.SourceColumn = "activity_pic";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@pActivityDurationDays";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9638,7 +9656,7 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pIdOrganizer";
+            param.ParameterName = "@pOrganizerId";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -9654,7 +9672,7 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@pIdOrganizerDuWhere";
+            param.ParameterName = "@pOrganizerIdDuWhere";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -9706,7 +9724,7 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@UserRateDuWhere";
+            param.ParameterName = "@pUserRateDuWhere";
             param.DbType = global::System.Data.DbType.Decimal;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
@@ -9816,59 +9834,59 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int pIdActivity, int pIdOrganizer, string pActivityName, string pActivityDescription, string pActivityDestination, string pActivityGPSPoint, global::System.Nullable<global::System.DateTime> pActivityDate, global::System.Nullable<decimal> pActivityUserRate, global::System.Nullable<decimal> pActivityGuestRate, string pVehicleType, global::System.Nullable<decimal> pActivityDurationDays) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(pIdActivity));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(pIdOrganizer));
-            if ((pActivityName == null)) {
+        public virtual int Delete(int pIdActivityDuWhere, int pIdOrganizerDuWhere, string pActivityNameDuWhere, string pActivityDescriptionDuWhere, string pActivityDestinationDuWhere, string pActivityGPSPointDuWhere, global::System.Nullable<global::System.DateTime> pActivityDateDuWhere, global::System.Nullable<decimal> pUserRateDuWhere, global::System.Nullable<decimal> pGuestRateDuWhere, string pVehicleTypeDuWhere, global::System.Nullable<decimal> pActivityDurationDaysDuWhere) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(pIdActivityDuWhere));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(pIdOrganizerDuWhere));
+            if ((pActivityNameDuWhere == null)) {
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(pActivityName));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(pActivityNameDuWhere));
             }
-            if ((pActivityDescription == null)) {
+            if ((pActivityDescriptionDuWhere == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(pActivityDescription));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(pActivityDescriptionDuWhere));
             }
-            if ((pActivityDestination == null)) {
+            if ((pActivityDestinationDuWhere == null)) {
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(pActivityDestination));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(pActivityDestinationDuWhere));
             }
-            if ((pActivityGPSPoint == null)) {
+            if ((pActivityGPSPointDuWhere == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(pActivityGPSPoint));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(pActivityGPSPointDuWhere));
             }
-            if ((pActivityDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(pActivityDate.Value));
+            if ((pActivityDateDuWhere.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(pActivityDateDuWhere.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((pActivityUserRate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(pActivityUserRate.Value));
+            if ((pUserRateDuWhere.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(pUserRateDuWhere.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((pActivityGuestRate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(pActivityGuestRate.Value));
+            if ((pGuestRateDuWhere.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(pGuestRateDuWhere.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((pVehicleType == null)) {
+            if ((pVehicleTypeDuWhere == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(pVehicleType));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(pVehicleTypeDuWhere));
             }
-            if ((pActivityDurationDays.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(pActivityDurationDays.Value));
+            if ((pActivityDurationDaysDuWhere.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(pActivityDurationDaysDuWhere.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
@@ -9893,7 +9911,7 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string pActivityName, string pActivityDescription, string pActivityDestination, string pActivityGPSPoint, global::System.Nullable<global::System.DateTime> pActivityDate, global::System.Nullable<decimal> ActivityUserRate, global::System.Nullable<decimal> pActivityGuestRate, string pActivityVehicleType, global::System.Nullable<decimal> pActivityDurationDays, int pOrganizerName) {
+        public virtual int Insert(string pActivityName, string pActivityDescription, string pActivityDestination, string pActivityGPSPoint, global::System.Nullable<global::System.DateTime> pActivityDate, global::System.Nullable<decimal> pUserRate, global::System.Nullable<decimal> pGuestRate, string pVehicleType, byte[] pActivityPic, global::System.Nullable<decimal> pActivityDuration, int pUserId) {
             if ((pActivityName == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -9924,31 +9942,37 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((ActivityUserRate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(ActivityUserRate.Value));
+            if ((pUserRate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(pUserRate.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((pActivityGuestRate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(pActivityGuestRate.Value));
+            if ((pGuestRate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(pGuestRate.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((pActivityVehicleType == null)) {
+            if ((pVehicleType == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(pActivityVehicleType));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(pVehicleType));
             }
-            if ((pActivityDurationDays.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(pActivityDurationDays.Value));
-            }
-            else {
+            if ((pActivityPic == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(pOrganizerName));
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((byte[])(pActivityPic));
+            }
+            if ((pActivityDuration.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(pActivityDuration.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(pUserId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9975,19 +9999,20 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
                     string pActivityDestination, 
                     string pActivityGPSPoint, 
                     global::System.Nullable<global::System.DateTime> pActivityDate, 
-                    global::System.Nullable<decimal> pActivityUserRate, 
-                    global::System.Nullable<decimal> pActivityGuestRate, 
-                    string pActivityVehicleType, 
-                    global::System.Nullable<decimal> pActivityDuration, 
-                    int pIdOrganizer, 
+                    global::System.Nullable<decimal> pUserRate, 
+                    global::System.Nullable<decimal> pGuestRate, 
+                    string pVehicleType, 
+                    byte[] pActivityPic, 
+                    global::System.Nullable<decimal> pActivityDurationDays, 
+                    int pOrganizerId, 
                     int pIdActivityDuWhere, 
-                    int pIdOrganizerDuWhere, 
+                    int pOrganizerIdDuWhere, 
                     string pActivityNameDuWhere, 
                     string pActivityDescriptionDuWhere, 
                     string pActivityDestinationDuWhere, 
                     string pActivityGPSPointDuWhere, 
                     global::System.Nullable<global::System.DateTime> pActivityDateDuWhere, 
-                    global::System.Nullable<decimal> UserRateDuWhere, 
+                    global::System.Nullable<decimal> pUserRateDuWhere, 
                     global::System.Nullable<decimal> pGuestRateDuWhere, 
                     string pVehicleTypeDuWhere, 
                     global::System.Nullable<decimal> pActivityDurationDaysDuWhere) {
@@ -10021,86 +10046,92 @@ WHERE        (id_activity = @pIdActivityDuWhere) AND (id = @pIdOrganizerDuWhere)
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((pActivityUserRate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(pActivityUserRate.Value));
+            if ((pUserRate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(pUserRate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((pActivityGuestRate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(pActivityGuestRate.Value));
+            if ((pGuestRate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(pGuestRate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((pActivityVehicleType == null)) {
+            if ((pVehicleType == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(pActivityVehicleType));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(pVehicleType));
             }
-            if ((pActivityDuration.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(pActivityDuration.Value));
-            }
-            else {
+            if ((pActivityPic == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(pIdOrganizer));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(pIdActivityDuWhere));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(pIdOrganizerDuWhere));
-            if ((pActivityNameDuWhere == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((byte[])(pActivityPic));
+            }
+            if ((pActivityDurationDays.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(pActivityDurationDays.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(pActivityNameDuWhere));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((pActivityDescriptionDuWhere == null)) {
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(pOrganizerId));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(pIdActivityDuWhere));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(pOrganizerIdDuWhere));
+            if ((pActivityNameDuWhere == null)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(pActivityDescriptionDuWhere));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(pActivityNameDuWhere));
             }
-            if ((pActivityDestinationDuWhere == null)) {
+            if ((pActivityDescriptionDuWhere == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(pActivityDestinationDuWhere));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(pActivityDescriptionDuWhere));
             }
-            if ((pActivityGPSPointDuWhere == null)) {
+            if ((pActivityDestinationDuWhere == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(pActivityGPSPointDuWhere));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(pActivityDestinationDuWhere));
             }
-            if ((pActivityDateDuWhere.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(pActivityDateDuWhere.Value));
-            }
-            else {
+            if ((pActivityGPSPointDuWhere == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((UserRateDuWhere.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(UserRateDuWhere.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(pActivityGPSPointDuWhere));
+            }
+            if ((pActivityDateDuWhere.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(pActivityDateDuWhere.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((pGuestRateDuWhere.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(pGuestRateDuWhere.Value));
+            if ((pUserRateDuWhere.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(pUserRateDuWhere.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((pVehicleTypeDuWhere == null)) {
+            if ((pGuestRateDuWhere.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((decimal)(pGuestRateDuWhere.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
+            if ((pVehicleTypeDuWhere == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(pVehicleTypeDuWhere));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(pVehicleTypeDuWhere));
             }
             if ((pActivityDurationDaysDuWhere.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(pActivityDurationDaysDuWhere.Value));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((decimal)(pActivityDurationDaysDuWhere.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13934,22 +13965,22 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
                 "etNr, street_name = @pStreetName, zip_code = @pZipCode, city = @pCity, \r\n       " +
                 "                  country = @pCountry, telephone_number = @pTelephoneNr, created" +
                 "_at = @pCreatedAt, updated_at = @pUpdatedAt, remember_token = @pRememberToken, i" +
-                "s_active = @pIsActive\r\nWHERE        (id = @pUsersRowId) AND (is_active = @pUsers" +
-                "RowisActive) AND (created_at IS NULL OR\r\n                         created_at = @" +
-                "pCrea_at) AND (updated_at IS NULL OR\r\n                         updated_at = @pUp" +
-                "da_at) AND (remember_token IS NULL OR\r\n                         remember_token =" +
-                " @pUsersRowremembertoken) AND (name IS NULL OR\r\n                         name = " +
-                "@pUsersRowname) AND (firstname IS NULL OR\r\n                         firstname = " +
-                "@pUsersRowFirstName) AND (email IS NULL OR\r\n                         email = @pU" +
-                "sersRowEmail) AND (is_organizer IS NULL OR\r\n                         is_organize" +
-                "r = @pUsersRowIsOrganizer) AND (dob IS NULL OR\r\n                         dob = @" +
-                "pUsersRowDoB) AND (street_number IS NULL OR\r\n                         street_num" +
-                "ber = @pUsersRowStreetNr) AND (street_name IS NULL OR\r\n                         " +
-                "street_name = @pUsersRowStreetName) AND (zip_code IS NULL OR\r\n                  " +
-                "       zip_code = @pUsersRowZipCode) AND (city IS NULL OR\r\n                     " +
-                "    city = @pUsersRowCity) AND (country IS NULL OR\r\n                         cou" +
-                "ntry = @pUsersRowCountry) AND (telephone_number IS NULL OR\r\n                    " +
-                "     telephone_number = @pUsersRowTelephoneNr)";
+                "s_active = @pIsActive, profile_pic = @pProfilePic\r\nWHERE        (id = @pUsersRow" +
+                "Id) AND (is_active = @pUsersRowisActive) AND (created_at IS NULL OR\r\n           " +
+                "              created_at = @pCrea_at) AND (updated_at IS NULL OR\r\n              " +
+                "           updated_at = @pUpda_at) AND (remember_token IS NULL OR\r\n             " +
+                "            remember_token = @pUsersRowremembertoken) AND (name IS NULL OR\r\n    " +
+                "                     name = @pUsersRowname) AND (firstname IS NULL OR\r\n         " +
+                "                firstname = @pUsersRowFirstName) AND (email IS NULL OR\r\n        " +
+                "                 email = @pUsersRowEmail) AND (is_organizer IS NULL OR\r\n        " +
+                "                 is_organizer = @pUsersRowIsOrganizer) AND (dob IS NULL OR\r\n    " +
+                "                     dob = @pUsersRowDoB) AND (street_number IS NULL OR\r\n       " +
+                "                  street_number = @pUsersRowStreetNr) AND (street_name IS NULL O" +
+                "R\r\n                         street_name = @pUsersRowStreetName) AND (zip_code IS" +
+                " NULL OR\r\n                         zip_code = @pUsersRowZipCode) AND (city IS NU" +
+                "LL OR\r\n                         city = @pUsersRowCity) AND (country IS NULL OR\r\n" +
+                "                         country = @pUsersRowCountry) AND (telephone_number IS N" +
+                "ULL OR\r\n                         telephone_number = @pUsersRowTelephoneNr)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pName";
@@ -14052,7 +14083,7 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pCreatedAt";
             param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Timestamp;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
             param.SourceColumn = "created_at";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
@@ -14060,7 +14091,7 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pUpdatedAt";
             param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Timestamp;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
             param.SourceColumn = "updated_at";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
@@ -14084,6 +14115,15 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@pProfilePic";
+            param.DbType = global::System.Data.DbType.Binary;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.LongBlob;
+            param.Size = 1024;
+            param.IsNullable = true;
+            param.SourceColumn = "profile_pic";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pUsersRowId";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -14103,7 +14143,7 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pCrea_at";
             param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Timestamp;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
             param.SourceColumn = "created_at";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -14111,7 +14151,7 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pUpda_at";
             param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Timestamp;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
             param.SourceColumn = "updated_at";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -14871,6 +14911,7 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
                     global::System.Nullable<global::System.DateTime> pUpdatedAt, 
                     string pRememberToken, 
                     object pIsActive, 
+                    byte[] pProfilePic, 
                     int pUsersRowId, 
                     object pUsersRowisActive, 
                     global::System.Nullable<global::System.DateTime> pCrea_at, 
@@ -14977,96 +15018,102 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(pIsActive));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(pUsersRowId));
+            if ((pProfilePic == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((byte[])(pProfilePic));
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(pUsersRowId));
             if ((pUsersRowisActive == null)) {
                 throw new global::System.ArgumentNullException("pUsersRowisActive");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(pUsersRowisActive));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(pUsersRowisActive));
             }
             if ((pCrea_at.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(pCrea_at.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((pUpda_at.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(pUpda_at.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(pCrea_at.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((pUsersRowremembertoken == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            if ((pUpda_at.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(pUpda_at.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(pUsersRowremembertoken));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            if ((pUsersRowname == null)) {
+            if ((pUsersRowremembertoken == null)) {
                 this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(pUsersRowname));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(pUsersRowremembertoken));
             }
-            if ((pUsersRowFirstName == null)) {
+            if ((pUsersRowname == null)) {
                 this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(pUsersRowFirstName));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(pUsersRowname));
             }
-            if ((pUsersRowEmail == null)) {
+            if ((pUsersRowFirstName == null)) {
                 this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(pUsersRowEmail));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(pUsersRowFirstName));
             }
-            if ((pUsersRowIsOrganizer == null)) {
+            if ((pUsersRowEmail == null)) {
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(pUsersRowIsOrganizer));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(pUsersRowEmail));
             }
-            if ((pUsersRowDoB.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((System.DateTime)(pUsersRowDoB.Value));
-            }
-            else {
+            if ((pUsersRowIsOrganizer == null)) {
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((pUsersRowStreetNr == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(pUsersRowIsOrganizer));
+            }
+            if ((pUsersRowDoB.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(pUsersRowDoB.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(pUsersRowStreetNr));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            if ((pUsersRowStreetName == null)) {
+            if ((pUsersRowStreetNr == null)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(pUsersRowStreetName));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(pUsersRowStreetNr));
             }
-            if ((pUsersRowZipCode == null)) {
+            if ((pUsersRowStreetName == null)) {
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(pUsersRowZipCode));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(pUsersRowStreetName));
             }
-            if ((pUsersRowCity == null)) {
+            if ((pUsersRowZipCode == null)) {
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(pUsersRowCity));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(pUsersRowZipCode));
             }
-            if ((pUsersRowCountry == null)) {
+            if ((pUsersRowCity == null)) {
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(pUsersRowCountry));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(pUsersRowCity));
             }
-            if ((pUsersRowTelephoneNr == null)) {
+            if ((pUsersRowCountry == null)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(pUsersRowTelephoneNr));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(pUsersRowCountry));
+            }
+            if ((pUsersRowTelephoneNr == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(pUsersRowTelephoneNr));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
