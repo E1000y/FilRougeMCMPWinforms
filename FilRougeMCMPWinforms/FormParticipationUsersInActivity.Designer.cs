@@ -75,9 +75,9 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.54348F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.45652F));
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(782, 736);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -87,7 +87,7 @@ namespace FilRougeMCMPWinforms
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 550);
+            this.groupBox1.Size = new System.Drawing.Size(385, 730);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sorties";
@@ -118,7 +118,7 @@ namespace FilRougeMCMPWinforms
             this.dataGridViewActivities.Name = "dataGridViewActivities";
             this.dataGridViewActivities.ReadOnly = true;
             this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewActivities.Size = new System.Drawing.Size(379, 531);
+            this.dataGridViewActivities.Size = new System.Drawing.Size(379, 711);
             this.dataGridViewActivities.TabIndex = 0;
             this.dataGridViewActivities.SelectionChanged += new System.EventHandler(this.dataGridViewActivities_SelectionChanged);
             // 
@@ -231,7 +231,7 @@ namespace FilRougeMCMPWinforms
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(394, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(385, 550);
+            this.groupBox2.Size = new System.Drawing.Size(385, 730);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Participants";
@@ -253,7 +253,7 @@ namespace FilRougeMCMPWinforms
             this.dataGridViewMembers.Name = "dataGridViewMembers";
             this.dataGridViewMembers.ReadOnly = true;
             this.dataGridViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMembers.Size = new System.Drawing.Size(379, 531);
+            this.dataGridViewMembers.Size = new System.Drawing.Size(379, 711);
             this.dataGridViewMembers.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn1

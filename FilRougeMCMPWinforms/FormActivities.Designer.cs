@@ -35,18 +35,6 @@ namespace FilRougeMCMPWinforms
             this.label7 = new System.Windows.Forms.Label();
             this.OutingsGroupBox = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitydescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitydestinationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitygpspointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userrateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guestrateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicletypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitypicDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.activitydurationdaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vactivityfulltableorganizernameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
             this.label1 = new System.Windows.Forms.Label();
@@ -96,6 +84,18 @@ namespace FilRougeMCMPWinforms
             this.vactivityfulltableorganizernameTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.vactivityfulltableorganizernameTableAdapter();
             this.participateTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.participateTableAdapter();
             this.participateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitydescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitydestinationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitygpspointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userrateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guestrateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicletypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitypicDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.activitydurationdaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.OutingsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -223,97 +223,6 @@ namespace FilRougeMCMPWinforms
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(786, 98);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idactivityDataGridViewTextBoxColumn
-            // 
-            this.idactivityDataGridViewTextBoxColumn.DataPropertyName = "id_activity";
-            this.idactivityDataGridViewTextBoxColumn.HeaderText = "id_activity";
-            this.idactivityDataGridViewTextBoxColumn.Name = "idactivityDataGridViewTextBoxColumn";
-            this.idactivityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // activitynameDataGridViewTextBoxColumn
-            // 
-            this.activitynameDataGridViewTextBoxColumn.DataPropertyName = "activity_name";
-            this.activitynameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'activité";
-            this.activitynameDataGridViewTextBoxColumn.Name = "activitynameDataGridViewTextBoxColumn";
-            this.activitynameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // activitydescriptionDataGridViewTextBoxColumn
-            // 
-            this.activitydescriptionDataGridViewTextBoxColumn.DataPropertyName = "activity_description";
-            this.activitydescriptionDataGridViewTextBoxColumn.HeaderText = "activity_description";
-            this.activitydescriptionDataGridViewTextBoxColumn.Name = "activitydescriptionDataGridViewTextBoxColumn";
-            this.activitydescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.activitydescriptionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // activitydestinationDataGridViewTextBoxColumn
-            // 
-            this.activitydestinationDataGridViewTextBoxColumn.DataPropertyName = "activity_destination";
-            this.activitydestinationDataGridViewTextBoxColumn.HeaderText = "Destination";
-            this.activitydestinationDataGridViewTextBoxColumn.Name = "activitydestinationDataGridViewTextBoxColumn";
-            this.activitydestinationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // activitygpspointDataGridViewTextBoxColumn
-            // 
-            this.activitygpspointDataGridViewTextBoxColumn.DataPropertyName = "activity_gps_point";
-            this.activitygpspointDataGridViewTextBoxColumn.HeaderText = "GPS RDV";
-            this.activitygpspointDataGridViewTextBoxColumn.Name = "activitygpspointDataGridViewTextBoxColumn";
-            this.activitygpspointDataGridViewTextBoxColumn.ReadOnly = true;
-            this.activitygpspointDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // activitydateDataGridViewTextBoxColumn
-            // 
-            this.activitydateDataGridViewTextBoxColumn.DataPropertyName = "activity_date";
-            this.activitydateDataGridViewTextBoxColumn.HeaderText = "Date de l\'activité";
-            this.activitydateDataGridViewTextBoxColumn.Name = "activitydateDataGridViewTextBoxColumn";
-            this.activitydateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // userrateDataGridViewTextBoxColumn
-            // 
-            this.userrateDataGridViewTextBoxColumn.DataPropertyName = "user_rate";
-            this.userrateDataGridViewTextBoxColumn.HeaderText = "user_rate";
-            this.userrateDataGridViewTextBoxColumn.Name = "userrateDataGridViewTextBoxColumn";
-            this.userrateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userrateDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // guestrateDataGridViewTextBoxColumn
-            // 
-            this.guestrateDataGridViewTextBoxColumn.DataPropertyName = "guest_rate";
-            this.guestrateDataGridViewTextBoxColumn.HeaderText = "guest_rate";
-            this.guestrateDataGridViewTextBoxColumn.Name = "guestrateDataGridViewTextBoxColumn";
-            this.guestrateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.guestrateDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // vehicletypeDataGridViewTextBoxColumn
-            // 
-            this.vehicletypeDataGridViewTextBoxColumn.DataPropertyName = "vehicle_type";
-            this.vehicletypeDataGridViewTextBoxColumn.HeaderText = "vehicle_type";
-            this.vehicletypeDataGridViewTextBoxColumn.Name = "vehicletypeDataGridViewTextBoxColumn";
-            this.vehicletypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.vehicletypeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // activitypicDataGridViewImageColumn
-            // 
-            this.activitypicDataGridViewImageColumn.DataPropertyName = "activity_pic";
-            this.activitypicDataGridViewImageColumn.HeaderText = "activity_pic";
-            this.activitypicDataGridViewImageColumn.Name = "activitypicDataGridViewImageColumn";
-            this.activitypicDataGridViewImageColumn.ReadOnly = true;
-            this.activitypicDataGridViewImageColumn.Visible = false;
-            // 
-            // activitydurationdaysDataGridViewTextBoxColumn
-            // 
-            this.activitydurationdaysDataGridViewTextBoxColumn.DataPropertyName = "activity_duration_days";
-            this.activitydurationdaysDataGridViewTextBoxColumn.HeaderText = "activity_duration_days";
-            this.activitydurationdaysDataGridViewTextBoxColumn.Name = "activitydurationdaysDataGridViewTextBoxColumn";
-            this.activitydurationdaysDataGridViewTextBoxColumn.ReadOnly = true;
-            this.activitydurationdaysDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'organisateur";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // vactivityfulltableorganizernameBindingSource
             // 
@@ -639,7 +548,7 @@ namespace FilRougeMCMPWinforms
             // dateTimePickerBeginDate
             // 
             this.dateTimePickerBeginDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerBeginDate.CustomFormat = "yyyy/MM/d";
+            this.dateTimePickerBeginDate.CustomFormat = "yyyy/MM/dd";
             this.dateTimePickerBeginDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerBeginDate.Location = new System.Drawing.Point(52, 3);
             this.dateTimePickerBeginDate.MaxDate = new System.DateTime(2022, 2, 28, 16, 37, 46, 0);
@@ -662,7 +571,7 @@ namespace FilRougeMCMPWinforms
             // dateTimePickerEndDate
             // 
             this.dateTimePickerEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerEndDate.CustomFormat = "yyyy/MM/d";
+            this.dateTimePickerEndDate.CustomFormat = "yyyy/MM/dd";
             this.dateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerEndDate.Location = new System.Drawing.Point(189, 3);
             this.dateTimePickerEndDate.MinDate = new System.DateTime(2022, 2, 16, 0, 0, 0, 0);
@@ -732,6 +641,98 @@ namespace FilRougeMCMPWinforms
             // 
             this.participateBindingSource.DataMember = "participate";
             this.participateBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // idactivityDataGridViewTextBoxColumn
+            // 
+            this.idactivityDataGridViewTextBoxColumn.DataPropertyName = "id_activity";
+            this.idactivityDataGridViewTextBoxColumn.HeaderText = "id_activity";
+            this.idactivityDataGridViewTextBoxColumn.Name = "idactivityDataGridViewTextBoxColumn";
+            this.idactivityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idactivityDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // activitynameDataGridViewTextBoxColumn
+            // 
+            this.activitynameDataGridViewTextBoxColumn.DataPropertyName = "activity_name";
+            this.activitynameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'activité";
+            this.activitynameDataGridViewTextBoxColumn.Name = "activitynameDataGridViewTextBoxColumn";
+            this.activitynameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // activitydescriptionDataGridViewTextBoxColumn
+            // 
+            this.activitydescriptionDataGridViewTextBoxColumn.DataPropertyName = "activity_description";
+            this.activitydescriptionDataGridViewTextBoxColumn.HeaderText = "activity_description";
+            this.activitydescriptionDataGridViewTextBoxColumn.Name = "activitydescriptionDataGridViewTextBoxColumn";
+            this.activitydescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.activitydescriptionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // activitydestinationDataGridViewTextBoxColumn
+            // 
+            this.activitydestinationDataGridViewTextBoxColumn.DataPropertyName = "activity_destination";
+            this.activitydestinationDataGridViewTextBoxColumn.HeaderText = "Destination";
+            this.activitydestinationDataGridViewTextBoxColumn.Name = "activitydestinationDataGridViewTextBoxColumn";
+            this.activitydestinationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // activitygpspointDataGridViewTextBoxColumn
+            // 
+            this.activitygpspointDataGridViewTextBoxColumn.DataPropertyName = "activity_gps_point";
+            this.activitygpspointDataGridViewTextBoxColumn.HeaderText = "GPS RDV";
+            this.activitygpspointDataGridViewTextBoxColumn.Name = "activitygpspointDataGridViewTextBoxColumn";
+            this.activitygpspointDataGridViewTextBoxColumn.ReadOnly = true;
+            this.activitygpspointDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // activitydateDataGridViewTextBoxColumn
+            // 
+            this.activitydateDataGridViewTextBoxColumn.DataPropertyName = "activity_date";
+            this.activitydateDataGridViewTextBoxColumn.HeaderText = "Date de l\'activité";
+            this.activitydateDataGridViewTextBoxColumn.Name = "activitydateDataGridViewTextBoxColumn";
+            this.activitydateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userrateDataGridViewTextBoxColumn
+            // 
+            this.userrateDataGridViewTextBoxColumn.DataPropertyName = "user_rate";
+            this.userrateDataGridViewTextBoxColumn.HeaderText = "user_rate";
+            this.userrateDataGridViewTextBoxColumn.Name = "userrateDataGridViewTextBoxColumn";
+            this.userrateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userrateDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // guestrateDataGridViewTextBoxColumn
+            // 
+            this.guestrateDataGridViewTextBoxColumn.DataPropertyName = "guest_rate";
+            this.guestrateDataGridViewTextBoxColumn.HeaderText = "guest_rate";
+            this.guestrateDataGridViewTextBoxColumn.Name = "guestrateDataGridViewTextBoxColumn";
+            this.guestrateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.guestrateDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // vehicletypeDataGridViewTextBoxColumn
+            // 
+            this.vehicletypeDataGridViewTextBoxColumn.DataPropertyName = "vehicle_type";
+            this.vehicletypeDataGridViewTextBoxColumn.HeaderText = "vehicle_type";
+            this.vehicletypeDataGridViewTextBoxColumn.Name = "vehicletypeDataGridViewTextBoxColumn";
+            this.vehicletypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.vehicletypeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // activitypicDataGridViewImageColumn
+            // 
+            this.activitypicDataGridViewImageColumn.DataPropertyName = "activity_pic";
+            this.activitypicDataGridViewImageColumn.HeaderText = "activity_pic";
+            this.activitypicDataGridViewImageColumn.Name = "activitypicDataGridViewImageColumn";
+            this.activitypicDataGridViewImageColumn.ReadOnly = true;
+            this.activitypicDataGridViewImageColumn.Visible = false;
+            // 
+            // activitydurationdaysDataGridViewTextBoxColumn
+            // 
+            this.activitydurationdaysDataGridViewTextBoxColumn.DataPropertyName = "activity_duration_days";
+            this.activitydurationdaysDataGridViewTextBoxColumn.HeaderText = "activity_duration_days";
+            this.activitydurationdaysDataGridViewTextBoxColumn.Name = "activitydurationdaysDataGridViewTextBoxColumn";
+            this.activitydurationdaysDataGridViewTextBoxColumn.ReadOnly = true;
+            this.activitydurationdaysDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'organisateur";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormActivities
             // 
@@ -813,6 +814,15 @@ namespace FilRougeMCMPWinforms
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource vactivityfulltableorganizernameBindingSource;
         private mcmpDataSetTableAdapters.vactivityfulltableorganizernameTableAdapter vactivityfulltableorganizernameTableAdapter;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBeginDate;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEndDate;
+        private System.Windows.Forms.Button btnReset;
+        private mcmpDataSetTableAdapters.participateTableAdapter participateTableAdapter;
+        private System.Windows.Forms.BindingSource participateBindingSource;
+        private System.Windows.Forms.Button btnChangePic;
         private System.Windows.Forms.DataGridViewTextBoxColumn idactivityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn activitynameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn activitydescriptionDataGridViewTextBoxColumn;
@@ -825,14 +835,5 @@ namespace FilRougeMCMPWinforms
         private System.Windows.Forms.DataGridViewImageColumn activitypicDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn activitydurationdaysDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePickerBeginDate;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePickerEndDate;
-        private System.Windows.Forms.Button btnReset;
-        private mcmpDataSetTableAdapters.participateTableAdapter participateTableAdapter;
-        private System.Windows.Forms.BindingSource participateBindingSource;
-        private System.Windows.Forms.Button btnChangePic;
     }
 }

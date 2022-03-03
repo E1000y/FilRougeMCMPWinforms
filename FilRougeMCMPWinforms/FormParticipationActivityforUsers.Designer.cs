@@ -33,10 +33,6 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanelParticipation = new System.Windows.Forms.TableLayoutPanel();
             this.GroupBoxMember = new System.Windows.Forms.GroupBox();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.groupBoxActivity = new System.Windows.Forms.GroupBox();
-            this.dataGridViewActivities = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnReset = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,19 +53,20 @@ namespace FilRougeMCMPWinforms
             this.isactiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
-            this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
-            this.currentYearActivitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.currentYearActivitiesTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter();
+            this.groupBoxActivity = new System.Windows.Forms.GroupBox();
+            this.dataGridViewActivities = new System.Windows.Forms.DataGridView();
             this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currentYearActivitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
+            this.currentYearActivitiesTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter();
             this.tableLayoutPanelParticipation.SuspendLayout();
             this.GroupBoxMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
-            this.groupBoxActivity.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).BeginInit();
+            this.groupBoxActivity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentYearActivitiesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,13 +77,12 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanelParticipation.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.5F));
             this.tableLayoutPanelParticipation.Controls.Add(this.GroupBoxMember, 0, 0);
             this.tableLayoutPanelParticipation.Controls.Add(this.groupBoxActivity, 1, 0);
-            this.tableLayoutPanelParticipation.Controls.Add(this.flowLayoutPanel1, 0, 1);
             this.tableLayoutPanelParticipation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelParticipation.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanelParticipation.Name = "tableLayoutPanelParticipation";
-            this.tableLayoutPanelParticipation.RowCount = 2;
+            this.tableLayoutPanelParticipation.RowCount = 1;
             this.tableLayoutPanelParticipation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 439F));
-            this.tableLayoutPanelParticipation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanelParticipation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelParticipation.Size = new System.Drawing.Size(804, 568);
             this.tableLayoutPanelParticipation.TabIndex = 0;
             // 
@@ -96,7 +92,7 @@ namespace FilRougeMCMPWinforms
             this.GroupBoxMember.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GroupBoxMember.Location = new System.Drawing.Point(3, 3);
             this.GroupBoxMember.Name = "GroupBoxMember";
-            this.GroupBoxMember.Size = new System.Drawing.Size(400, 433);
+            this.GroupBoxMember.Size = new System.Drawing.Size(400, 562);
             this.GroupBoxMember.TabIndex = 0;
             this.GroupBoxMember.TabStop = false;
             this.GroupBoxMember.Text = "Adhérents";
@@ -133,9 +129,161 @@ namespace FilRougeMCMPWinforms
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(394, 414);
+            this.dataGridViewUsers.Size = new System.Drawing.Size(394, 543);
             this.dataGridViewUsers.TabIndex = 0;
             this.dataGridViewUsers.SelectionChanged += new System.EventHandler(this.dataGridViewUsers_SelectionChanged);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "Prénom";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // isorganizerDataGridViewCheckBoxColumn
+            // 
+            this.isorganizerDataGridViewCheckBoxColumn.DataPropertyName = "is_organizer";
+            this.isorganizerDataGridViewCheckBoxColumn.HeaderText = "is_organizer";
+            this.isorganizerDataGridViewCheckBoxColumn.Name = "isorganizerDataGridViewCheckBoxColumn";
+            this.isorganizerDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.isorganizerDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // dobDataGridViewTextBoxColumn
+            // 
+            this.dobDataGridViewTextBoxColumn.DataPropertyName = "dob";
+            this.dobDataGridViewTextBoxColumn.HeaderText = "dob";
+            this.dobDataGridViewTextBoxColumn.Name = "dobDataGridViewTextBoxColumn";
+            this.dobDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dobDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // profilepicDataGridViewImageColumn
+            // 
+            this.profilepicDataGridViewImageColumn.DataPropertyName = "profile_pic";
+            this.profilepicDataGridViewImageColumn.HeaderText = "profile_pic";
+            this.profilepicDataGridViewImageColumn.Name = "profilepicDataGridViewImageColumn";
+            this.profilepicDataGridViewImageColumn.ReadOnly = true;
+            this.profilepicDataGridViewImageColumn.Visible = false;
+            // 
+            // streetnumberDataGridViewTextBoxColumn
+            // 
+            this.streetnumberDataGridViewTextBoxColumn.DataPropertyName = "street_number";
+            this.streetnumberDataGridViewTextBoxColumn.HeaderText = "street_number";
+            this.streetnumberDataGridViewTextBoxColumn.Name = "streetnumberDataGridViewTextBoxColumn";
+            this.streetnumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.streetnumberDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // streetnameDataGridViewTextBoxColumn
+            // 
+            this.streetnameDataGridViewTextBoxColumn.DataPropertyName = "street_name";
+            this.streetnameDataGridViewTextBoxColumn.HeaderText = "street_name";
+            this.streetnameDataGridViewTextBoxColumn.Name = "streetnameDataGridViewTextBoxColumn";
+            this.streetnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.streetnameDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // zipcodeDataGridViewTextBoxColumn
+            // 
+            this.zipcodeDataGridViewTextBoxColumn.DataPropertyName = "zip_code";
+            this.zipcodeDataGridViewTextBoxColumn.HeaderText = "zip_code";
+            this.zipcodeDataGridViewTextBoxColumn.Name = "zipcodeDataGridViewTextBoxColumn";
+            this.zipcodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zipcodeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cityDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // countryDataGridViewTextBoxColumn
+            // 
+            this.countryDataGridViewTextBoxColumn.DataPropertyName = "country";
+            this.countryDataGridViewTextBoxColumn.HeaderText = "country";
+            this.countryDataGridViewTextBoxColumn.Name = "countryDataGridViewTextBoxColumn";
+            this.countryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.countryDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // telephonenumberDataGridViewTextBoxColumn
+            // 
+            this.telephonenumberDataGridViewTextBoxColumn.DataPropertyName = "telephone_number";
+            this.telephonenumberDataGridViewTextBoxColumn.HeaderText = "telephone_number";
+            this.telephonenumberDataGridViewTextBoxColumn.Name = "telephonenumberDataGridViewTextBoxColumn";
+            this.telephonenumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telephonenumberDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // createdatDataGridViewTextBoxColumn
+            // 
+            this.createdatDataGridViewTextBoxColumn.DataPropertyName = "created_at";
+            this.createdatDataGridViewTextBoxColumn.HeaderText = "created_at";
+            this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
+            this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.createdatDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // updatedatDataGridViewTextBoxColumn
+            // 
+            this.updatedatDataGridViewTextBoxColumn.DataPropertyName = "updated_at";
+            this.updatedatDataGridViewTextBoxColumn.HeaderText = "updated_at";
+            this.updatedatDataGridViewTextBoxColumn.Name = "updatedatDataGridViewTextBoxColumn";
+            this.updatedatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.updatedatDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // remembertokenDataGridViewTextBoxColumn
+            // 
+            this.remembertokenDataGridViewTextBoxColumn.DataPropertyName = "remember_token";
+            this.remembertokenDataGridViewTextBoxColumn.HeaderText = "remember_token";
+            this.remembertokenDataGridViewTextBoxColumn.Name = "remembertokenDataGridViewTextBoxColumn";
+            this.remembertokenDataGridViewTextBoxColumn.ReadOnly = true;
+            this.remembertokenDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // isactiveDataGridViewCheckBoxColumn
+            // 
+            this.isactiveDataGridViewCheckBoxColumn.DataPropertyName = "is_active";
+            this.isactiveDataGridViewCheckBoxColumn.HeaderText = "is_active";
+            this.isactiveDataGridViewCheckBoxColumn.Name = "isactiveDataGridViewCheckBoxColumn";
+            this.isactiveDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.isactiveDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // mcmpDataSet
+            // 
+            this.mcmpDataSet.DataSetName = "mcmpDataSet";
+            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBoxActivity
             // 
@@ -143,7 +291,7 @@ namespace FilRougeMCMPWinforms
             this.groupBoxActivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxActivity.Location = new System.Drawing.Point(409, 3);
             this.groupBoxActivity.Name = "groupBoxActivity";
-            this.groupBoxActivity.Size = new System.Drawing.Size(392, 433);
+            this.groupBoxActivity.Size = new System.Drawing.Size(392, 562);
             this.groupBoxActivity.TabIndex = 1;
             this.groupBoxActivity.TabStop = false;
             this.groupBoxActivity.Text = "Sorties";
@@ -165,205 +313,52 @@ namespace FilRougeMCMPWinforms
             this.dataGridViewActivities.ReadOnly = true;
             this.dataGridViewActivities.RowHeadersVisible = false;
             this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewActivities.Size = new System.Drawing.Size(386, 414);
+            this.dataGridViewActivities.Size = new System.Drawing.Size(386, 543);
             this.dataGridViewActivities.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.tableLayoutPanelParticipation.SetColumnSpan(this.flowLayoutPanel1, 2);
-            this.flowLayoutPanel1.Controls.Add(this.btnReset);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 442);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(798, 123);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnReset.Location = new System.Drawing.Point(3, 3);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(118, 62);
-            this.btnReset.TabIndex = 3;
-            this.btnReset.Text = "Remise à zéro";
-            this.btnReset.UseVisualStyleBackColor = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // firstnameDataGridViewTextBoxColumn
-            // 
-            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
-            this.firstnameDataGridViewTextBoxColumn.HeaderText = "Prénom";
-            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // isorganizerDataGridViewCheckBoxColumn
-            // 
-            this.isorganizerDataGridViewCheckBoxColumn.DataPropertyName = "is_organizer";
-            this.isorganizerDataGridViewCheckBoxColumn.HeaderText = "is_organizer";
-            this.isorganizerDataGridViewCheckBoxColumn.Name = "isorganizerDataGridViewCheckBoxColumn";
-            this.isorganizerDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // dobDataGridViewTextBoxColumn
-            // 
-            this.dobDataGridViewTextBoxColumn.DataPropertyName = "dob";
-            this.dobDataGridViewTextBoxColumn.HeaderText = "dob";
-            this.dobDataGridViewTextBoxColumn.Name = "dobDataGridViewTextBoxColumn";
-            this.dobDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // profilepicDataGridViewImageColumn
-            // 
-            this.profilepicDataGridViewImageColumn.DataPropertyName = "profile_pic";
-            this.profilepicDataGridViewImageColumn.HeaderText = "profile_pic";
-            this.profilepicDataGridViewImageColumn.Name = "profilepicDataGridViewImageColumn";
-            this.profilepicDataGridViewImageColumn.Visible = false;
-            // 
-            // streetnumberDataGridViewTextBoxColumn
-            // 
-            this.streetnumberDataGridViewTextBoxColumn.DataPropertyName = "street_number";
-            this.streetnumberDataGridViewTextBoxColumn.HeaderText = "street_number";
-            this.streetnumberDataGridViewTextBoxColumn.Name = "streetnumberDataGridViewTextBoxColumn";
-            this.streetnumberDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // streetnameDataGridViewTextBoxColumn
-            // 
-            this.streetnameDataGridViewTextBoxColumn.DataPropertyName = "street_name";
-            this.streetnameDataGridViewTextBoxColumn.HeaderText = "street_name";
-            this.streetnameDataGridViewTextBoxColumn.Name = "streetnameDataGridViewTextBoxColumn";
-            this.streetnameDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // zipcodeDataGridViewTextBoxColumn
-            // 
-            this.zipcodeDataGridViewTextBoxColumn.DataPropertyName = "zip_code";
-            this.zipcodeDataGridViewTextBoxColumn.HeaderText = "zip_code";
-            this.zipcodeDataGridViewTextBoxColumn.Name = "zipcodeDataGridViewTextBoxColumn";
-            this.zipcodeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // countryDataGridViewTextBoxColumn
-            // 
-            this.countryDataGridViewTextBoxColumn.DataPropertyName = "country";
-            this.countryDataGridViewTextBoxColumn.HeaderText = "country";
-            this.countryDataGridViewTextBoxColumn.Name = "countryDataGridViewTextBoxColumn";
-            this.countryDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // telephonenumberDataGridViewTextBoxColumn
-            // 
-            this.telephonenumberDataGridViewTextBoxColumn.DataPropertyName = "telephone_number";
-            this.telephonenumberDataGridViewTextBoxColumn.HeaderText = "telephone_number";
-            this.telephonenumberDataGridViewTextBoxColumn.Name = "telephonenumberDataGridViewTextBoxColumn";
-            this.telephonenumberDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // createdatDataGridViewTextBoxColumn
-            // 
-            this.createdatDataGridViewTextBoxColumn.DataPropertyName = "created_at";
-            this.createdatDataGridViewTextBoxColumn.HeaderText = "created_at";
-            this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
-            this.createdatDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // updatedatDataGridViewTextBoxColumn
-            // 
-            this.updatedatDataGridViewTextBoxColumn.DataPropertyName = "updated_at";
-            this.updatedatDataGridViewTextBoxColumn.HeaderText = "updated_at";
-            this.updatedatDataGridViewTextBoxColumn.Name = "updatedatDataGridViewTextBoxColumn";
-            this.updatedatDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // remembertokenDataGridViewTextBoxColumn
-            // 
-            this.remembertokenDataGridViewTextBoxColumn.DataPropertyName = "remember_token";
-            this.remembertokenDataGridViewTextBoxColumn.HeaderText = "remember_token";
-            this.remembertokenDataGridViewTextBoxColumn.Name = "remembertokenDataGridViewTextBoxColumn";
-            this.remembertokenDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // isactiveDataGridViewCheckBoxColumn
-            // 
-            this.isactiveDataGridViewCheckBoxColumn.DataPropertyName = "is_active";
-            this.isactiveDataGridViewCheckBoxColumn.HeaderText = "is_active";
-            this.isactiveDataGridViewCheckBoxColumn.Name = "isactiveDataGridViewCheckBoxColumn";
-            this.isactiveDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // mcmpDataSet
-            // 
-            this.mcmpDataSet.DataSetName = "mcmpDataSet";
-            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // currentYearActivitiesBindingSource
-            // 
-            this.currentYearActivitiesBindingSource.DataMember = "CurrentYearActivities";
-            this.currentYearActivitiesBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // currentYearActivitiesTableAdapter
-            // 
-            this.currentYearActivitiesTableAdapter.ClearBeforeFill = true;
             // 
             // activitynameDataGridViewTextBoxColumn
             // 
             this.activitynameDataGridViewTextBoxColumn.DataPropertyName = "activity_name";
             this.activitynameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'activité";
             this.activitynameDataGridViewTextBoxColumn.Name = "activitynameDataGridViewTextBoxColumn";
+            this.activitynameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // activitydateDataGridViewTextBoxColumn
             // 
             this.activitydateDataGridViewTextBoxColumn.DataPropertyName = "activity_date";
             this.activitydateDataGridViewTextBoxColumn.HeaderText = "Date de l\'activité";
             this.activitydateDataGridViewTextBoxColumn.Name = "activitydateDataGridViewTextBoxColumn";
+            this.activitydateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // FormParticipation
+            // currentYearActivitiesBindingSource
+            // 
+            this.currentYearActivitiesBindingSource.DataMember = "CurrentYearActivities";
+            this.currentYearActivitiesBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // currentYearActivitiesTableAdapter
+            // 
+            this.currentYearActivitiesTableAdapter.ClearBeforeFill = true;
+            // 
+            // FormParticipationActivityforUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 568);
             this.Controls.Add(this.tableLayoutPanelParticipation);
-            this.Name = "FormParticipation";
+            this.Name = "FormParticipationActivityforUsers";
             this.Text = "FormParticipation";
             this.Load += new System.EventHandler(this.FormParticipation_Load);
             this.tableLayoutPanelParticipation.ResumeLayout(false);
             this.GroupBoxMember.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
-            this.groupBoxActivity.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).EndInit();
+            this.groupBoxActivity.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentYearActivitiesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -379,8 +374,6 @@ namespace FilRougeMCMPWinforms
         private mcmpDataSet mcmpDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private mcmpDataSetTableAdapters.usersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
