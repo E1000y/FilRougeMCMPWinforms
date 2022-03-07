@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FilRougeMCMPWinforms
 {
-    public partial class Form1 : Form
+    public partial class FormWelcome : Form
     {
-        public Form1()
+        public FormWelcome()
         {
             InitializeComponent();
             customizeDesign();

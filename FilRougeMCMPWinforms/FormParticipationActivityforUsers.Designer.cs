@@ -128,6 +128,7 @@ namespace FilRougeMCMPWinforms
             this.dataGridViewUsers.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.ReadOnly = true;
+            this.dataGridViewUsers.RowHeadersVisible = false;
             this.dataGridViewUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewUsers.Size = new System.Drawing.Size(394, 543);
             this.dataGridViewUsers.TabIndex = 0;

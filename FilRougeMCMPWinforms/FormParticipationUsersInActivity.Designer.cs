@@ -117,6 +117,7 @@ namespace FilRougeMCMPWinforms
             this.dataGridViewActivities.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewActivities.Name = "dataGridViewActivities";
             this.dataGridViewActivities.ReadOnly = true;
+            this.dataGridViewActivities.RowHeadersVisible = false;
             this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewActivities.Size = new System.Drawing.Size(379, 711);
             this.dataGridViewActivities.TabIndex = 0;
@@ -252,6 +253,7 @@ namespace FilRougeMCMPWinforms
             this.dataGridViewMembers.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewMembers.Name = "dataGridViewMembers";
             this.dataGridViewMembers.ReadOnly = true;
+            this.dataGridViewMembers.RowHeadersVisible = false;
             this.dataGridViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewMembers.Size = new System.Drawing.Size(379, 711);
             this.dataGridViewMembers.TabIndex = 0;

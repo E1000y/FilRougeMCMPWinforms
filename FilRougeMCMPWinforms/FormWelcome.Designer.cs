@@ -1,7 +1,7 @@
 ﻿
 namespace FilRougeMCMPWinforms
 {
-    partial class Form1
+    partial class FormWelcome
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -29,6 +29,7 @@ namespace FilRougeMCMPWinforms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWelcome));
             this.SideMenuPanel = new System.Windows.Forms.Panel();
             this.BtnJetons = new System.Windows.Forms.Button();
             this.OutingsPanel = new System.Windows.Forms.Panel();
@@ -180,13 +181,15 @@ namespace FilRougeMCMPWinforms
             // ChildFormPanel
             // 
             this.ChildFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(232)))), ((int)(((byte)(236)))));
+            this.ChildFormPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChildFormPanel.BackgroundImage")));
+            this.ChildFormPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ChildFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChildFormPanel.Location = new System.Drawing.Point(293, 0);
             this.ChildFormPanel.Name = "ChildFormPanel";
             this.ChildFormPanel.Size = new System.Drawing.Size(929, 815);
             this.ChildFormPanel.TabIndex = 1;
             // 
-            // Form1
+            // FormWelcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,7 +200,7 @@ namespace FilRougeMCMPWinforms
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(792, 322);
-            this.Name = "Form1";
+            this.Name = "FormWelcome";
             this.Text = "Bienvenue sur l\'application MCMP";
             this.SideMenuPanel.ResumeLayout(false);
             this.OutingsPanel.ResumeLayout(false);
