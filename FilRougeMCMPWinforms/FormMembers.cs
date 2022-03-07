@@ -195,7 +195,7 @@ WHERE        (id = @pUsersRowId) AND (is_active = @pUsersRowisActive) AND (creat
             dateTimePickerEndDate.Value = DateTime.Today;
             vactivityfulltableorganizernameBindingSource.RemoveFilter();*/
 
-            dateTimePickerDoBlimitbeginning.Value = DateTime.Today.AddYears(-70);
+            dateTimePickerDoBlimitbeginning.Value = DateTime.Today.AddYears(-80);
             dateTimePickerDoBLimitEnd.Value = DateTime.Today.AddDays(-50);
 
             textBoxFilterMembers.Text = "";

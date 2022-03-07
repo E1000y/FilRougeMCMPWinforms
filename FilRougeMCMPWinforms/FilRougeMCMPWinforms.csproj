@@ -57,11 +57,6 @@
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cda60_bd1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cda60_bd1DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,17 +131,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="cda60_bd1DataSet.xsc">
-      <DependentUpon>cda60_bd1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="cda60_bd1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cda60_bd1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cda60_bd1DataSet.xss">
-      <DependentUpon>cda60_bd1DataSet.xsd</DependentUpon>
-    </None>
     <None Include="mcmpDataSet.xsc">
       <DependentUpon>mcmpDataSet.xsd</DependentUpon>
     </None>

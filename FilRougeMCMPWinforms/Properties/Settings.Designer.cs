@@ -26,21 +26,11 @@ namespace FilRougeMCMPWinforms.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;persistsecurityinfo=True;port=3316;database=mcmp")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=cda60.2isa.org;user id=cda60;persistsecurityinfo=True;port=3306;database=c" +
+            "da60_bd1;password=1205cda60")]
         public string mcmpConnectionString {
             get {
                 return ((string)(this["mcmpConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=cda60.2isa.org;user id=cda60;password=1205cda60;persistsecurityinfo=True;d" +
-            "atabase=cda60_bd1")]
-        public string mcmponlineConnectionString {
-            get {
-                return ((string)(this["mcmponlineConnectionString"]));
             }
         }
     }
