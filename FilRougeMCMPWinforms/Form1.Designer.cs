@@ -198,7 +198,7 @@ namespace FilRougeMCMPWinforms
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(792, 322);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Bienvenue sur l\'application MCMP";
             this.SideMenuPanel.ResumeLayout(false);
             this.OutingsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
