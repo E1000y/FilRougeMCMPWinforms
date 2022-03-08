@@ -5,10 +5,10 @@
     <Setting Name="mcmpConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=cda60.2isa.org;user id=cda60;persistsecurityinfo=True;port=3306;database=cda60_bd1;password=1205cda60&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;server=localhost;user id=root;persistsecurityinfo=True;port=3316;database=mcmp;password=&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=cda60.2isa.org;user id=cda60;persistsecurityinfo=True;port=3306;database=cda60_bd1;password=1205cda60</Value>
+      <Value Profile="(Default)">server=localhost;user id=root;persistsecurityinfo=True;port=3316;database=mcmp;password=</Value>
     </Setting>
   </Settings>
 </SettingsFile>
