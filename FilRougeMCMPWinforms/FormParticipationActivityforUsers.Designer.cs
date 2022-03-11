@@ -33,6 +33,15 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanelParticipation = new System.Windows.Forms.TableLayoutPanel();
             this.GroupBoxMember = new System.Windows.Forms.GroupBox();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
+            this.groupBoxActivity = new System.Windows.Forms.GroupBox();
+            this.dataGridViewActivities = new System.Windows.Forms.DataGridView();
+            this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currentYearActivitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
+            this.currentYearActivitiesTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,15 +60,6 @@ namespace FilRougeMCMPWinforms
             this.updatedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remembertokenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isactiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
-            this.groupBoxActivity = new System.Windows.Forms.GroupBox();
-            this.dataGridViewActivities = new System.Windows.Forms.DataGridView();
-            this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currentYearActivitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
-            this.currentYearActivitiesTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter();
             this.tableLayoutPanelParticipation.SuspendLayout();
             this.GroupBoxMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
@@ -134,6 +134,74 @@ namespace FilRougeMCMPWinforms
             this.dataGridViewUsers.TabIndex = 0;
             this.dataGridViewUsers.SelectionChanged += new System.EventHandler(this.dataGridViewUsers_SelectionChanged);
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // mcmpDataSet
+            // 
+            this.mcmpDataSet.DataSetName = "mcmpDataSet";
+            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBoxActivity
+            // 
+            this.groupBoxActivity.Controls.Add(this.dataGridViewActivities);
+            this.groupBoxActivity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxActivity.Location = new System.Drawing.Point(409, 3);
+            this.groupBoxActivity.Name = "groupBoxActivity";
+            this.groupBoxActivity.Size = new System.Drawing.Size(392, 562);
+            this.groupBoxActivity.TabIndex = 1;
+            this.groupBoxActivity.TabStop = false;
+            this.groupBoxActivity.Text = "Sorties";
+            // 
+            // dataGridViewActivities
+            // 
+            this.dataGridViewActivities.AllowUserToAddRows = false;
+            this.dataGridViewActivities.AllowUserToDeleteRows = false;
+            this.dataGridViewActivities.AutoGenerateColumns = false;
+            this.dataGridViewActivities.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewActivities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.activitynameDataGridViewTextBoxColumn,
+            this.activitydateDataGridViewTextBoxColumn});
+            this.dataGridViewActivities.DataSource = this.currentYearActivitiesBindingSource;
+            this.dataGridViewActivities.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewActivities.Location = new System.Drawing.Point(3, 16);
+            this.dataGridViewActivities.Name = "dataGridViewActivities";
+            this.dataGridViewActivities.ReadOnly = true;
+            this.dataGridViewActivities.RowHeadersVisible = false;
+            this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewActivities.Size = new System.Drawing.Size(386, 543);
+            this.dataGridViewActivities.TabIndex = 1;
+            // 
+            // activitynameDataGridViewTextBoxColumn
+            // 
+            this.activitynameDataGridViewTextBoxColumn.DataPropertyName = "activity_name";
+            this.activitynameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'activité";
+            this.activitynameDataGridViewTextBoxColumn.Name = "activitynameDataGridViewTextBoxColumn";
+            this.activitynameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // activitydateDataGridViewTextBoxColumn
+            // 
+            this.activitydateDataGridViewTextBoxColumn.DataPropertyName = "activity_date";
+            this.activitydateDataGridViewTextBoxColumn.HeaderText = "Date de l\'activité";
+            this.activitydateDataGridViewTextBoxColumn.Name = "activitydateDataGridViewTextBoxColumn";
+            this.activitydateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // currentYearActivitiesBindingSource
+            // 
+            this.currentYearActivitiesBindingSource.DataMember = "CurrentYearActivities";
+            this.currentYearActivitiesBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // currentYearActivitiesTableAdapter
+            // 
+            this.currentYearActivitiesTableAdapter.ClearBeforeFill = true;
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -145,6 +213,7 @@ namespace FilRougeMCMPWinforms
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.FillWeight = 73.85786F;
             this.nameDataGridViewTextBoxColumn.HeaderText = "Nom";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -152,6 +221,7 @@ namespace FilRougeMCMPWinforms
             // firstnameDataGridViewTextBoxColumn
             // 
             this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.FillWeight = 73.85786F;
             this.firstnameDataGridViewTextBoxColumn.HeaderText = "Prénom";
             this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
             this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -159,10 +229,10 @@ namespace FilRougeMCMPWinforms
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.FillWeight = 152.2843F;
             this.emailDataGridViewTextBoxColumn.HeaderText = "email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Visible = false;
             // 
             // isorganizerDataGridViewCheckBoxColumn
             // 
@@ -276,74 +346,6 @@ namespace FilRougeMCMPWinforms
             this.isactiveDataGridViewCheckBoxColumn.ReadOnly = true;
             this.isactiveDataGridViewCheckBoxColumn.Visible = false;
             // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // mcmpDataSet
-            // 
-            this.mcmpDataSet.DataSetName = "mcmpDataSet";
-            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // groupBoxActivity
-            // 
-            this.groupBoxActivity.Controls.Add(this.dataGridViewActivities);
-            this.groupBoxActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxActivity.Location = new System.Drawing.Point(409, 3);
-            this.groupBoxActivity.Name = "groupBoxActivity";
-            this.groupBoxActivity.Size = new System.Drawing.Size(392, 562);
-            this.groupBoxActivity.TabIndex = 1;
-            this.groupBoxActivity.TabStop = false;
-            this.groupBoxActivity.Text = "Sorties";
-            // 
-            // dataGridViewActivities
-            // 
-            this.dataGridViewActivities.AllowUserToAddRows = false;
-            this.dataGridViewActivities.AllowUserToDeleteRows = false;
-            this.dataGridViewActivities.AutoGenerateColumns = false;
-            this.dataGridViewActivities.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewActivities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.activitynameDataGridViewTextBoxColumn,
-            this.activitydateDataGridViewTextBoxColumn});
-            this.dataGridViewActivities.DataSource = this.currentYearActivitiesBindingSource;
-            this.dataGridViewActivities.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewActivities.Location = new System.Drawing.Point(3, 16);
-            this.dataGridViewActivities.Name = "dataGridViewActivities";
-            this.dataGridViewActivities.ReadOnly = true;
-            this.dataGridViewActivities.RowHeadersVisible = false;
-            this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewActivities.Size = new System.Drawing.Size(386, 543);
-            this.dataGridViewActivities.TabIndex = 1;
-            // 
-            // activitynameDataGridViewTextBoxColumn
-            // 
-            this.activitynameDataGridViewTextBoxColumn.DataPropertyName = "activity_name";
-            this.activitynameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'activité";
-            this.activitynameDataGridViewTextBoxColumn.Name = "activitynameDataGridViewTextBoxColumn";
-            this.activitynameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // activitydateDataGridViewTextBoxColumn
-            // 
-            this.activitydateDataGridViewTextBoxColumn.DataPropertyName = "activity_date";
-            this.activitydateDataGridViewTextBoxColumn.HeaderText = "Date de l\'activité";
-            this.activitydateDataGridViewTextBoxColumn.Name = "activitydateDataGridViewTextBoxColumn";
-            this.activitydateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // currentYearActivitiesBindingSource
-            // 
-            this.currentYearActivitiesBindingSource.DataMember = "CurrentYearActivities";
-            this.currentYearActivitiesBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // currentYearActivitiesTableAdapter
-            // 
-            this.currentYearActivitiesTableAdapter.ClearBeforeFill = true;
-            // 
             // FormParticipationActivityforUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,6 +377,10 @@ namespace FilRougeMCMPWinforms
         private mcmpDataSet mcmpDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private mcmpDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activitynameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activitydateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource currentYearActivitiesBindingSource;
+        private mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter currentYearActivitiesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
@@ -393,9 +399,5 @@ namespace FilRougeMCMPWinforms
         private System.Windows.Forms.DataGridViewTextBoxColumn updatedatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn remembertokenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isactiveDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn activitynameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn activitydateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource currentYearActivitiesBindingSource;
-        private mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter currentYearActivitiesTableAdapter;
     }
 }

@@ -78,33 +78,33 @@ namespace FilRougeMCMPWinforms
                 {
                     tableauImageOctets = null;
                 }
-               
-                
+
+
 
             }
 
 
-            
-                String DestinationActivity = textBoxActivityDestination.Text;
-                String NameActivity = textBoxNameActivity.Text;
-                DateTime DateActivity = dtpDateActivity.Value;
-                String DescriptionActivity = textBoxDescription.Text;
-                String VehicleType = textBoxVehicleType.Text;
-                decimal? UsersRate = String.IsNullOrWhiteSpace(textBoxUserRate.Text) ? 0 : Decimal.Parse(textBoxUserRate.Text);
-                decimal? GuestsRate = String.IsNullOrWhiteSpace(textBoxGuestRate.Text) ? 0 : Decimal.Parse(textBoxGuestRate.Text);
-                decimal? ActivityDuration = String.IsNullOrWhiteSpace(textBoxActivityDurationDays.Text) ? 0 : Decimal.Parse(textBoxActivityDurationDays.Text);
-                int idOrganizer = (int)comboBoxOrganizerName.SelectedValue;
-                String GPSpoint = textBoxGPS.Text;
+
+            String DestinationActivity = textBoxActivityDestination.Text;
+            String NameActivity = textBoxNameActivity.Text;
+            DateTime DateActivity = dtpDateActivity.Value;
+            String DescriptionActivity = textBoxDescription.Text;
+            String VehicleType = textBoxVehicleType.Text;
+            decimal? UsersRate = String.IsNullOrWhiteSpace(textBoxUserRate.Text) ? 0 : Decimal.Parse(textBoxUserRate.Text);
+            decimal? GuestsRate = String.IsNullOrWhiteSpace(textBoxGuestRate.Text) ? 0 : Decimal.Parse(textBoxGuestRate.Text);
+            decimal? ActivityDuration = String.IsNullOrWhiteSpace(textBoxActivityDurationDays.Text) ? 0 : Decimal.Parse(textBoxActivityDurationDays.Text);
+            int idOrganizer = (int)comboBoxOrganizerName.SelectedValue;
+            String GPSpoint = textBoxGPS.Text;
 
 
-                activityTableAdapter.Insert(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, tableauImageOctets, ActivityDuration, idOrganizer);
+            activityTableAdapter.Insert(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, tableauImageOctets, ActivityDuration, idOrganizer);
 
 
-                this.vactivityfulltableorganizernameTableAdapter.Fill(this.mcmpDataSet.vactivityfulltableorganizername);
+            this.vactivityfulltableorganizernameTableAdapter.Fill(this.mcmpDataSet.vactivityfulltableorganizername);
 
-                this.vactivityfulltableorganizernameBindingSource.Position = this.vactivityfulltableorganizernameBindingSource.Find("id_activity", activityTableAdapter.Adapter.InsertCommand.LastInsertedId);
+            this.vactivityfulltableorganizernameBindingSource.Position = this.vactivityfulltableorganizernameBindingSource.Find("id_activity", activityTableAdapter.Adapter.InsertCommand.LastInsertedId);
 
-            
+
 
 
 
@@ -173,10 +173,10 @@ namespace FilRougeMCMPWinforms
 
                 activityTableAdapter.Update(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, tableauImageOctets, ActivityDuration, idOrganizer, IdActivityDuWhere, IdOrganizerDuWhere, ActivityNameDuWhere, ActivityDescriptionDuWhere, ActivityDestinationDuWhere, ActivityGPSPointDuWhere, ActivityDateDuWhere, UserRateDuWhere, GuestRateDuWhere, VehicleTypeDuWhere, ActivityDurationDaysDuWhere);
 
-               /* TODO revoir ceci
-                * 
-                * activityTableAdapter.Update(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, ActivityDuration, idOrganizer, IdActivityDuWhere, IdOrganizerDuWhere, ActivityNameDuWhere, ActivityDescriptionDuWhere, ActivityDestinationDuWhere, ActivityGPSPointDuWhere, ActivityDateDuWhere, UserRateDuWhere, GuestRateDuWhere, VehicleTypeDuWhere, ActivityDurationDaysDuWhere);
-               */
+                /* TODO revoir ceci
+                 * 
+                 * activityTableAdapter.Update(NameActivity, DescriptionActivity, DestinationActivity, GPSpoint, DateActivity, UsersRate, GuestsRate, VehicleType, ActivityDuration, idOrganizer, IdActivityDuWhere, IdOrganizerDuWhere, ActivityNameDuWhere, ActivityDescriptionDuWhere, ActivityDestinationDuWhere, ActivityGPSPointDuWhere, ActivityDateDuWhere, UserRateDuWhere, GuestRateDuWhere, VehicleTypeDuWhere, ActivityDurationDaysDuWhere);
+                */
 
                 this.vactivityfulltableorganizernameTableAdapter.Fill(this.mcmpDataSet.vactivityfulltableorganizername);
                 this.vactivityfulltableorganizernameBindingSource.Position = vactivityfulltableorganizernameBindingSource.Find("activity_name", NameActivity);
@@ -199,40 +199,14 @@ namespace FilRougeMCMPWinforms
                 DataRowView objectDRV = (DataRowView)vactivityfulltableorganizernameBindingSource.Current;
                 mcmpDataSet.vactivityfulltableorganizernameRow vactivityorgaRow = (mcmpDataSet.vactivityfulltableorganizernameRow)objectDRV.Row;
 
-                //BUG : on a une erreur là car le BindingSource de participate est null forcément car on n'a pas de datagridview correspondant au participatebindingsource
-
-
-
-
                 DialogResult dr = MessageBox.Show("Voulez-vous vraiment supprimer cette ligne?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
                 if (dr == DialogResult.Yes)
                 {
                     using (TransactionScope objtransaction = new TransactionScope())
                     {
-
-
-                        //TODO : Supprimer les inscriptions dans la table participate (le rajouter dans l'interface), inscrire tout ça dans une transaction 
                         int np = this.participateTableAdapter.DeleteActivity(vactivityorgaRow.id_activity);
-
-                        
-                        /*
-                         * 
-                         * DELETE FROM activity
-                            WHERE        (id_activity = @pIdActivityDuWhere) 
-                            AND (activity_name IS NULL OR activity_name = @pActivityNameDuWhere) 
-                            AND (activity_description IS NULL OR activity_description = @pActivityDescriptionDuWhere) 
-                            AND (activity_destination IS NULL OR activity_destination = @pActivityDestinationDuWhere) 
-                            AND (activity_gps_point IS NULL OR activity_gps_point = @pActivityGPSPointDuWhere) 
-                            AND (activity_date IS NULL OR activity_date = @pActivityDateDuWhere) 
-                            AND (user_rate IS NULL OR user_rate = @pUserRateDuWhere) 
-                            AND (guest_rate IS NULL OR guest_rate = @pGuestRateDuWhere) 
-                            AND (vehicle_type IS NULL OR vehicle_type = @pVehicleTypeDuWhere) 
-                            AND (activity_duration_days IS NULL OR activity_duration_days = @pActivityDurationDaysDuWhere) 
-                            AND (id = @pIdOrganizerDuWhere)
-                         * 
-                         */
-
+                        MessageBox.Show(np + " participations retirées", "info");
 
                         int n = this.activityTableAdapter.Delete(vactivityorgaRow.id_activity, vactivityorgaRow.id, vactivityorgaRow.activity_name, vactivityorgaRow.activity_description, vactivityorgaRow.activity_destination, vactivityorgaRow.activity_gps_point, vactivityorgaRow.activity_date, vactivityorgaRow.user_rate, vactivityorgaRow.guest_rate, vactivityorgaRow.vehicle_type, vactivityorgaRow.activity_duration_days);
 
@@ -248,8 +222,6 @@ namespace FilRougeMCMPWinforms
                         {
                             objtransaction.Complete();
                         }
-
-
                     }
                     MySqlConnection.ClearAllPools();
                 }
@@ -321,7 +293,7 @@ namespace FilRougeMCMPWinforms
                     MessageBox.Show(objOpenfiledialog.FileName);
                     pictureBoxActivityImage.Load(objOpenfiledialog.FileName);
 
-                    
+
                 }
             }
 

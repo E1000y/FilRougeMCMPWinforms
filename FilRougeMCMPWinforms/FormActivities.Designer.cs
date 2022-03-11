@@ -35,6 +35,18 @@ namespace FilRougeMCMPWinforms
             this.label7 = new System.Windows.Forms.Label();
             this.OutingsGroupBox = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitydescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitydestinationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitygpspointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userrateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guestrateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicletypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitypicDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.activitydurationdaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vactivityfulltableorganizernameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
             this.label1 = new System.Windows.Forms.Label();
@@ -84,18 +96,6 @@ namespace FilRougeMCMPWinforms
             this.vactivityfulltableorganizernameTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.vactivityfulltableorganizernameTableAdapter();
             this.participateTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.participateTableAdapter();
             this.participateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitydescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitydestinationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitygpspointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userrateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guestrateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicletypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitypicDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.activitydurationdaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.OutingsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -166,9 +166,9 @@ namespace FilRougeMCMPWinforms
             // textBoxFilterActivity
             // 
             this.textBoxFilterActivity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxFilterActivity.Location = new System.Drawing.Point(114, 11);
+            this.textBoxFilterActivity.Location = new System.Drawing.Point(113, 11);
             this.textBoxFilterActivity.Name = "textBoxFilterActivity";
-            this.textBoxFilterActivity.Size = new System.Drawing.Size(231, 20);
+            this.textBoxFilterActivity.Size = new System.Drawing.Size(229, 20);
             this.textBoxFilterActivity.TabIndex = 0;
             this.textBoxFilterActivity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFilterActivity_KeyPress);
             // 
@@ -176,7 +176,7 @@ namespace FilRougeMCMPWinforms
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 8);
+            this.label7.Location = new System.Drawing.Point(18, 8);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 26);
             this.label7.TabIndex = 19;
@@ -223,424 +223,6 @@ namespace FilRougeMCMPWinforms
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(786, 98);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // vactivityfulltableorganizernameBindingSource
-            // 
-            this.vactivityfulltableorganizernameBindingSource.DataMember = "vactivityfulltableorganizername";
-            this.vactivityfulltableorganizernameBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // mcmpDataSet
-            // 
-            this.mcmpDataSet.DataSetName = "mcmpDataSet";
-            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 246);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Description";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 345);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "type de véhicule";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 371);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "tarif adhérents";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 397);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "tarif invités";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 423);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Durée de l\'activité";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 454);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Organisateur";
-            // 
-            // textBoxDescription
-            // 
-            this.textBoxDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_description", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxDescription.Location = new System.Drawing.Point(114, 249);
-            this.textBoxDescription.Multiline = true;
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxDescription.Size = new System.Drawing.Size(231, 93);
-            this.textBoxDescription.TabIndex = 6;
-            // 
-            // textBoxVehicleType
-            // 
-            this.textBoxVehicleType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "vehicle_type", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxVehicleType.Location = new System.Drawing.Point(114, 348);
-            this.textBoxVehicleType.Name = "textBoxVehicleType";
-            this.textBoxVehicleType.Size = new System.Drawing.Size(100, 20);
-            this.textBoxVehicleType.TabIndex = 7;
-            // 
-            // textBoxUserRate
-            // 
-            this.textBoxUserRate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "user_rate", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxUserRate.Location = new System.Drawing.Point(114, 374);
-            this.textBoxUserRate.Name = "textBoxUserRate";
-            this.textBoxUserRate.Size = new System.Drawing.Size(100, 20);
-            this.textBoxUserRate.TabIndex = 8;
-            this.textBoxUserRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUserRate_KeyPress);
-            // 
-            // textBoxGuestRate
-            // 
-            this.textBoxGuestRate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "guest_rate", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxGuestRate.Location = new System.Drawing.Point(114, 400);
-            this.textBoxGuestRate.Name = "textBoxGuestRate";
-            this.textBoxGuestRate.Size = new System.Drawing.Size(100, 20);
-            this.textBoxGuestRate.TabIndex = 13;
-            this.textBoxGuestRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUserRate_KeyPress);
-            // 
-            // textBoxActivityDurationDays
-            // 
-            this.textBoxActivityDurationDays.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_duration_days", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N1"));
-            this.textBoxActivityDurationDays.Location = new System.Drawing.Point(114, 426);
-            this.textBoxActivityDurationDays.Name = "textBoxActivityDurationDays";
-            this.textBoxActivityDurationDays.Size = new System.Drawing.Size(100, 20);
-            this.textBoxActivityDurationDays.TabIndex = 14;
-            this.textBoxActivityDurationDays.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUserRate_KeyPress);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label9);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBoxActivityImage);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(351, 249);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.tableLayoutPanel1.SetRowSpan(this.flowLayoutPanel1, 4);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(444, 171);
-            this.flowLayoutPanel1.TabIndex = 16;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Photo de l\'activité";
-            // 
-            // pictureBoxActivityImage
-            // 
-            this.pictureBoxActivityImage.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.vactivityfulltableorganizernameBindingSource, "activity_pic", true));
-            this.pictureBoxActivityImage.Location = new System.Drawing.Point(100, 3);
-            this.pictureBoxActivityImage.Name = "pictureBoxActivityImage";
-            this.pictureBoxActivityImage.Size = new System.Drawing.Size(286, 158);
-            this.pictureBoxActivityImage.TabIndex = 1;
-            this.pictureBoxActivityImage.TabStop = false;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.btnClearFields);
-            this.flowLayoutPanel2.Controls.Add(this.BtnAddActivity);
-            this.flowLayoutPanel2.Controls.Add(this.BtnUpdateActivity);
-            this.flowLayoutPanel2.Controls.Add(this.BtnDeleteActivity);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(351, 457);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(444, 87);
-            this.flowLayoutPanel2.TabIndex = 17;
-            // 
-            // btnClearFields
-            // 
-            this.btnClearFields.Location = new System.Drawing.Point(3, 3);
-            this.btnClearFields.Name = "btnClearFields";
-            this.btnClearFields.Size = new System.Drawing.Size(52, 50);
-            this.btnClearFields.TabIndex = 30;
-            this.btnClearFields.Text = "Vider les champs";
-            this.btnClearFields.UseVisualStyleBackColor = true;
-            this.btnClearFields.Click += new System.EventHandler(this.btnClearFields_Click);
-            // 
-            // BtnAddActivity
-            // 
-            this.BtnAddActivity.Location = new System.Drawing.Point(61, 3);
-            this.BtnAddActivity.Name = "BtnAddActivity";
-            this.BtnAddActivity.Size = new System.Drawing.Size(107, 50);
-            this.BtnAddActivity.TabIndex = 31;
-            this.BtnAddActivity.Text = "&Ajouter une nouvelle activité";
-            this.BtnAddActivity.UseVisualStyleBackColor = true;
-            this.BtnAddActivity.Click += new System.EventHandler(this.BtnAddActivity_Click);
-            // 
-            // BtnUpdateActivity
-            // 
-            this.BtnUpdateActivity.Location = new System.Drawing.Point(174, 3);
-            this.BtnUpdateActivity.Name = "BtnUpdateActivity";
-            this.BtnUpdateActivity.Size = new System.Drawing.Size(107, 50);
-            this.BtnUpdateActivity.TabIndex = 32;
-            this.BtnUpdateActivity.Text = "&Modifier l\'activité";
-            this.BtnUpdateActivity.UseVisualStyleBackColor = true;
-            this.BtnUpdateActivity.Click += new System.EventHandler(this.BtnUpdateActivity_Click);
-            // 
-            // BtnDeleteActivity
-            // 
-            this.BtnDeleteActivity.Location = new System.Drawing.Point(287, 3);
-            this.BtnDeleteActivity.Name = "BtnDeleteActivity";
-            this.BtnDeleteActivity.Size = new System.Drawing.Size(107, 50);
-            this.BtnDeleteActivity.TabIndex = 33;
-            this.BtnDeleteActivity.Text = "&Supprimer l\'activité";
-            this.BtnDeleteActivity.UseVisualStyleBackColor = true;
-            this.BtnDeleteActivity.Click += new System.EventHandler(this.BtnDeleteActivity_Click);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.label8);
-            this.flowLayoutPanel3.Controls.Add(this.textBoxGPS);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(351, 426);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(431, 25);
-            this.flowLayoutPanel3.TabIndex = 18;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 6);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Point GPS RDV";
-            // 
-            // textBoxGPS
-            // 
-            this.textBoxGPS.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxGPS.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_gps_point", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxGPS.Location = new System.Drawing.Point(91, 3);
-            this.textBoxGPS.Name = "textBoxGPS";
-            this.textBoxGPS.Size = new System.Drawing.Size(317, 20);
-            this.textBoxGPS.TabIndex = 27;
-            this.textBoxGPS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGPS_KeyPress);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 191);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 13);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Nom de la sortie";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 217);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 13);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Date de la sortie";
-            // 
-            // textBoxNameActivity
-            // 
-            this.textBoxNameActivity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxNameActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxNameActivity.Location = new System.Drawing.Point(114, 194);
-            this.textBoxNameActivity.Name = "textBoxNameActivity";
-            this.textBoxNameActivity.Size = new System.Drawing.Size(231, 20);
-            this.textBoxNameActivity.TabIndex = 4;
-            // 
-            // dtpDateActivity
-            // 
-            this.dtpDateActivity.CustomFormat = "le yyyy/MM/dd à HH:mm";
-            this.dtpDateActivity.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vactivityfulltableorganizernameBindingSource, "activity_date", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.dtpDateActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtpDateActivity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateActivity.Location = new System.Drawing.Point(114, 220);
-            this.dtpDateActivity.Name = "dtpDateActivity";
-            this.dtpDateActivity.Size = new System.Drawing.Size(231, 20);
-            this.dtpDateActivity.TabIndex = 5;
-            // 
-            // comboBoxOrganizerName
-            // 
-            this.comboBoxOrganizerName.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.activityBindingSource, "id", true));
-            this.comboBoxOrganizerName.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activityBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.comboBoxOrganizerName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.comboBoxOrganizerName.DataSource = this.usersBindingSource;
-            this.comboBoxOrganizerName.DisplayMember = "name";
-            this.comboBoxOrganizerName.FormattingEnabled = true;
-            this.comboBoxOrganizerName.Location = new System.Drawing.Point(114, 457);
-            this.comboBoxOrganizerName.Name = "comboBoxOrganizerName";
-            this.comboBoxOrganizerName.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxOrganizerName.TabIndex = 26;
-            this.comboBoxOrganizerName.ValueMember = "id";
-            // 
-            // activityBindingSource
-            // 
-            this.activityBindingSource.DataMember = "activity";
-            this.activityBindingSource.DataSource = this.mcmpDataSet;
-            this.activityBindingSource.CurrentChanged += new System.EventHandler(this.activityBindingSource_CurrentChanged);
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 165);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 26);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Destination de l\'activité";
-            // 
-            // textBoxActivityDestination
-            // 
-            this.textBoxActivityDestination.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_destination", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.textBoxActivityDestination.Location = new System.Drawing.Point(114, 168);
-            this.textBoxActivityDestination.Name = "textBoxActivityDestination";
-            this.textBoxActivityDestination.Size = new System.Drawing.Size(181, 20);
-            this.textBoxActivityDestination.TabIndex = 3;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.label13);
-            this.flowLayoutPanel4.Controls.Add(this.dateTimePickerBeginDate);
-            this.flowLayoutPanel4.Controls.Add(this.label14);
-            this.flowLayoutPanel4.Controls.Add(this.dateTimePickerEndDate);
-            this.flowLayoutPanel4.Controls.Add(this.btnReset);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(351, 3);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(427, 36);
-            this.flowLayoutPanel4.TabIndex = 28;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 7);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Entre le";
-            // 
-            // dateTimePickerBeginDate
-            // 
-            this.dateTimePickerBeginDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerBeginDate.CustomFormat = "yyyy/MM/dd";
-            this.dateTimePickerBeginDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerBeginDate.Location = new System.Drawing.Point(52, 3);
-            this.dateTimePickerBeginDate.MaxDate = new System.DateTime(2022, 2, 28, 16, 37, 46, 0);
-            this.dateTimePickerBeginDate.Name = "dateTimePickerBeginDate";
-            this.dateTimePickerBeginDate.Size = new System.Drawing.Size(90, 20);
-            this.dateTimePickerBeginDate.TabIndex = 1;
-            this.dateTimePickerBeginDate.Value = new System.DateTime(2022, 2, 28, 0, 0, 0, 0);
-            this.dateTimePickerBeginDate.ValueChanged += new System.EventHandler(this.dateTimePickerBeginDate_ValueChanged);
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(148, 7);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 13);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Et Le ";
-            // 
-            // dateTimePickerEndDate
-            // 
-            this.dateTimePickerEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerEndDate.CustomFormat = "yyyy/MM/dd";
-            this.dateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerEndDate.Location = new System.Drawing.Point(189, 3);
-            this.dateTimePickerEndDate.MinDate = new System.DateTime(2022, 2, 16, 0, 0, 0, 0);
-            this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
-            this.dateTimePickerEndDate.Size = new System.Drawing.Size(92, 20);
-            this.dateTimePickerEndDate.TabIndex = 3;
-            this.dateTimePickerEndDate.ValueChanged += new System.EventHandler(this.dateTimePickerEndDate_ValueChanged);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(287, 3);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(107, 21);
-            this.btnReset.TabIndex = 4;
-            this.btnReset.Text = "&Rétablir";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnChangePic
-            // 
-            this.btnChangePic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnChangePic.Location = new System.Drawing.Point(351, 220);
-            this.btnChangePic.Name = "btnChangePic";
-            this.btnChangePic.Size = new System.Drawing.Size(444, 23);
-            this.btnChangePic.TabIndex = 29;
-            this.btnChangePic.Text = "Changer la photo de l\'activité";
-            this.btnChangePic.UseVisualStyleBackColor = true;
-            this.btnChangePic.Click += new System.EventHandler(this.btnChangePic_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // activityTableAdapter
-            // 
-            this.activityTableAdapter.ClearBeforeFill = true;
-            // 
-            // organizersBindingSource
-            // 
-            this.organizersBindingSource.DataMember = "Organizers";
-            this.organizersBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // organizersTableAdapter
-            // 
-            this.organizersTableAdapter.ClearBeforeFill = true;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // vorganizeractivityBindingSource
-            // 
-            this.vorganizeractivityBindingSource.DataMember = "vorganizeractivity";
-            this.vorganizeractivityBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // vactivityfulltableorganizernameTableAdapter
-            // 
-            this.vactivityfulltableorganizernameTableAdapter.ClearBeforeFill = true;
-            // 
-            // participateTableAdapter
-            // 
-            this.participateTableAdapter.ClearBeforeFill = true;
-            // 
-            // participateBindingSource
-            // 
-            this.participateBindingSource.DataMember = "participate";
-            this.participateBindingSource.DataSource = this.mcmpDataSet;
             // 
             // idactivityDataGridViewTextBoxColumn
             // 
@@ -734,6 +316,424 @@ namespace FilRougeMCMPWinforms
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // vactivityfulltableorganizernameBindingSource
+            // 
+            this.vactivityfulltableorganizernameBindingSource.DataMember = "vactivityfulltableorganizername";
+            this.vactivityfulltableorganizernameBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // mcmpDataSet
+            // 
+            this.mcmpDataSet.DataSetName = "mcmpDataSet";
+            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 246);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Description";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 345);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "type de véhicule";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 371);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "tarif adhérents";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 397);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "tarif invités";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 423);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Durée de l\'activité";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 454);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Organisateur";
+            // 
+            // textBoxDescription
+            // 
+            this.textBoxDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_description", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxDescription.Location = new System.Drawing.Point(113, 249);
+            this.textBoxDescription.Multiline = true;
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxDescription.Size = new System.Drawing.Size(229, 93);
+            this.textBoxDescription.TabIndex = 6;
+            // 
+            // textBoxVehicleType
+            // 
+            this.textBoxVehicleType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "vehicle_type", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxVehicleType.Location = new System.Drawing.Point(113, 348);
+            this.textBoxVehicleType.Name = "textBoxVehicleType";
+            this.textBoxVehicleType.Size = new System.Drawing.Size(100, 20);
+            this.textBoxVehicleType.TabIndex = 7;
+            // 
+            // textBoxUserRate
+            // 
+            this.textBoxUserRate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "user_rate", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxUserRate.Location = new System.Drawing.Point(113, 374);
+            this.textBoxUserRate.Name = "textBoxUserRate";
+            this.textBoxUserRate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxUserRate.TabIndex = 8;
+            this.textBoxUserRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUserRate_KeyPress);
+            // 
+            // textBoxGuestRate
+            // 
+            this.textBoxGuestRate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "guest_rate", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxGuestRate.Location = new System.Drawing.Point(113, 400);
+            this.textBoxGuestRate.Name = "textBoxGuestRate";
+            this.textBoxGuestRate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxGuestRate.TabIndex = 13;
+            this.textBoxGuestRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUserRate_KeyPress);
+            // 
+            // textBoxActivityDurationDays
+            // 
+            this.textBoxActivityDurationDays.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_duration_days", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N1"));
+            this.textBoxActivityDurationDays.Location = new System.Drawing.Point(113, 426);
+            this.textBoxActivityDurationDays.Name = "textBoxActivityDurationDays";
+            this.textBoxActivityDurationDays.Size = new System.Drawing.Size(100, 20);
+            this.textBoxActivityDurationDays.TabIndex = 14;
+            this.textBoxActivityDurationDays.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUserRate_KeyPress);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label9);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBoxActivityImage);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(348, 249);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.tableLayoutPanel1.SetRowSpan(this.flowLayoutPanel1, 4);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(447, 171);
+            this.flowLayoutPanel1.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Photo de l\'activité";
+            // 
+            // pictureBoxActivityImage
+            // 
+            this.pictureBoxActivityImage.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.vactivityfulltableorganizernameBindingSource, "activity_pic", true));
+            this.pictureBoxActivityImage.Location = new System.Drawing.Point(100, 3);
+            this.pictureBoxActivityImage.Name = "pictureBoxActivityImage";
+            this.pictureBoxActivityImage.Size = new System.Drawing.Size(286, 158);
+            this.pictureBoxActivityImage.TabIndex = 1;
+            this.pictureBoxActivityImage.TabStop = false;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btnClearFields);
+            this.flowLayoutPanel2.Controls.Add(this.BtnAddActivity);
+            this.flowLayoutPanel2.Controls.Add(this.BtnUpdateActivity);
+            this.flowLayoutPanel2.Controls.Add(this.BtnDeleteActivity);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(348, 457);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(447, 87);
+            this.flowLayoutPanel2.TabIndex = 17;
+            // 
+            // btnClearFields
+            // 
+            this.btnClearFields.Location = new System.Drawing.Point(3, 3);
+            this.btnClearFields.Name = "btnClearFields";
+            this.btnClearFields.Size = new System.Drawing.Size(52, 50);
+            this.btnClearFields.TabIndex = 30;
+            this.btnClearFields.Text = "Vider les champs";
+            this.btnClearFields.UseVisualStyleBackColor = true;
+            this.btnClearFields.Click += new System.EventHandler(this.btnClearFields_Click);
+            // 
+            // BtnAddActivity
+            // 
+            this.BtnAddActivity.Location = new System.Drawing.Point(61, 3);
+            this.BtnAddActivity.Name = "BtnAddActivity";
+            this.BtnAddActivity.Size = new System.Drawing.Size(107, 50);
+            this.BtnAddActivity.TabIndex = 31;
+            this.BtnAddActivity.Text = "&Ajouter une nouvelle activité";
+            this.BtnAddActivity.UseVisualStyleBackColor = true;
+            this.BtnAddActivity.Click += new System.EventHandler(this.BtnAddActivity_Click);
+            // 
+            // BtnUpdateActivity
+            // 
+            this.BtnUpdateActivity.Location = new System.Drawing.Point(174, 3);
+            this.BtnUpdateActivity.Name = "BtnUpdateActivity";
+            this.BtnUpdateActivity.Size = new System.Drawing.Size(107, 50);
+            this.BtnUpdateActivity.TabIndex = 32;
+            this.BtnUpdateActivity.Text = "&Modifier l\'activité";
+            this.BtnUpdateActivity.UseVisualStyleBackColor = true;
+            this.BtnUpdateActivity.Click += new System.EventHandler(this.BtnUpdateActivity_Click);
+            // 
+            // BtnDeleteActivity
+            // 
+            this.BtnDeleteActivity.Location = new System.Drawing.Point(287, 3);
+            this.BtnDeleteActivity.Name = "BtnDeleteActivity";
+            this.BtnDeleteActivity.Size = new System.Drawing.Size(107, 50);
+            this.BtnDeleteActivity.TabIndex = 33;
+            this.BtnDeleteActivity.Text = "&Supprimer l\'activité";
+            this.BtnDeleteActivity.UseVisualStyleBackColor = true;
+            this.BtnDeleteActivity.Click += new System.EventHandler(this.BtnDeleteActivity_Click);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.label8);
+            this.flowLayoutPanel3.Controls.Add(this.textBoxGPS);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(348, 426);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(431, 25);
+            this.flowLayoutPanel3.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 6);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Point GPS RDV";
+            // 
+            // textBoxGPS
+            // 
+            this.textBoxGPS.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxGPS.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_gps_point", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxGPS.Location = new System.Drawing.Point(91, 3);
+            this.textBoxGPS.Name = "textBoxGPS";
+            this.textBoxGPS.Size = new System.Drawing.Size(317, 20);
+            this.textBoxGPS.TabIndex = 27;
+            this.textBoxGPS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGPS_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 191);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Nom de la sortie";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 217);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Date de la sortie";
+            // 
+            // textBoxNameActivity
+            // 
+            this.textBoxNameActivity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxNameActivity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxNameActivity.Location = new System.Drawing.Point(113, 194);
+            this.textBoxNameActivity.Name = "textBoxNameActivity";
+            this.textBoxNameActivity.Size = new System.Drawing.Size(229, 20);
+            this.textBoxNameActivity.TabIndex = 4;
+            // 
+            // dtpDateActivity
+            // 
+            this.dtpDateActivity.CustomFormat = "le yyyy/MM/dd à HH:mm";
+            this.dtpDateActivity.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vactivityfulltableorganizernameBindingSource, "activity_date", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.dtpDateActivity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpDateActivity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateActivity.Location = new System.Drawing.Point(113, 220);
+            this.dtpDateActivity.Name = "dtpDateActivity";
+            this.dtpDateActivity.Size = new System.Drawing.Size(229, 20);
+            this.dtpDateActivity.TabIndex = 5;
+            // 
+            // comboBoxOrganizerName
+            // 
+            this.comboBoxOrganizerName.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.activityBindingSource, "id", true));
+            this.comboBoxOrganizerName.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.activityBindingSource, "id", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.comboBoxOrganizerName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.comboBoxOrganizerName.DataSource = this.usersBindingSource;
+            this.comboBoxOrganizerName.DisplayMember = "name";
+            this.comboBoxOrganizerName.FormattingEnabled = true;
+            this.comboBoxOrganizerName.Location = new System.Drawing.Point(113, 457);
+            this.comboBoxOrganizerName.Name = "comboBoxOrganizerName";
+            this.comboBoxOrganizerName.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxOrganizerName.TabIndex = 26;
+            this.comboBoxOrganizerName.ValueMember = "id";
+            // 
+            // activityBindingSource
+            // 
+            this.activityBindingSource.DataMember = "activity";
+            this.activityBindingSource.DataSource = this.mcmpDataSet;
+            this.activityBindingSource.CurrentChanged += new System.EventHandler(this.activityBindingSource_CurrentChanged);
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 165);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 26);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Destination de l\'activité";
+            // 
+            // textBoxActivityDestination
+            // 
+            this.textBoxActivityDestination.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vactivityfulltableorganizernameBindingSource, "activity_destination", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.textBoxActivityDestination.Location = new System.Drawing.Point(113, 168);
+            this.textBoxActivityDestination.Name = "textBoxActivityDestination";
+            this.textBoxActivityDestination.Size = new System.Drawing.Size(181, 20);
+            this.textBoxActivityDestination.TabIndex = 3;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.label13);
+            this.flowLayoutPanel4.Controls.Add(this.dateTimePickerBeginDate);
+            this.flowLayoutPanel4.Controls.Add(this.label14);
+            this.flowLayoutPanel4.Controls.Add(this.dateTimePickerEndDate);
+            this.flowLayoutPanel4.Controls.Add(this.btnReset);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(348, 3);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(427, 36);
+            this.flowLayoutPanel4.TabIndex = 28;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Entre le";
+            // 
+            // dateTimePickerBeginDate
+            // 
+            this.dateTimePickerBeginDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerBeginDate.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerBeginDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerBeginDate.Location = new System.Drawing.Point(52, 3);
+            this.dateTimePickerBeginDate.MaxDate = new System.DateTime(2022, 2, 28, 16, 37, 46, 0);
+            this.dateTimePickerBeginDate.Name = "dateTimePickerBeginDate";
+            this.dateTimePickerBeginDate.Size = new System.Drawing.Size(90, 20);
+            this.dateTimePickerBeginDate.TabIndex = 1;
+            this.dateTimePickerBeginDate.Value = new System.DateTime(2022, 2, 28, 0, 0, 0, 0);
+            this.dateTimePickerBeginDate.ValueChanged += new System.EventHandler(this.dateTimePickerBeginDate_ValueChanged);
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(148, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Et Le ";
+            // 
+            // dateTimePickerEndDate
+            // 
+            this.dateTimePickerEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerEndDate.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerEndDate.Location = new System.Drawing.Point(189, 3);
+            this.dateTimePickerEndDate.MinDate = new System.DateTime(2022, 2, 16, 0, 0, 0, 0);
+            this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
+            this.dateTimePickerEndDate.Size = new System.Drawing.Size(92, 20);
+            this.dateTimePickerEndDate.TabIndex = 3;
+            this.dateTimePickerEndDate.ValueChanged += new System.EventHandler(this.dateTimePickerEndDate_ValueChanged);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(287, 3);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(107, 21);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "&Rétablir";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnChangePic
+            // 
+            this.btnChangePic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnChangePic.Location = new System.Drawing.Point(348, 220);
+            this.btnChangePic.Name = "btnChangePic";
+            this.btnChangePic.Size = new System.Drawing.Size(447, 23);
+            this.btnChangePic.TabIndex = 29;
+            this.btnChangePic.Text = "Changer la photo de l\'activité";
+            this.btnChangePic.UseVisualStyleBackColor = true;
+            this.btnChangePic.Click += new System.EventHandler(this.btnChangePic_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // activityTableAdapter
+            // 
+            this.activityTableAdapter.ClearBeforeFill = true;
+            // 
+            // organizersBindingSource
+            // 
+            this.organizersBindingSource.DataMember = "Organizers";
+            this.organizersBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // organizersTableAdapter
+            // 
+            this.organizersTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // vorganizeractivityBindingSource
+            // 
+            this.vorganizeractivityBindingSource.DataMember = "vorganizeractivity";
+            this.vorganizeractivityBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // vactivityfulltableorganizernameTableAdapter
+            // 
+            this.vactivityfulltableorganizernameTableAdapter.ClearBeforeFill = true;
+            // 
+            // participateTableAdapter
+            // 
+            this.participateTableAdapter.ClearBeforeFill = true;
+            // 
+            // participateBindingSource
+            // 
+            this.participateBindingSource.DataMember = "participate";
+            this.participateBindingSource.DataSource = this.mcmpDataSet;
+            // 
             // FormActivities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -742,7 +742,7 @@ namespace FilRougeMCMPWinforms
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormActivities";
-            this.Text = "Form2";
+            this.Text = "Formulaire des sorties";
             this.Load += new System.EventHandler(this.FormOutings_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

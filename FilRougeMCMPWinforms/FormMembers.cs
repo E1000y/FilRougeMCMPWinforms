@@ -174,13 +174,7 @@ WHERE        (id = @pUsersRowId) AND (is_active = @pUsersRowisActive) AND (creat
 
         private void textBoxFilterMembers_TextChanged(object sender, EventArgs e)
         {
-            /*
-             private void textBoxFilterActivity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            vactivityfulltableorganizernameBindingSource.Filter = $" activity_name LIKE '%{textBoxFilterActivity.Text}%' OR activity_description LIKE '%{textBoxFilterActivity.Text}%' OR activity_destination LIKE '%{textBoxFilterActivity.Text}%'";
-        }
-             */
-
+        
             usersBindingSource.Filter = $"name LIKE '%{textBoxFilterMembers.Text}%' OR firstname LIKE '%{textBoxFilterMembers.Text}%' ";
 
         }
