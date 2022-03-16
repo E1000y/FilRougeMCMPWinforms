@@ -33,8 +33,6 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewActivities = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewMembers = new System.Windows.Forms.DataGridView();
             this.idactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activitydescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,20 +47,22 @@ namespace FilRougeMCMPWinforms
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
-            this.usersbyActivityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.activityTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.activityTableAdapter();
-            this.usersbyActivityTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersbyActivityTableAdapter();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewMembers = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersbyActivityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.activityTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.activityTableAdapter();
+            this.usersbyActivityTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersbyActivityTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.activityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersbyActivityBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,16 +79,17 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 736F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(782, 736);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(913, 776);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridViewActivities);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 730);
+            this.groupBox1.Size = new System.Drawing.Size(450, 770);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sorties";
@@ -115,47 +116,14 @@ namespace FilRougeMCMPWinforms
             this.idDataGridViewTextBoxColumn});
             this.dataGridViewActivities.DataSource = this.activityBindingSource;
             this.dataGridViewActivities.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewActivities.Location = new System.Drawing.Point(3, 16);
+            this.dataGridViewActivities.Location = new System.Drawing.Point(3, 22);
             this.dataGridViewActivities.Name = "dataGridViewActivities";
             this.dataGridViewActivities.ReadOnly = true;
             this.dataGridViewActivities.RowHeadersVisible = false;
             this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewActivities.Size = new System.Drawing.Size(379, 711);
+            this.dataGridViewActivities.Size = new System.Drawing.Size(444, 745);
             this.dataGridViewActivities.TabIndex = 0;
             this.dataGridViewActivities.SelectionChanged += new System.EventHandler(this.dataGridViewActivities_SelectionChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridViewMembers);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(394, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(385, 730);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Participants";
-            // 
-            // dataGridViewMembers
-            // 
-            this.dataGridViewMembers.AllowUserToAddRows = false;
-            this.dataGridViewMembers.AllowUserToDeleteRows = false;
-            this.dataGridViewMembers.AutoGenerateColumns = false;
-            this.dataGridViewMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.nameDataGridViewTextBoxColumn,
-            this.firstnameDataGridViewTextBoxColumn,
-            this.email});
-            this.dataGridViewMembers.DataSource = this.usersbyActivityBindingSource;
-            this.dataGridViewMembers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewMembers.Location = new System.Drawing.Point(3, 16);
-            this.dataGridViewMembers.Name = "dataGridViewMembers";
-            this.dataGridViewMembers.ReadOnly = true;
-            this.dataGridViewMembers.RowHeadersVisible = false;
-            this.dataGridViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMembers.Size = new System.Drawing.Size(379, 711);
-            this.dataGridViewMembers.TabIndex = 0;
             // 
             // idactivityDataGridViewTextBoxColumn
             // 
@@ -260,18 +228,39 @@ namespace FilRougeMCMPWinforms
             this.mcmpDataSet.DataSetName = "mcmpDataSet";
             this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usersbyActivityBindingSource
+            // groupBox2
             // 
-            this.usersbyActivityBindingSource.DataMember = "usersbyActivity";
-            this.usersbyActivityBindingSource.DataSource = this.mcmpDataSet;
+            this.groupBox2.Controls.Add(this.dataGridViewMembers);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox2.Location = new System.Drawing.Point(459, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(451, 770);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Participants";
             // 
-            // activityTableAdapter
+            // dataGridViewMembers
             // 
-            this.activityTableAdapter.ClearBeforeFill = true;
-            // 
-            // usersbyActivityTableAdapter
-            // 
-            this.usersbyActivityTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewMembers.AllowUserToAddRows = false;
+            this.dataGridViewMembers.AllowUserToDeleteRows = false;
+            this.dataGridViewMembers.AutoGenerateColumns = false;
+            this.dataGridViewMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.nameDataGridViewTextBoxColumn,
+            this.firstnameDataGridViewTextBoxColumn,
+            this.email});
+            this.dataGridViewMembers.DataSource = this.usersbyActivityBindingSource;
+            this.dataGridViewMembers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewMembers.Location = new System.Drawing.Point(3, 22);
+            this.dataGridViewMembers.Name = "dataGridViewMembers";
+            this.dataGridViewMembers.ReadOnly = true;
+            this.dataGridViewMembers.RowHeadersVisible = false;
+            this.dataGridViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewMembers.Size = new System.Drawing.Size(445, 745);
+            this.dataGridViewMembers.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -305,23 +294,35 @@ namespace FilRougeMCMPWinforms
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
+            // usersbyActivityBindingSource
+            // 
+            this.usersbyActivityBindingSource.DataMember = "usersbyActivity";
+            this.usersbyActivityBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // activityTableAdapter
+            // 
+            this.activityTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersbyActivityTableAdapter
+            // 
+            this.usersbyActivityTableAdapter.ClearBeforeFill = true;
+            // 
             // FormParticipationUsersInActivity
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 736);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(913, 776);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(798, 775);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Name = "FormParticipationUsersInActivity";
-            this.Text = "FormParticipationUsersInActivity";
+            this.Text = "Quels participants pour une sortie donnée?";
             this.Load += new System.EventHandler(this.FormParticipationUsersInActivity_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivities)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.activityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mcmpDataSet)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersbyActivityBindingSource)).EndInit();
             this.ResumeLayout(false);
 

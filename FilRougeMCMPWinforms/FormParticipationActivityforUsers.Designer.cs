@@ -33,15 +33,6 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanelParticipation = new System.Windows.Forms.TableLayoutPanel();
             this.GroupBoxMember = new System.Windows.Forms.GroupBox();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
-            this.groupBoxActivity = new System.Windows.Forms.GroupBox();
-            this.dataGridViewActivities = new System.Windows.Forms.DataGridView();
-            this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currentYearActivitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
-            this.currentYearActivitiesTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +51,15 @@ namespace FilRougeMCMPWinforms
             this.updatedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remembertokenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isactiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mcmpDataSet = new FilRougeMCMPWinforms.mcmpDataSet();
+            this.groupBoxActivity = new System.Windows.Forms.GroupBox();
+            this.dataGridViewActivities = new System.Windows.Forms.DataGridView();
+            this.activitynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activitydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currentYearActivitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.usersTableAdapter();
+            this.currentYearActivitiesTableAdapter = new FilRougeMCMPWinforms.mcmpDataSetTableAdapters.CurrentYearActivitiesTableAdapter();
             this.tableLayoutPanelParticipation.SuspendLayout();
             this.GroupBoxMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
@@ -83,16 +83,17 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanelParticipation.RowCount = 1;
             this.tableLayoutPanelParticipation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 439F));
             this.tableLayoutPanelParticipation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelParticipation.Size = new System.Drawing.Size(804, 568);
+            this.tableLayoutPanelParticipation.Size = new System.Drawing.Size(913, 776);
             this.tableLayoutPanelParticipation.TabIndex = 0;
             // 
             // GroupBoxMember
             // 
             this.GroupBoxMember.Controls.Add(this.dataGridViewUsers);
             this.GroupBoxMember.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GroupBoxMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.GroupBoxMember.Location = new System.Drawing.Point(3, 3);
             this.GroupBoxMember.Name = "GroupBoxMember";
-            this.GroupBoxMember.Size = new System.Drawing.Size(400, 562);
+            this.GroupBoxMember.Size = new System.Drawing.Size(455, 770);
             this.GroupBoxMember.TabIndex = 0;
             this.GroupBoxMember.TabStop = false;
             this.GroupBoxMember.Text = "Adhérents";
@@ -125,82 +126,14 @@ namespace FilRougeMCMPWinforms
             this.isactiveDataGridViewCheckBoxColumn});
             this.dataGridViewUsers.DataSource = this.usersBindingSource;
             this.dataGridViewUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(3, 16);
+            this.dataGridViewUsers.Location = new System.Drawing.Point(3, 22);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.RowHeadersVisible = false;
             this.dataGridViewUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(394, 543);
+            this.dataGridViewUsers.Size = new System.Drawing.Size(449, 745);
             this.dataGridViewUsers.TabIndex = 0;
             this.dataGridViewUsers.SelectionChanged += new System.EventHandler(this.dataGridViewUsers_SelectionChanged);
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // mcmpDataSet
-            // 
-            this.mcmpDataSet.DataSetName = "mcmpDataSet";
-            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // groupBoxActivity
-            // 
-            this.groupBoxActivity.Controls.Add(this.dataGridViewActivities);
-            this.groupBoxActivity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxActivity.Location = new System.Drawing.Point(409, 3);
-            this.groupBoxActivity.Name = "groupBoxActivity";
-            this.groupBoxActivity.Size = new System.Drawing.Size(392, 562);
-            this.groupBoxActivity.TabIndex = 1;
-            this.groupBoxActivity.TabStop = false;
-            this.groupBoxActivity.Text = "Sorties";
-            // 
-            // dataGridViewActivities
-            // 
-            this.dataGridViewActivities.AllowUserToAddRows = false;
-            this.dataGridViewActivities.AllowUserToDeleteRows = false;
-            this.dataGridViewActivities.AutoGenerateColumns = false;
-            this.dataGridViewActivities.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewActivities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.activitynameDataGridViewTextBoxColumn,
-            this.activitydateDataGridViewTextBoxColumn});
-            this.dataGridViewActivities.DataSource = this.currentYearActivitiesBindingSource;
-            this.dataGridViewActivities.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewActivities.Location = new System.Drawing.Point(3, 16);
-            this.dataGridViewActivities.Name = "dataGridViewActivities";
-            this.dataGridViewActivities.ReadOnly = true;
-            this.dataGridViewActivities.RowHeadersVisible = false;
-            this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewActivities.Size = new System.Drawing.Size(386, 543);
-            this.dataGridViewActivities.TabIndex = 1;
-            // 
-            // activitynameDataGridViewTextBoxColumn
-            // 
-            this.activitynameDataGridViewTextBoxColumn.DataPropertyName = "activity_name";
-            this.activitynameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'activité";
-            this.activitynameDataGridViewTextBoxColumn.Name = "activitynameDataGridViewTextBoxColumn";
-            this.activitynameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // activitydateDataGridViewTextBoxColumn
-            // 
-            this.activitydateDataGridViewTextBoxColumn.DataPropertyName = "activity_date";
-            this.activitydateDataGridViewTextBoxColumn.HeaderText = "Date de l\'activité";
-            this.activitydateDataGridViewTextBoxColumn.Name = "activitydateDataGridViewTextBoxColumn";
-            this.activitydateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // currentYearActivitiesBindingSource
-            // 
-            this.currentYearActivitiesBindingSource.DataMember = "CurrentYearActivities";
-            this.currentYearActivitiesBindingSource.DataSource = this.mcmpDataSet;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // currentYearActivitiesTableAdapter
-            // 
-            this.currentYearActivitiesTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -346,14 +279,83 @@ namespace FilRougeMCMPWinforms
             this.isactiveDataGridViewCheckBoxColumn.ReadOnly = true;
             this.isactiveDataGridViewCheckBoxColumn.Visible = false;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // mcmpDataSet
+            // 
+            this.mcmpDataSet.DataSetName = "mcmpDataSet";
+            this.mcmpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBoxActivity
+            // 
+            this.groupBoxActivity.Controls.Add(this.dataGridViewActivities);
+            this.groupBoxActivity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBoxActivity.Location = new System.Drawing.Point(464, 3);
+            this.groupBoxActivity.Name = "groupBoxActivity";
+            this.groupBoxActivity.Size = new System.Drawing.Size(446, 770);
+            this.groupBoxActivity.TabIndex = 1;
+            this.groupBoxActivity.TabStop = false;
+            this.groupBoxActivity.Text = "Sorties";
+            // 
+            // dataGridViewActivities
+            // 
+            this.dataGridViewActivities.AllowUserToAddRows = false;
+            this.dataGridViewActivities.AllowUserToDeleteRows = false;
+            this.dataGridViewActivities.AutoGenerateColumns = false;
+            this.dataGridViewActivities.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewActivities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.activitynameDataGridViewTextBoxColumn,
+            this.activitydateDataGridViewTextBoxColumn});
+            this.dataGridViewActivities.DataSource = this.currentYearActivitiesBindingSource;
+            this.dataGridViewActivities.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewActivities.Location = new System.Drawing.Point(3, 22);
+            this.dataGridViewActivities.Name = "dataGridViewActivities";
+            this.dataGridViewActivities.ReadOnly = true;
+            this.dataGridViewActivities.RowHeadersVisible = false;
+            this.dataGridViewActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewActivities.Size = new System.Drawing.Size(440, 745);
+            this.dataGridViewActivities.TabIndex = 1;
+            // 
+            // activitynameDataGridViewTextBoxColumn
+            // 
+            this.activitynameDataGridViewTextBoxColumn.DataPropertyName = "activity_name";
+            this.activitynameDataGridViewTextBoxColumn.HeaderText = "Nom de l\'activité";
+            this.activitynameDataGridViewTextBoxColumn.Name = "activitynameDataGridViewTextBoxColumn";
+            this.activitynameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // activitydateDataGridViewTextBoxColumn
+            // 
+            this.activitydateDataGridViewTextBoxColumn.DataPropertyName = "activity_date";
+            this.activitydateDataGridViewTextBoxColumn.HeaderText = "Date de l\'activité";
+            this.activitydateDataGridViewTextBoxColumn.Name = "activitydateDataGridViewTextBoxColumn";
+            this.activitydateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // currentYearActivitiesBindingSource
+            // 
+            this.currentYearActivitiesBindingSource.DataMember = "CurrentYearActivities";
+            this.currentYearActivitiesBindingSource.DataSource = this.mcmpDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // currentYearActivitiesTableAdapter
+            // 
+            this.currentYearActivitiesTableAdapter.ClearBeforeFill = true;
+            // 
             // FormParticipationActivityforUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 568);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(913, 776);
             this.Controls.Add(this.tableLayoutPanelParticipation);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Name = "FormParticipationActivityforUsers";
-            this.Text = "FormParticipation";
+            this.Text = "Quelles sorties pour un adhérent donné?";
             this.Load += new System.EventHandler(this.FormParticipation_Load);
             this.tableLayoutPanelParticipation.ResumeLayout(false);
             this.GroupBoxMember.ResumeLayout(false);

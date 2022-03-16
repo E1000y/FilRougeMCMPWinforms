@@ -50,18 +50,19 @@ namespace FilRougeMCMPWinforms
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.BtnGenerateToken, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(782, 686);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1173, 1055);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -76,13 +77,14 @@ namespace FilRougeMCMPWinforms
             this.etatDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.banquejetonBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(159, 117);
+            this.dataGridView1.Location = new System.Drawing.Point(238, 180);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(463, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(695, 517);
             this.dataGridView1.TabIndex = 0;
             // 
             // jetonDataGridViewTextBoxColumn
@@ -90,12 +92,14 @@ namespace FilRougeMCMPWinforms
             this.jetonDataGridViewTextBoxColumn.DataPropertyName = "jeton";
             this.jetonDataGridViewTextBoxColumn.HeaderText = "jeton";
             this.jetonDataGridViewTextBoxColumn.Name = "jetonDataGridViewTextBoxColumn";
+            this.jetonDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // etatDataGridViewCheckBoxColumn
             // 
             this.etatDataGridViewCheckBoxColumn.DataPropertyName = "etat";
             this.etatDataGridViewCheckBoxColumn.HeaderText = "etat";
             this.etatDataGridViewCheckBoxColumn.Name = "etatDataGridViewCheckBoxColumn";
+            this.etatDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // banquejetonBindingSource
             // 
@@ -112,9 +116,10 @@ namespace FilRougeMCMPWinforms
             this.BtnGenerateToken.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnGenerateToken.Location = new System.Drawing.Point(159, 459);
+            this.BtnGenerateToken.Location = new System.Drawing.Point(238, 707);
+            this.BtnGenerateToken.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnGenerateToken.Name = "BtnGenerateToken";
-            this.BtnGenerateToken.Size = new System.Drawing.Size(463, 108);
+            this.BtnGenerateToken.Size = new System.Drawing.Size(695, 165);
             this.BtnGenerateToken.TabIndex = 1;
             this.BtnGenerateToken.Text = "Générer un jeton";
             this.BtnGenerateToken.UseVisualStyleBackColor = true;
@@ -126,11 +131,12 @@ namespace FilRougeMCMPWinforms
             // 
             // FormTokens
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 686);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1173, 1055);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(798, 725);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(1189, 1094);
             this.Name = "FormTokens";
             this.Text = "Jetons";
             this.Load += new System.EventHandler(this.FormTokens_Load);
