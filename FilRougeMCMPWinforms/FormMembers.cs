@@ -225,5 +225,20 @@ WHERE        (id = @pUsersRowId) AND (is_active = @pUsersRowisActive) AND (creat
                 }
             }
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

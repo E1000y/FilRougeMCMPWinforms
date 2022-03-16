@@ -15554,8 +15554,7 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `firstname`, `name`, `activity_name`, `activity_date`, `registration_date`" +
-                ", `number_of_guests`, `guests_description` FROM `mcmp`.`vusers_participate_activ" +
-                "ity`";
+                ", `number_of_guests`, `guests_description` FROM `vusers_participate_activity`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15736,15 +15735,15 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             this._commandCollection[0].Parameters.Add(param);
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        name\r\nFROM            users\r\nWHERE        (is_organizer = 1)";
+            this._commandCollection[1].CommandText = "SELECT name FROM users WHERE (is_organizer = 1)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        name\r\nFROM            users\r\nWHERE        (is_organizer = 1)";
+            this._commandCollection[2].CommandText = "SELECT name FROM users WHERE (is_organizer = 1)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT  name FROM `users` WHERE is_organizer =1";
+            this._commandCollection[3].CommandText = "SELECT name FROM users WHERE (is_organizer = 1)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -16295,7 +16294,7 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT `id_activity`, `activity_name`, `activity_description`, `activity_destination`, `activity_gps_point`, `activity_date`, `user_rate`, `guest_rate`, `vehicle_type`, `activity_pic`, `activity_duration_days`, `id`, `name` FROM `mcmp`.`vactivityfulltableorganizername`";
+            this._commandCollection[0].CommandText = @"SELECT `id_activity`, `activity_name`, `activity_description`, `activity_destination`, `activity_gps_point`, `activity_date`, `user_rate`, `guest_rate`, `vehicle_type`, `activity_pic`, `activity_duration_days`, `id`, `name` FROM `vactivityfulltableorganizername`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -16465,8 +16464,8 @@ VALUES        (@pName, @pFirstName, @pEmail, @pIsOrganizer, @pDoB, @pProfilePic,
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `id_activity`, `activity_name`, `activity_date`, `name` FROM `mcmp`.`vorga" +
-                "nizeractivity`";
+            this._commandCollection[0].CommandText = "SELECT `id_activity`, `activity_name`, `activity_date`, `name` FROM `vorganizerac" +
+                "tivity`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -26,8 +26,8 @@ namespace FilRougeMCMPWinforms.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;persistsecurityinfo=True;port=3316;database=mcmp;pa" +
-            "ssword=")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=cda74.2isa.org;user id=cda74;persistsecurityinfo=True;port=3306;database=c" +
+            "da74_bd1;password=2619cda74")]
         public string mcmpConnectionString {
             get {
                 return ((string)(this["mcmpConnectionString"]));
