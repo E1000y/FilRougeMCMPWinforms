@@ -198,10 +198,12 @@ namespace FilRougeMCMPWinforms
             this.Controls.Add(this.ChildFormPanel);
             this.Controls.Add(this.SideMenuPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(1238, 854);
             this.Name = "FormWelcome";
             this.Text = "Bienvenue sur l\'application MCMP";
+            this.Load += new System.EventHandler(this.FormWelcome_Load);
             this.SideMenuPanel.ResumeLayout(false);
             this.OutingsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
